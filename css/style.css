@@ -10,3 +10,181 @@ OpenSans-ExtraBold
 OpenSans-ExtraBoldItalic
 OpenSans-LightItalic
 */
+
+/* ********************************* BASIC CSS ********************************* */
+
+body {
+    background: linear-gradient(to right, #fff, 80%, #8f8f8f);
+}
+
+body .container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    color: #555;
+}
+
+/* ********************************* TITLES ********************************* */
+
+.logo-title {
+    font-family: OpenSans-Bold;
+    font-size: 14px;
+    margin: 10px 0 25px 15px;
+}
+
+.big-title {
+    font-family: OpenSans-Bold;
+    font-size: 3.5rem;
+    margin-left: 10px;
+}
+
+.big-sub-title {
+    font-family: OpenSans-Regular;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.secondary-title {
+    font-family: OpenSans-Light;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.input-titles {
+    color: #009483;
+    font-family: OpenSans-Bold;
+    font-size: 0.8rem;
+    padding-top: 5px;
+}
+
+/* ********************************* INPUTS ********************************* */
+
+.custom-inputs {
+    font-family: OpenSans-SemiBold;
+    border-width: 1px;
+    border-color: #555;
+    height: 25px;
+    font-size: 13px;
+    color: #555;
+    padding-left: 7px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.custom-inputs:focus {
+    background-color: #e7efcc;
+    outline: none;
+}
+
+#exam-date.custom-inputs {
+    width: 55%;
+}
+
+/* ********************************* ALL PAGES ********************************* */
+
+.logo {
+    max-width: 58%;
+    margin-top: 35px;
+    margin-left: 15px;
+}
+
+.logo-col {
+    padding: 0;
+}
+
+.logo-hr {
+    border-style: none;
+    background-color: #009483;
+    height: 7px;
+    margin: 0;
+}
+
+.body-col {
+    background-color: #fff;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    margin-bottom: 80px;
+}
+
+.left-block {
+    background: linear-gradient(to right, #009483, #006459);
+    height: 140px;
+    margin-top: 50px;
+}
+
+.right-block {
+    background: linear-gradient(to left, #009483, #006459);
+    height: 140px;
+    margin-top: 250px;
+}
+
+.vertical-line {
+    margin-top: 20px;
+    height: 200px;
+    width: 1px;
+    background-color: #006459;
+}
+
+#internal.vertical-line {
+    height: 310px;
+    margin: 0;
+    position: absolute;
+    left: 305px;
+    top: 50px;
+}
+
+/* ********************************* FIRST PAGE ********************************* */
+
+.top-left-box {
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.top-right-box {
+    background-color: #fff;
+    padding: 10px 0 0 15px;
+}
+
+.sub-container1 {
+    display: inline-block;
+    width: 65%;
+    margin-right: 15px;
+}
+
+.sub-container2 {
+    display: inline-block;
+    width: 28%;
+}
+
+.sub-container3 {
+    display: inline-block;
+}
+
+.sub-container4 {
+    display: inline-block;
+}
+
+.sub-container5 {
+    display: inline-block;
+}
+
+.bottom-left-box {
+    background-color: #dddede;
+    margin-right: 15px;
+}
+
+.bottom-right-box {
+    background-color: #fff;
+}
+
+/* ********************************* SECOND PAGE ********************************* */
+
+/* ********************************* THIRD PAGE ********************************* */
