@@ -19,7 +19,7 @@ body {
 
 body .container {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     max-width: 100%;
 }
 
@@ -62,7 +62,17 @@ h1, h2, h3, h4, h5, h6, p {
     color: #009483;
     font-family: OpenSans-Bold;
     font-size: 0.8rem;
-    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.input-radio-labels {
+    font-family: OpenSans-Light;
+    font-size: 1rem;
+    margin-right: 3px;
+    position: relative;
+    bottom: 6px;
+    right: 5px;
 }
 
 /* ********************************* INPUTS ********************************* */
@@ -88,6 +98,60 @@ h1, h2, h3, h4, h5, h6, p {
     width: 55%;
 }
 
+.custom-radios {
+    -webkit-appearance: none;
+    border: solid 1px #555;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* .custom-radios:after {
+    qui va inserito ciò che voglio vedere dentro l'input radio prima di  aver cliccato
+} */
+
+.custom-radios:checked:after {
+    background-color: #009483;
+    border-radius: 25px;
+    height: 15px;
+    width: 15px;
+    content: '';
+    display: block;
+    position: relative;
+    left: 4px;
+    top: 4px;
+}
+
+/* ********************************* BUTTONS ********************************* */
+
+.custom-buttons {
+    font-family: OpenSans-Regular;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 50px;
+    padding: 4px 18px 6px 22px;
+}
+
+.custom-buttons:hover {
+    background-color: rgb(165, 165, 165);
+    color: #fff;
+}
+
+.icon-right {
+    height: 20px;
+    position: relative;
+    top: 4px;
+}
+
+#page1-nxt-btn {
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+
 /* ********************************* ALL PAGES ********************************* */
 
 .logo {
@@ -104,7 +168,7 @@ h1, h2, h3, h4, h5, h6, p {
     border-style: none;
     background-color: #009483;
     height: 7px;
-    margin: 0;
+    margin: 0 -1%;
 }
 
 .body-col {
@@ -166,14 +230,21 @@ h1, h2, h3, h4, h5, h6, p {
 
 .sub-container3 {
     display: inline-block;
+    width: 12%;
+    margin-right: 113px;
 }
 
 .sub-container4 {
     display: inline-block;
+    margin-right: 114px;
+    position: relative;
+    top: 8px;
 }
 
 .sub-container5 {
     display: inline-block;
+    position: relative;
+    top: 8px;
 }
 
 .bottom-left-box {
