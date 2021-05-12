@@ -213,8 +213,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .top-right-box {
-    background-color: #fff;
-    padding: 10px 0 0 15px;
+    padding: 10px 0 0 20px;
 }
 
 .sub-container1 {
@@ -252,9 +251,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin-right: 15px;
 }
 
-.bottom-right-box {
-    background-color: #fff;
-}
+/* .bottom-right-box {} */
 
 /* ********************************* SECOND PAGE ********************************* */
 
