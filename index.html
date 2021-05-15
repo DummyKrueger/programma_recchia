@@ -105,7 +105,7 @@
                     </div>
 
                     <div class="col-lg-8 bottom-right-box">
-                        <button id="page1-nxt-btn" class="btn custom-buttons">
+                        <button id="page1-nxt-btn" class="btn nxt-button">
                             AVANTI
                             <img class="icon" src="images/angle-right.jpg" alt="angle-icon">
                         </button>
@@ -148,25 +148,87 @@
 
                 <div class="row">
 
-                    <div class="col" style="background-color: red;"></div>
+                    <div class="col-4 top-title-box">
+                        <h1 class="big-title">PSR</h1>
+                        <h2 class="big-sub-title">PERIODONTAL SCREENING AND RECORDING</h2>
+                    </div>
 
-                    <div class="col" style="background-color: yellow;">
+                    <div class="col-4">
+                        <div class="top-arch">
+                            <h3 class="secondary-title">ARCATA</h3>
+                            <h3 class="secondary-title">SUPERIORE</h3>
+                        </div>
                         <object class="" data="big_arch_top.svg"></object>
                     </div>
 
-                    <div class="col" style="background-color: blue;"></div>
+                    <div class="col-4"></div>
 
                 </div>
 
                 <div class="row">
 
-                    <div class="col" style="background-color: aqua;"></div>
+                    <div class="col-4">
+                        <div class="info-box">
+                            <h4 class="info-title">Inserisci valori</h4>
+                            <h5 class="info-subtitle">compresi tra 0 e 4*</h5>
+                        </div>
+                    </div>
 
-                    <div class="col" style="background-color: chartreuse;">
+                    <div class="col-4">
+
+                        <datalist id="conditions">
+                            <option value="0">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                            <option value="4">
+                            <option value="4*">
+                        </datalist>
+
+                        <div class="top">
+                            <input list="conditions" id="input-one" name="input-one" class="teeth-inputs" />
+                            <input list="conditions" id="input-two" name="input-two" class="teeth-inputs" />
+                            <input list="conditions" id="input-three" name="input-three" class="teeth-inputs" />
+                        </div>
+
+                        <div class="bottom">
+                            <input list="conditions" id="input-four" name="input-four" class="teeth-inputs" />
+                            <input list="conditions" id="input-five" name="input-five" class="teeth-inputs" />
+                            <input list="conditions" id="input-six" name="input-six" class="teeth-inputs" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+
+                        <div class="button-box">
+                            <button id="page2-nxt-btn" class="btn nxt-button">
+                                AVANTI
+                                <img class="icon" src="images/angle-right.jpg" alt="angle-icon">
+                            </button>
+                            <button id="page2-prv-btn" class="btn prv-button">
+                                <img class="icon" src="images/angle-left.jpg" alt="angle-icon">
+                                INDIETRO
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-4"></div>
+
+                    <div class="col-4">
+                        <div class="bottom-arch">
+                            <h3 class="secondary-title">ARCATA</h3>
+                            <h3 class="secondary-title">INFERIORE</h3>
+                        </div>
                         <object class="" data="big_arch_bottom.svg"></object>
                     </div>
 
-                    <div class="col" style="background-color: burlywood;"></div>
+                    <div class="col-4"></div>
 
                 </div>
 

@@ -64,6 +64,14 @@ p {
     margin-bottom: 10px;
 }
 
+.top-arch .secondary-title {
+    margin: 0;
+}
+
+.bottom-arch .secondary-title {
+    margin: 0;
+}
+
 .input-titles {
     color: #009483;
     font-family: OpenSans-Bold;
@@ -79,6 +87,18 @@ p {
     position: relative;
     bottom: 6px;
     right: 5px;
+}
+
+.info-title {
+    margin: 5px;
+    font-family: OpenSans-Regular;
+    font-size: 1.5rem;
+}
+
+.info-subtitle {
+    margin: 4px;
+    font-family: OpenSans-Light;
+    font-size: 1.1rem;
 }
 
 /* ********************************* INPUTS ********************************* */
@@ -129,19 +149,55 @@ p {
     top: 4px;
 }
 
+.teeth-inputs {
+    font-family: OpenSans-SemiBold;
+    border-width: 1px;
+    border-color: #555;
+    height: 40px;
+    width: 40px;
+    font-size: 1.5rem;
+    color: #555;
+    text-align: center;
+}
+
+.teeth-inputs:focus {
+    background-color: #e7efcc;
+    outline: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
 /* ********************************* BUTTONS ********************************* */
 
-.custom-buttons {
+.nxt-button {
     font-family: OpenSans-Regular;
     font-size: 1rem;
     letter-spacing: 1px;
     background-color: #555;
     color: #fff;
     border-radius: 50px;
-    padding: 4px 18px 6px 22px;
+    padding: 6px 18px 6px 22px;
 }
 
-.custom-buttons:hover {
+.nxt-button:hover {
+    background-color: rgb(165, 165, 165);
+    color: #fff;
+}
+
+.prv-button {
+    font-family: OpenSans-Regular;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 50px;
+    padding: 6px 12px 6px 8px;
+    margin-top: 8px;
+}
+
+.prv-button:hover {
     background-color: rgb(165, 165, 165);
     color: #fff;
 }
@@ -263,6 +319,54 @@ p {
 
 /* ********************************* SECOND PAGE ********************************* */
 
+.top-title-box {
+    padding-left: 0;
+}
+
+.button-box {
+    float: right;
+    width: 60%;
+    text-align: center;
+}
+
+.top-arch {
+    text-align: center;
+    position: absolute;
+    top: 110px;
+    left: 114px;
+}
+
+.bottom-arch {
+    text-align: center;
+    position: absolute;
+    top: 45px;
+    left: 112px;
+}
+
+.info-box {
+    float: right;
+    background-color: #dddede;
+    padding: 10px;
+}
+
+.top {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.top input {
+    margin: 0 15px 0 15px;
+}
+
+.bottom {
+    text-align: center;
+    margin: 0;
+}
+
+.bottom input {
+    margin: 0 15px 0 15px;
+}
+
 /* ********************************* THIRD PAGE ********************************* */
 
 
@@ -289,4 +393,32 @@ p {
 
 .teeth-int {
     fill: #53575A;
+}
+
+.state-one {
+    fill: red;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.state-two {
+    fill: red;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.state-three {
+    fill: red;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.state-four {
+    fill: red;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
 }
