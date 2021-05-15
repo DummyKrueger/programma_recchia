@@ -146,10 +146,12 @@ p {
     color: #fff;
 }
 
-.icon-right {
-    height: 20px;
-    position: relative;
-    top: 4px;
+.icon {
+    margin-bottom: 3px;
+}
+
+.icon-hover {
+    filter: blur(3px) brightness(150%);
 }
 
 #page1-nxt-btn {
