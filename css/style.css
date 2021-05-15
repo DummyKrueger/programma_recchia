@@ -23,7 +23,13 @@ body .container {
     max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
     color: #555;
 }
@@ -256,3 +262,29 @@ h1, h2, h3, h4, h5, h6, p {
 /* ********************************* SECOND PAGE ********************************* */
 
 /* ********************************* THIRD PAGE ********************************* */
+
+
+
+/* ********************************* TEETH ********************************* */
+
+.molar-ext {
+    fill: none;
+    stroke: #B6B7B9;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.molar-int {
+    fill: #B6B7B9;
+}
+
+.teeth-ext {
+    fill: none;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.teeth-int {
+    fill: #53575A;
+}
