@@ -102,10 +102,107 @@ $("#input-one").on('keyup change', function () {
     }
 });
 
+$("#input-two").on('keyup change', function () {
+    if ($(this).val() == "0") {
+        $('.group2 #target').removeClass().addClass("teeth-ext");
+    }
+    if ($(this).val() == "1") {
+        $('.group2 #target').removeClass().addClass("state-one");
+    }
+    if ($(this).val() == "2") {
+        $('.group2 #target').removeClass().addClass("state-two");
+    }
+    if ($(this).val() == "3") {
+        $('.group2 #target').removeClass().addClass("state-three");
+    }
+    if ($(this).val() == "4") {
+        $('.group2 #target').removeClass().addClass("state-four");
+    }
+    if ($(this).val() == "4*") {
+        $('.group2 #target').removeClass().addClass("state-four");
+    }
+});
 
+$("#input-three").on('keyup change', function () {
+    if ($(this).val() == "0") {
+        $('.group3 #target').removeClass().addClass("teeth-ext");
+    }
+    if ($(this).val() == "1") {
+        $('.group3 #target').removeClass().addClass("state-one");
+    }
+    if ($(this).val() == "2") {
+        $('.group3 #target').removeClass().addClass("state-two");
+    }
+    if ($(this).val() == "3") {
+        $('.group3 #target').removeClass().addClass("state-three");
+    }
+    if ($(this).val() == "4") {
+        $('.group3 #target').removeClass().addClass("state-four");
+    }
+    if ($(this).val() == "4*") {
+        $('.group3 #target').removeClass().addClass("state-four");
+    }
+});
 
-// .keydown(function (event) {
-//     if (event.which == 4) {
-//         alert('blank');
-//     }
-// })
+$("#input-four").on('keyup change', function () {
+    if ($(this).val() == "0") {
+        $('.group4 #target').removeClass().addClass("teeth-ext");
+    }
+    if ($(this).val() == "1") {
+        $('.group4 #target').removeClass().addClass("state-one");
+    }
+    if ($(this).val() == "2") {
+        $('.group4 #target').removeClass().addClass("state-two");
+    }
+    if ($(this).val() == "3") {
+        $('.group4 #target').removeClass().addClass("state-three");
+    }
+    if ($(this).val() == "4") {
+        $('.group4 #target').removeClass().addClass("state-four");
+    }
+    if ($(this).val() == "4*") {
+        $('.group4 #target').removeClass().addClass("state-four");
+    }
+});
+
+$("#input-five").on('keyup change', function () {
+    if ($(this).val() == "0") {
+        $('.group5 #target').removeClass().addClass("teeth-ext");
+    }
+    if ($(this).val() == "1") {
+        $('.group5 #target').removeClass().addClass("state-one");
+    }
+    if ($(this).val() == "2") {
+        $('.group5 #target').removeClass().addClass("state-two");
+    }
+    if ($(this).val() == "3") {
+        $('.group5 #target').removeClass().addClass("state-three");
+    }
+    if ($(this).val() == "4") {
+        $('.group5 #target').removeClass().addClass("state-four");
+    }
+    if ($(this).val() == "4*") {
+        $('.group5 #target').removeClass().addClass("state-four");
+    }
+});
+
+$("#input-six").on('keyup change', function () {
+    if ($(this).val() == "0") {
+        $('.group6 #target').removeClass().addClass("teeth-ext");
+    }
+    if ($(this).val() == "1") {
+        $('.group6 #target').removeClass().addClass("state-one");
+    }
+    if ($(this).val() == "2") {
+        $('.group6 #target').removeClass().addClass("state-two");
+    }
+    if ($(this).val() == "3") {
+        $('.group6 #target').removeClass().addClass("state-three");
+    }
+    if ($(this).val() == "4") {
+        $('.group6 #target').removeClass().addClass("state-four");
+    }
+    if ($(this).val() == "4*") {
+        $('.group6 #target').removeClass().addClass("state-four");
+    }
+});

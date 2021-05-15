@@ -396,28 +396,28 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .state-one {
-    fill: red;
+    fill: #bbdfeb;
     stroke: #53575A;
     stroke-width: 0.5;
     stroke-miterlimit: 10;
 }
 
 .state-two {
-    fill: red;
+    fill: #2d94c1;
     stroke: #53575A;
     stroke-width: 0.5;
     stroke-miterlimit: 10;
 }
 
 .state-three {
-    fill: red;
+    fill: #fadb65;
     stroke: #53575A;
     stroke-width: 0.5;
     stroke-miterlimit: 10;
 }
 
 .state-four {
-    fill: red;
+    fill: #d62831;
     stroke: #53575A;
     stroke-width: 0.5;
     stroke-miterlimit: 10;
