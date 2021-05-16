@@ -1,8 +1,12 @@
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
-$("#page1").show();
+// $("#page1").show();
+// $("#page2").hide();
+// $("#page3").hide();
+
+$("#page1").hide();
 $("#page2").hide();
-$("#page3").hide();
+$("#page3").show();
 
 
 
