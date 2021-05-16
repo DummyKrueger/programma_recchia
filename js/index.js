@@ -210,3 +210,17 @@ $("#input-six").on('keyup change', function () {
         $('.group6 #target').removeClass().addClass("state-four");
     }
 });
+
+
+
+
+
+
+
+// **************************** PRINT OUTPUT ****************************
+
+$("#print-btn").click(function () {
+
+    window.print();
+
+});

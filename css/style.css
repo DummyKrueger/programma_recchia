@@ -422,6 +422,48 @@ input::-webkit-calendar-picker-indicator {
     padding-bottom: 10px;
 }
 
+.page3-logo-hr {
+    border-style: none;
+    background-color: #009483;
+    height: 7px;
+    margin: 0 -1% 40px -1%;
+}
+
+#print-row .col {
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+/* ********************************* PRINT OUTPUT ********************************* */
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .output {
+        visibility: visible;
+        position: absolute;
+        top: -63mm;
+        left: -95.5mm;
+    }
+
+    .output * {
+        visibility: visible;
+    }
+}
+
+.output {
+    background-color: coral;
+    padding: 0;
+    width: 290mm;
+    height: 416mm;
+}
+
 /* ********************************* TEETH ********************************* */
 
 .molar-ext {
