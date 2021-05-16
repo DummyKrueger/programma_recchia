@@ -457,12 +457,51 @@ input::-webkit-calendar-picker-indicator {
     }
 }
 
+
 .output {
-    background-color: coral;
+    background-color: rgb(255, 226, 226);
     padding: 0;
     width: 290mm;
     height: 416mm;
 }
+
+.output .container {
+    padding: 0;
+}
+
+.print-logo {
+    width: 60mm;
+    margin-top: 10mm;
+    margin-left: 20mm;
+}
+
+.print-logo-title {
+    font-family: OpenSans-Bold;
+    font-size: 4.1mm;
+    margin: 2mm 20mm 6mm;
+    width: 500mm;
+}
+
+.print-logo-hr {
+    border-style: none;
+    background-color: #009483;
+    height: 7px;
+    margin: 0;
+}
+
+.print-date-box {
+    display: inline-block;
+    position: absolute;
+    top: 55mm;
+    right: 20mm;
+    border: solid 1mm blue;
+    padding-left: 3mm;
+    padding-right: 3mm;
+}
+
+
+
+
 
 /* ********************************* TEETH ********************************* */
 
