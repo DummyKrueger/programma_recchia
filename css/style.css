@@ -434,75 +434,6 @@ input::-webkit-calendar-picker-indicator {
     margin-bottom: 40px;
 }
 
-/* ********************************* PRINT OUTPUT ********************************* */
-
-@media print {
-    body * {
-        visibility: hidden;
-    }
-
-    body {
-        background: #fff;
-    }
-
-    .output {
-        visibility: visible;
-        position: absolute;
-        top: -63mm;
-        left: -95.5mm;
-    }
-
-    .output * {
-        visibility: visible;
-    }
-}
-
-
-.output {
-    background-color: rgb(255, 226, 226);
-    padding: 0;
-    width: 290mm;
-    height: 416mm;
-}
-
-.output .container {
-    padding: 0;
-}
-
-.print-logo {
-    width: 60mm;
-    margin-top: 10mm;
-    margin-left: 20mm;
-}
-
-.print-logo-title {
-    font-family: OpenSans-Bold;
-    font-size: 4.1mm;
-    margin: 2mm 20mm 6mm;
-    width: 500mm;
-}
-
-.print-logo-hr {
-    border-style: none;
-    background-color: #009483;
-    height: 7px;
-    margin: 0;
-}
-
-.print-date-box {
-    display: inline-block;
-    position: absolute;
-    top: 55mm;
-    right: 20mm;
-    border: solid 1mm blue;
-    padding-left: 3mm;
-    padding-right: 3mm;
-}
-
-
-
-
-
 /* ********************************* TEETH ********************************* */
 
 .molar-ext {
@@ -553,4 +484,186 @@ input::-webkit-calendar-picker-indicator {
     stroke: #53575A;
     stroke-width: 0.5;
     stroke-miterlimit: 10;
+}
+
+/* ********************************* PRINT OUTPUT ********************************* */
+/* le classi vanno ripetute sia in @media print che in
+@media screen. Solo la classe .output è leggermente diversa */
+
+@media screen {
+    .output {
+        background-color: #fff;
+        padding: 0;
+        width: 290mm;
+        height: 408mm;
+        transform: scale(0.76);
+        position: relative;
+        bottom: 50mm;
+    }
+
+    .output .container {
+        padding: 0;
+    }
+
+    .print-logo {
+        width: 60mm;
+        margin-top: 10mm;
+        margin-left: 20mm;
+    }
+
+    .print-logo-title {
+        font-family: OpenSans-Bold;
+        font-size: 4.1mm;
+        margin: 2mm 20mm 6mm;
+        width: 70mm;
+    }
+
+    .print-logo-hr {
+        border-style: none;
+        background-color: #009483;
+        height: 7px;
+        margin: 0;
+    }
+
+    .print-date-box {
+        display: inline-block;
+        position: absolute;
+        top: 51mm;
+        right: 20mm;
+        border: solid 0.7mm #555;
+        color: #555;
+        padding: 0.5mm 5mm;
+        font-family: OpenSans-Bold;
+        font-size: 6mm;
+    }
+
+    /***** MARK *****/
+
+    .print-left-block {
+        float: left;
+        height: 337mm;
+        width: 20mm;
+    }
+
+    .print-right-block {
+        float: right;
+        height: 337mm;
+        width: 20mm;
+    }
+
+    .gradient1 {
+        background: linear-gradient(to right, #009483, #006459);
+        height: 40mm;
+        margin-top: 15mm;
+    }
+
+    .gradient2 {
+        background: linear-gradient(to left, #009483, #006459);
+        height: 40mm;
+        margin-top: 275mm;
+    }
+
+    .print-vertical-line {
+        float: right;
+        margin-top: 7mm;
+        height: 55mm;
+        width: 0.2mm;
+        background-color: #006459;
+    }
+
+    #row1 {
+        display: inline-block;
+    }
+
+    .print-row1-body {
+        display: inline-block;
+        width: 249mm;
+    }
+
+    .print-title-box {
+        float: left;
+        margin-top: 12mm;
+    }
+
+    .print-intro-box {
+        display: inline-block;
+        width: 185mm;
+    }
+
+    .print-big-title {
+        font-family: OpenSans-Bold;
+        font-size: 16mm;
+        margin-left: 1mm;
+        margin-bottom: -2mm;
+    }
+
+    .print-big-sub-title {
+        font-family: OpenSans-Regular;
+        font-size: 7mm;
+        line-height: 1.1;
+        letter-spacing: -0.4mm;
+        width: 60mm;
+        margin-left: 2mm;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .output {
+        visibility: visible;
+        position: absolute;
+        top: -63mm;
+        left: -96mm;
+        background-color: rgb(255, 226, 226);
+        padding: 0;
+        width: 290mm;
+        height: 408mm;
+    }
+
+    .output * {
+        visibility: visible;
+    }
+
+    .output .container {
+        padding: 0;
+    }
+
+    .print-logo {
+        width: 60mm;
+        margin-top: 10mm;
+        margin-left: 20mm;
+    }
+
+    .print-logo-title {
+        font-family: OpenSans-Bold;
+        font-size: 4.1mm;
+        margin: 2mm 20mm 6mm;
+        width: 70mm;
+    }
+
+    .print-logo-hr {
+        border-style: none;
+        background-color: #009483;
+        height: 7px;
+        margin: 0;
+    }
+
+    .print-date-box {
+        display: inline-block;
+        position: absolute;
+        top: 51mm;
+        right: 20mm;
+        border: solid 0.7mm #555;
+        color: #555;
+        padding: 0.5mm 5mm;
+        font-family: OpenSans-Bold;
+        font-size: 6mm;
+    }
 }
