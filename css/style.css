@@ -509,6 +509,7 @@ input::-webkit-calendar-picker-indicator {
 @media screen. Solo la classe .output è leggermente diversa */
 
 @media screen {
+
     .output {
         background-color: #fff;
         padding: 0;
@@ -523,6 +524,7 @@ input::-webkit-calendar-picker-indicator {
         padding: 0;
     }
 
+    /* *********************** header ******************** */
     .print-logo {
         width: 60mm;
         margin-top: 10mm;
@@ -555,6 +557,7 @@ input::-webkit-calendar-picker-indicator {
         font-size: 6mm;
     }
 
+    /* *********************** left & right block ******************** */
     .print-left-block {
         float: left;
         height: 337mm;
@@ -589,6 +592,7 @@ input::-webkit-calendar-picker-indicator {
         background-color: #006459;
     }
 
+    /* *********************** separators ******************** */
     .print-vertical-sep {
         background-color: #006459;
         display: inline-block;
@@ -615,7 +619,21 @@ input::-webkit-calendar-picker-indicator {
         left: 50mm;
     }
 
-    .print-row1 {
+    #sep3.print-horizontal-sep {
+        position: absolute;
+        top: 208mm;
+        left: 50mm;
+    }
+
+    #sep4.print-vertical-sep {
+        position: absolute;
+        top: 208mm;
+        right: 127mm;
+        height: 85mm;
+    }
+
+    /* *********************** row one ******************** */
+    .print-row {
         display: inline-block;
         width: 249mm;
     }
@@ -650,17 +668,192 @@ input::-webkit-calendar-picker-indicator {
     .print-parag {
         font-family: OpenSans-Regular;
         font-size: 5mm;
+        text-align: justify;
     }
 
     /***** MARK *****/
 
-    .print-row2 {
+    /* *********************** row two ******************** */
+    .print-diag-title {
+        font-family: OpenSans-Bold;
+        color: #C4C4C4;
+        font-size: 7mm;
+        margin-top: 10mm;
+        margin-left: 2mm;
+    }
+
+    .print-diag {
+        margin-top: 4mm;
+        margin-left: 2mm;
+        float: left;
+        height: 45mm;
+        width: 60mm;
+    }
+
+    .print-diag-subtitle {
+        font-family: OpenSans-SemiBold;
+        font-size: 4.5mm;
+        width: 55mm;
+        padding: 2mm 1mm;
+        background-color: #dddede;
+    }
+
+    .print-arches {
         display: inline-block;
-        width: 249mm;
+        height: 48mm;
+        width: 141mm;
+    }
+
+    .print-top-arch {
+        float: left;
+        position: relative;
+        right: 10mm;
+        height: 48mm;
+        width: 70mm;
+    }
+
+    .print-bottom-arch {
+        float: right;
+        position: relative;
+        right: 27mm;
+        height: 48mm;
+        width: 70mm;
+    }
+
+    .print-arch-title1 {
+        font-family: OpenSans-Bold;
+        font-size: 5mm;
+        margin-left: 14mm;
+        margin-top: 3mm;
+    }
+
+    .print-arch-title2 {
+        font-family: OpenSans-Bold;
+        font-size: 5mm;
+        margin-left: 17mm;
+        margin-top: 3mm;
+    }
+
+    .print-legend {
+        position: absolute;
+        top: 148mm;
+        right: 20mm;
+        width: 74mm;
+    }
+
+    .legend4,
+    .legend3,
+    .legend2,
+    .legend1,
+    .legend0 {
+        display: inline-block;
+        margin-bottom: 2mm;
+        height: 8mm;
+    }
+
+    .square {
+        float: left;
+        height: 8mm;
+        width: 8mm;
+        border: solid 0.5mm #555;
+    }
+
+    .legend4 .square {
+        background-color: #d62831;
+    }
+
+    .legend3 .square {
+        background-color: #fadb65;
+    }
+
+    .legend2 .square {
+        background-color: #2d94c1;
+    }
+
+    .legend1 .square {
+        background-color: #bbdfeb;
+    }
+
+    .legend-para {
+        font-family: OpenSans-Regular;
+        font-size: 4.5mm;
+        line-height: 1;
+        margin: 0 0 0 9mm;
+    }
+
+    .legend4 .legend-para,
+    .legend3 .legend-para,
+    .legend1 .legend-para {
+        margin-top: 1.5mm;
+    }
+
+    .legend2 .legend-para,
+    .legend0 .legend-para {
+        margin-top: -0.5mm;
+    }
+
+    /* *********************** row three ******************** */
+    #row3.print-row {
+        margin-top: 19mm;
+        margin-left: 2mm;
+        padding-right: 2mm;
+    }
+
+    .print-result-title {
+        font-family: OpenSans-Bold;
+        color: #C4C4C4;
+        font-size: 7mm;
+
+    }
+
+    .print-result-subtitle {
+        font-family: OpenSans-Bold;
+        color: #C4C4C4;
+        font-size: 6mm;
+
+    }
+
+    .print-img-box {
+        float: right;
+        margin-top: 10mm;
+        margin-left: 10mm;
+    }
+
+    .print-img-box img {
+        height: 60mm;
+        margin: 0 5mm;
+    }
+
+    .desc1 {
+        display: inline-block;
+        text-align: center;
+        width: 40mm;
+        margin-left: 6mm;
+        position: relative;
+        bottom: 4mm;
+        font-family: OpenSans-Regular;
+        font-size: 4.3mm;
+    }
+
+    .desc2 {
+        display: inline-block;
+        text-align: center;
+        width: 40mm;
+        margin-left: 12mm;
+        font-family: OpenSans-Regular;
+        font-size: 4.3mm;
+        line-height: 1;
     }
 
 
+
+
 }
+
+
+
+
+
 
 
 
@@ -793,7 +986,7 @@ input::-webkit-calendar-picker-indicator {
         left: 50mm;
     }
 
-    .print-row1 {
+    .print-row {
         display: inline-block;
         width: 249mm;
     }
@@ -828,5 +1021,7 @@ input::-webkit-calendar-picker-indicator {
     .print-parag {
         font-family: OpenSans-Regular;
         font-size: 5mm;
+        text-align: justify;
     }
+
 }
