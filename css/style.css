@@ -486,6 +486,24 @@ input::-webkit-calendar-picker-indicator {
     stroke-miterlimit: 10;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ********************************* PRINT OUTPUT ********************************* */
 /* le classi vanno ripetute sia in @media print che in
 @media screen. Solo la classe .output è leggermente diversa */
@@ -537,8 +555,6 @@ input::-webkit-calendar-picker-indicator {
         font-size: 6mm;
     }
 
-    /***** MARK *****/
-
     .print-left-block {
         float: left;
         height: 337mm;
@@ -546,7 +562,9 @@ input::-webkit-calendar-picker-indicator {
     }
 
     .print-right-block {
-        float: right;
+        position: absolute;
+        right: 0;
+        top: 70mm;
         height: 337mm;
         width: 20mm;
     }
@@ -554,7 +572,7 @@ input::-webkit-calendar-picker-indicator {
     .gradient1 {
         background: linear-gradient(to right, #009483, #006459);
         height: 40mm;
-        margin-top: 15mm;
+        margin-top: 13mm;
     }
 
     .gradient2 {
@@ -565,29 +583,52 @@ input::-webkit-calendar-picker-indicator {
 
     .print-vertical-line {
         float: right;
-        margin-top: 7mm;
+        margin-top: 6mm;
         height: 55mm;
         width: 0.2mm;
         background-color: #006459;
     }
 
-    #row1 {
+    .print-vertical-sep {
+        background-color: #006459;
         display: inline-block;
+        height: 55mm;
+        width: 0.2mm;
     }
 
-    .print-row1-body {
+    .print-horizontal-sep {
+        background-color: #006459;
+        display: inline-block;
+        width: 180mm;
+        height: 0.2mm;
+    }
+
+    #sep1.print-vertical-sep {
+        position: absolute;
+        top: 77mm;
+        left: 85mm;
+    }
+
+    #sep2.print-horizontal-sep {
+        position: absolute;
+        top: 132mm;
+        left: 50mm;
+    }
+
+    .print-row1 {
         display: inline-block;
         width: 249mm;
     }
 
     .print-title-box {
         float: left;
-        margin-top: 12mm;
+        margin-top: 10mm;
     }
 
     .print-intro-box {
-        display: inline-block;
-        width: 185mm;
+        float: right;
+        width: 175mm;
+        margin-top: 11mm;
     }
 
     .print-big-title {
@@ -605,7 +646,32 @@ input::-webkit-calendar-picker-indicator {
         width: 60mm;
         margin-left: 2mm;
     }
+
+    .print-parag {
+        font-family: OpenSans-Regular;
+        font-size: 5mm;
+    }
+
+    /***** MARK *****/
+
+    .print-row2 {
+        display: inline-block;
+        width: 249mm;
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @media print {
     body * {
@@ -665,5 +731,102 @@ input::-webkit-calendar-picker-indicator {
         padding: 0.5mm 5mm;
         font-family: OpenSans-Bold;
         font-size: 6mm;
+    }
+
+    .print-left-block {
+        float: left;
+        height: 337mm;
+        width: 20mm;
+    }
+
+    .print-right-block {
+        position: absolute;
+        right: 0;
+        top: 70mm;
+        height: 337mm;
+        width: 20mm;
+    }
+
+    .gradient1 {
+        background: linear-gradient(to right, #009483, #006459);
+        height: 40mm;
+        margin-top: 13mm;
+    }
+
+    .gradient2 {
+        background: linear-gradient(to left, #009483, #006459);
+        height: 40mm;
+        margin-top: 275mm;
+    }
+
+    .print-vertical-line {
+        float: right;
+        margin-top: 6mm;
+        height: 55mm;
+        width: 0.2mm;
+        background-color: #006459;
+    }
+
+    .print-vertical-sep {
+        background-color: #006459;
+        display: inline-block;
+        height: 55mm;
+        width: 0.2mm;
+    }
+
+    .print-horizontal-sep {
+        background-color: #006459;
+        display: inline-block;
+        width: 180mm;
+        height: 0.2mm;
+    }
+
+    #sep1.print-vertical-sep {
+        position: absolute;
+        top: 77mm;
+        left: 85mm;
+    }
+
+    #sep2.print-horizontal-sep {
+        position: absolute;
+        top: 132mm;
+        left: 50mm;
+    }
+
+    .print-row1 {
+        display: inline-block;
+        width: 249mm;
+    }
+
+    .print-title-box {
+        float: left;
+        margin-top: 10mm;
+    }
+
+    .print-intro-box {
+        float: right;
+        width: 175mm;
+        margin-top: 11mm;
+    }
+
+    .print-big-title {
+        font-family: OpenSans-Bold;
+        font-size: 16mm;
+        margin-left: 1mm;
+        margin-bottom: -2mm;
+    }
+
+    .print-big-sub-title {
+        font-family: OpenSans-Regular;
+        font-size: 7mm;
+        line-height: 1.1;
+        letter-spacing: -0.4mm;
+        width: 60mm;
+        margin-left: 2mm;
+    }
+
+    .print-parag {
+        font-family: OpenSans-Regular;
+        font-size: 5mm;
     }
 }
