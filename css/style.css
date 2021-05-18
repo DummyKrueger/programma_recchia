@@ -580,8 +580,8 @@ input::-webkit-calendar-picker-indicator {
 
     .gradient2 {
         background: linear-gradient(to left, #009483, #006459);
-        height: 40mm;
-        margin-top: 275mm;
+        height: 15mm;
+        margin-top: 317mm;
     }
 
     .print-vertical-line {
@@ -674,9 +674,14 @@ input::-webkit-calendar-picker-indicator {
     /***** MARK *****/
 
     /* *********************** row two ******************** */
+    #row3 .print-parag {
+        margin-top: 3mm;
+        margin-bottom: 3mm;
+    }
+
     .print-diag-title {
         font-family: OpenSans-Bold;
-        color: #C4C4C4;
+        color: #797979;
         font-size: 7mm;
         margin-top: 10mm;
         margin-left: 2mm;
@@ -801,15 +806,15 @@ input::-webkit-calendar-picker-indicator {
 
     .print-result-title {
         font-family: OpenSans-Bold;
-        color: #C4C4C4;
+        color: #797979;
         font-size: 7mm;
 
     }
 
     .print-result-subtitle {
         font-family: OpenSans-Bold;
-        color: #C4C4C4;
-        font-size: 6mm;
+        color: #797979;
+        font-size: 5.5mm;
 
     }
 
@@ -845,7 +850,14 @@ input::-webkit-calendar-picker-indicator {
         line-height: 1;
     }
 
-
+    .sheet-num {
+        position: absolute;
+        bottom: 6mm;
+        right: 25mm;
+        font-family: OpenSans-ExtraBold;
+        font-size: 10mm;
+        color: #dddede;
+    }
 
 
 }
@@ -948,8 +960,8 @@ input::-webkit-calendar-picker-indicator {
 
     .gradient2 {
         background: linear-gradient(to left, #009483, #006459);
-        height: 40mm;
-        margin-top: 275mm;
+        height: 15mm;
+        margin-top: 317mm;
     }
 
     .print-vertical-line {
