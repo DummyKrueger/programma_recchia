@@ -429,7 +429,7 @@ input::-webkit-calendar-picker-indicator {
     margin: 0 -1% 40px -1%;
 }
 
-#print-row .col {
+#alpha .col {
     padding: 0;
     margin-bottom: 40px;
 }
@@ -505,12 +505,12 @@ input::-webkit-calendar-picker-indicator {
 
 
 /* ********************************* PRINT OUTPUT ********************************* */
-/* le classi vanno ripetute sia in @media print che in
-@media screen. Solo la classe .output è leggermente diversa */
+/* Copia/incollare tutte le classi contenute in @media screen {} all'interno di
+    @media print {}, partendo dalla classe .print-logo in giù. */
 
 @media screen {
 
-    .output {
+    .output1 {
         background-color: #fff;
         padding: 0;
         width: 290mm;
@@ -520,7 +520,21 @@ input::-webkit-calendar-picker-indicator {
         bottom: 50mm;
     }
 
-    .output .container {
+    .output1 .container {
+        padding: 0;
+    }
+
+    .output2 {
+        background-color: #fff;
+        padding: 0;
+        width: 290mm;
+        height: 408mm;
+        transform: scale(0.76);
+        position: relative;
+        bottom: 150mm;
+    }
+
+    .output2 .container {
         padding: 0;
     }
 
@@ -621,15 +635,28 @@ input::-webkit-calendar-picker-indicator {
 
     #sep3.print-horizontal-sep {
         position: absolute;
-        top: 208mm;
+        top: 218mm;
         left: 50mm;
     }
 
     #sep4.print-vertical-sep {
         position: absolute;
-        top: 208mm;
+        top: 218mm;
         right: 127mm;
         height: 85mm;
+    }
+
+    #sep5.print-horizontal-sep {
+        position: absolute;
+        top: 208mm;
+        right: 20mm;
+    }
+
+    #sep6.print-vertical-sep {
+        position: absolute;
+        top: 120mm;
+        right: 20mm;
+        height: 120mm;
     }
 
     /* *********************** row one ******************** */
@@ -671,8 +698,6 @@ input::-webkit-calendar-picker-indicator {
         text-align: justify;
     }
 
-    /***** MARK *****/
-
     /* *********************** row two ******************** */
     #row3 .print-parag {
         margin-top: 3mm;
@@ -683,7 +708,7 @@ input::-webkit-calendar-picker-indicator {
         font-family: OpenSans-Bold;
         color: #797979;
         font-size: 7mm;
-        margin-top: 10mm;
+        margin-top: 15mm;
         margin-left: 2mm;
     }
 
@@ -741,7 +766,7 @@ input::-webkit-calendar-picker-indicator {
 
     .print-legend {
         position: absolute;
-        top: 148mm;
+        top: 153mm;
         right: 20mm;
         width: 74mm;
     }
@@ -799,7 +824,7 @@ input::-webkit-calendar-picker-indicator {
 
     /* *********************** row three ******************** */
     #row3.print-row {
-        margin-top: 19mm;
+        margin-top: 24mm;
         margin-left: 2mm;
         padding-right: 2mm;
     }
@@ -859,6 +884,153 @@ input::-webkit-calendar-picker-indicator {
         color: #dddede;
     }
 
+    /* *********************** row four ******************** */
+
+    #row4.print-row {
+        margin-top: 10mm;
+        margin-left: 2mm;
+        padding-right: 10mm;
+    }
+
+    .print-list-title {
+        margin-left: 5mm;
+        margin-top: 4mm;
+        font-family: OpenSans-SemiBold;
+        font-size: 4.8mm;
+    }
+
+    .print-list li {
+        margin-top: 2mm;
+    }
+
+    .print-list-foot {
+        margin-top: 4mm;
+        font-family: OpenSans-SemiBold;
+        font-size: 4.8mm;
+        line-height: 1.2;
+    }
+
+    /* *********************** row five ******************** */
+
+    #row5.print-row {
+        margin-top: 17mm;
+        margin-left: 2mm;
+    }
+
+    .float-L {
+        float: left;
+    }
+
+    .section2-img-box {
+        background-color: #dddede;
+        width: 109mm;
+        margin-bottom: 5mm;
+        border-radius: 15mm 0 0 0;
+        padding: 2mm 2mm 2mm 0;
+    }
+
+    .print-parag-except1 {
+        font-family: OpenSans-Regular;
+        font-size: 5mm;
+        text-align: justify;
+        margin-top: 3mm;
+        margin-bottom: 3mm;
+    }
+
+    .print-parag-except2 {
+        font-family: OpenSans-Regular;
+        font-size: 5mm;
+        text-align: justify;
+        margin-top: 6mm;
+        margin-bottom: 8mm;
+    }
+
+    .section2-img-box img {
+        margin: 3mm 6mm 5mm 0;
+        float: left;
+    }
+
+    .odd-num {
+        font-family: OpenSans-ExtraBold;
+        font-size: 10mm;
+        color: #009483;
+    }
+
+    #one1 {
+        background-color: #dddede;
+        width: 12mm;
+        height: 12mm;
+        border-radius: 50%;
+        padding-left: 2mm;
+        position: absolute;
+        left: 42mm;
+        top: 217.5mm;
+    }
+
+    #two2 {
+        background-color: #dddede;
+        width: 12mm;
+        height: 12mm;
+        border-radius: 50%;
+        padding-left: 2mm;
+        position: absolute;
+        left: 42mm;
+        top: 264mm;
+    }
+
+    #three3 {
+        background-color: #dddede;
+        width: 12mm;
+        height: 12mm;
+        border-radius: 50%;
+        padding-left: 2mm;
+        position: absolute;
+        left: 42mm;
+        top: 302mm;
+    }
+
+    .smoke-box {
+        float: right;
+        background-color: #dddede;
+        width: 90mm;
+        padding: 5mm;
+        border-radius: 15mm 0 0 0;
+        margin-right: 20mm;
+    }
+
+    .markk-container {
+        float: left;
+        background-color: #eb5b85;
+        width: 22mm;
+        height: 22mm;
+        border-radius: 50%;
+        margin: 0 4mm 0 -5mm;
+    }
+
+    .markk {
+        position: relative;
+        left: 8mm;
+        bottom: 1mm;
+        font-family: OpenSans-ExtraBold;
+        font-size: 20mm;
+        color: #dddede;
+    }
+
+    /* *********************** row six ******************** */
+
+    #row6.print-row {
+        margin-left: 2mm;
+    }
+
+    .ending {
+        text-align: justify;
+        font-family: OpenSans-Regular;
+        font-size: 4.3mm;
+        margin-top: 6mm;
+        margin-right: 15mm;
+
+    }
+
 
 }
 
@@ -876,7 +1048,8 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-
+/* aggiustare la posizione di output2 nel print format in modo che
+    vada a pagina 2 */
 
 @media print {
     body * {
@@ -887,7 +1060,7 @@ input::-webkit-calendar-picker-indicator {
         background: #fff;
     }
 
-    .output {
+    .output1 {
         visibility: visible;
         position: absolute;
         top: -63mm;
@@ -898,142 +1071,31 @@ input::-webkit-calendar-picker-indicator {
         height: 408mm;
     }
 
-    .output * {
+    .output1 * {
         visibility: visible;
     }
 
-    .output .container {
+    .output2 {
+        visibility: visible;
+        position: absolute;
+        top: -163mm;
+        left: -96mm;
+        background-color: rgb(183, 255, 195);
         padding: 0;
+        width: 290mm;
+        height: 408mm;
     }
 
-    .print-logo {
-        width: 60mm;
-        margin-top: 10mm;
-        margin-left: 20mm;
+    .output2 * {
+        visibility: visible;
     }
 
-    .print-logo-title {
-        font-family: OpenSans-Bold;
-        font-size: 4.1mm;
-        margin: 2mm 20mm 6mm;
-        width: 70mm;
-    }
 
-    .print-logo-hr {
-        border-style: none;
-        background-color: #009483;
-        height: 7px;
-        margin: 0;
-    }
 
-    .print-date-box {
-        display: inline-block;
-        position: absolute;
-        top: 51mm;
-        right: 20mm;
-        border: solid 0.7mm #555;
-        color: #555;
-        padding: 0.5mm 5mm;
-        font-family: OpenSans-Bold;
-        font-size: 6mm;
-    }
 
-    .print-left-block {
-        float: left;
-        height: 337mm;
-        width: 20mm;
-    }
 
-    .print-right-block {
-        position: absolute;
-        right: 0;
-        top: 70mm;
-        height: 337mm;
-        width: 20mm;
-    }
 
-    .gradient1 {
-        background: linear-gradient(to right, #009483, #006459);
-        height: 40mm;
-        margin-top: 13mm;
-    }
 
-    .gradient2 {
-        background: linear-gradient(to left, #009483, #006459);
-        height: 15mm;
-        margin-top: 317mm;
-    }
 
-    .print-vertical-line {
-        float: right;
-        margin-top: 6mm;
-        height: 55mm;
-        width: 0.2mm;
-        background-color: #006459;
-    }
-
-    .print-vertical-sep {
-        background-color: #006459;
-        display: inline-block;
-        height: 55mm;
-        width: 0.2mm;
-    }
-
-    .print-horizontal-sep {
-        background-color: #006459;
-        display: inline-block;
-        width: 180mm;
-        height: 0.2mm;
-    }
-
-    #sep1.print-vertical-sep {
-        position: absolute;
-        top: 77mm;
-        left: 85mm;
-    }
-
-    #sep2.print-horizontal-sep {
-        position: absolute;
-        top: 132mm;
-        left: 50mm;
-    }
-
-    .print-row {
-        display: inline-block;
-        width: 249mm;
-    }
-
-    .print-title-box {
-        float: left;
-        margin-top: 10mm;
-    }
-
-    .print-intro-box {
-        float: right;
-        width: 175mm;
-        margin-top: 11mm;
-    }
-
-    .print-big-title {
-        font-family: OpenSans-Bold;
-        font-size: 16mm;
-        margin-left: 1mm;
-        margin-bottom: -2mm;
-    }
-
-    .print-big-sub-title {
-        font-family: OpenSans-Regular;
-        font-size: 7mm;
-        line-height: 1.1;
-        letter-spacing: -0.4mm;
-        width: 60mm;
-        margin-left: 2mm;
-    }
-
-    .print-parag {
-        font-family: OpenSans-Regular;
-        font-size: 5mm;
-        text-align: justify;
-    }
 
 }
