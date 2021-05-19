@@ -1,13 +1,8 @@
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
-// $("#page1").show();
-// $("#page2").hide();
-// $("#page3").hide();
-
-$("#page1").hide();
+$("#page1").show();
 $("#page2").hide();
-$("#page3").show();
-
+$("#page3").hide();
 
 
 $("#page1-nxt-btn").click(function () {
