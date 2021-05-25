@@ -1,3 +1,38 @@
+// **************************** EXAM DATE TODAY PRECOMPILATION ****************************
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+$("#exam-date").attr("value", today);
+
+
+
+
+
+// **************************** AGE PRECOMPILATION ****************************
+
+$("#birth-date").on('keyup change', function () {
+    var birthDate = $("#birth-date").val();
+    birthDate = birthDate.replace('-', '').replace('-', '');
+    var ye = Number(birthDate.substr(0, 4));
+    var mon = Number(birthDate.substr(4, 2)) - 1;
+    var dy = Number(birthDate.substr(6, 2));
+    var tod = new Date();
+    var age = tod.getFullYear() - ye;
+    if (tod.getMonth() < mon || (tod.getMonth() == mon && tod.getDate() < dy)) {
+        age--;
+    };
+
+    $("#age").attr("value", age);
+
+});
+
+
+
+
+
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
 // ****************** hover style ******************
@@ -18,7 +53,6 @@ $("#page2-prv-btn").hover(function () {
 }, function () {
     $("#page2-prv-btn img").removeClass("icon-hover");
 });
-
 
 
 // ****************** functionality ******************
@@ -158,15 +192,23 @@ $("#page2-nxt-btn").click(function () {
 
     pname = $("#pname-orig").val();
 
+    var exdate = $("#exam-date").val();
+    var day = exdate.slice(8, 10);
+    var month = exdate.slice(5, 7);
+    var year = exdate.slice(0, 4);
+    exdate = day + " / " + month + " / " + year;
+
+    if ($('input:radio[id=smoke-yes-input]:checked').val() == "") {
+        var smoke = "yes";
+    };
+
+    if ($('input:radio[id=smoke-no-input]:checked').val() == "") {
+        var smoke = "no";
+    };
+
     var highest = Math.max(input1, input2, input3, input4, input5, input6);
 
-    var path = "result" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
+    var path = "result" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
 
     $("#dataPath").attr("href", path);
 });
-
-
-
-
-
-

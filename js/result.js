@@ -15,9 +15,16 @@ const allData = new URLSearchParams(queryString);
 
 var oname = allData.get('oname');
 var pname = allData.get('pname');
+var exdate = allData.get('exdate');
+var smoke = allData.get('smoke');
 
 $("#oname-dest").text(oname);
 $("#pname-dest").text(pname);
+$(".print-date-box").text(exdate);
+
+if (smoke == "no") {
+    $(".smoke-box").css("display", "none");
+}
 
 
 // **************************** TEETH COLORATION ****************************

@@ -326,7 +326,11 @@ p {
     outline: none;
 }
 
-input::-webkit-calendar-picker-indicator {
+.top input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.bottom input::-webkit-calendar-picker-indicator {
     display: none;
 }
 
@@ -489,6 +493,8 @@ input::-webkit-calendar-picker-indicator {
 .sub-container2 {
     display: inline-block;
     width: 28%;
+    position: relative;
+    bottom: 1px;
 }
 
 .sub-container3 {
