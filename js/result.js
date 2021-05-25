@@ -1,11 +1,30 @@
+// **************************** PREV BUTTON ****************************
+
+$("#roof-prv-btn").hover(function () {
+    $("#roof-prv-btn img").addClass("icon-hover");
+}, function () {
+    $("#roof-prv-btn img").removeClass("icon-hover");
+});
+
+
+// **************************** DATA COLLECTION/INJECTION****************************
+
 const queryString = window.location.search;
 
 const allData = new URLSearchParams(queryString);
 
+var oname = allData.get('oname');
+var pname = allData.get('pname');
+
+$("#oname-dest").text(oname);
+$("#pname-dest").text(pname);
+
+
+// **************************** TEETH COLORATION ****************************
+
 for (var i = 1; i < 7; i++) {
     teethColoration(allData.get('input' + i), i)
 };
-
 
 
 function teethColoration(inputValue, groupNumber) {

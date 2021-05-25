@@ -37,10 +37,12 @@
                             STAMPA
                         </button>
 
-                        <button id="roof-prv-btn" class="btn prv-button">
-                            <img class="icon" src="images/angle-left.jpg" alt="angle-icon">
-                            INDIETRO
-                        </button>
+                        <a href="index.html">
+                            <button id="roof-prv-btn" class="btn prv-button">
+                                <img class="icon" src="images/angle-left.jpg" alt="angle-icon">
+                                INDIETRO
+                            </button>
+                        </a>
 
                     </div>
 
@@ -94,9 +96,10 @@
                                 <span id="sep1" class="print-vertical-sep"></span>
 
                                 <div class="print-intro-box">
-                                    <p class="print-parag">GENTILE Nome Cognome!</p>
+                                    <p class="print-parag">GENTILE <span id="pname-dest">Nome Cognome</span>!</p>
                                     <p class="print-parag">
-                                        Oggi è stato sottoposto dall'operatore Nome Cognome ad un test di screening
+                                        Oggi è stato sottoposto dall'operatore <span id="oname-dest">Nome Cognome</span>
+                                        ad un test di screening
                                         parodontale PSR presso il nostro studio per scoprire se ha una
                                         malattia parodontale (gengivale) e per determinare la necessità di ulteriori
                                         diagnosi e cure. Di seguito il risultato del test e le indicazioni che Le
@@ -1021,7 +1024,7 @@
     <!-- ******************************* JavaScript ******************************* -->
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/result5.js"></script>
+    <script src="js/result.js"></script>
     <script src="https://kit.fontawesome.com/570bcc97c6.js" crossorigin="anonymous"></script>
 </body>
 

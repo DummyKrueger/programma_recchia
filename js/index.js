@@ -19,12 +19,6 @@ $("#page2-prv-btn").hover(function () {
     $("#page2-prv-btn img").removeClass("icon-hover");
 });
 
-$("#roof-prv-btn").hover(function () {
-    $("#roof-prv-btn img").addClass("icon-hover");
-}, function () {
-    $("#roof-prv-btn img").removeClass("icon-hover");
-});
-
 
 
 // ****************** functionality ******************
@@ -63,13 +57,6 @@ $(".teeth-inputs").on('change keyup', function () {
 
 
 // **************************** TEETH GROUPS COLORATION ****************************
-
-var input1 = "0";
-var input2 = "0";
-var input3 = "0";
-var input4 = "0";
-var input5 = "0";
-var input6 = "0";
 
 $("#input-one").on('keyup change', function () {
     if ($(this).val() == "4*") {
@@ -155,11 +142,25 @@ function teethColoration(inputValue, groupNumber) {
 
 // **************************** DATA TRANSMISSION TO PAGE 3 ****************************
 
+var oname = "Nome Cognome";
+var pname = "Nome Cognome";
+var input1 = "0";
+var input2 = "0";
+var input3 = "0";
+var input4 = "0";
+var input5 = "0";
+var input6 = "0";
+
+
 $("#page2-nxt-btn").click(function () {
+
+    oname = $("#oname-orig").val();
+
+    pname = $("#pname-orig").val();
 
     var highest = Math.max(input1, input2, input3, input4, input5, input6);
 
-    var path = "result" + highest + ".html" + "?" + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
+    var path = "result" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
 
     $("#dataPath").attr("href", path);
 });
