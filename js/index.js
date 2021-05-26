@@ -1,20 +1,28 @@
 // **************************** PROGRAM SELECTION RESPONSE ****************************
 
+var toPage2 = "#page2PSR";
+
 $("#program-selector").on("change", function () {
     if ($("#program-selector").val() == "DMFT") {
+        toPage2 = "#page2DMFT";
         $("#page1-subtitle").html("<p>ANALISI</p><p>SITUAZIONE</p><p>DENTALE</p>");
         $("#page1-nxt-btn").css("top", "0");
         $("#page1-nxt-btn").css("left", "200px");
         $(".DMFT-radio-teeth").css("display", "block");
         $("#internal.vertical-line").css("height", "430px");
+        $("#bodyPage1 .right-block").css("margin-top", "350px");
     }
+
     if ($("#program-selector").val() == "PSR") {
+        toPage2 = "#page2PSR";
         $("#page1-subtitle").html("PERIODONTAL SCREENING AND RECORDING");
         $("#page1-nxt-btn").css("top", "50px");
         $("#page1-nxt-btn").css("left", "300px");
         $(".DMFT-radio-teeth").css("display", "none");
         $("#internal.vertical-line").css("height", "310px");
+        $("#bodyPage1 .right-block").css("margin-top", "250px");
     }
+
 });
 
 
@@ -84,30 +92,52 @@ $("#page1-nxt-btn").hover(function () {
     $("#page1-nxt-btn img").removeClass("icon-hover");
 });
 
-$("#page2-nxt-btn").hover(function () {
-    $("#page2-nxt-btn img").addClass("icon-hover");
+$("#page2PSR-nxt-btn").hover(function () {
+    $("#page2PSR-nxt-btn img").addClass("icon-hover");
 }, function () {
-    $("#page2-nxt-btn img").removeClass("icon-hover");
+    $("#page2PSR-nxt-btn img").removeClass("icon-hover");
 });
 
-$("#page2-prv-btn").hover(function () {
-    $("#page2-prv-btn img").addClass("icon-hover");
+$("#page2PSR-prv-btn").hover(function () {
+    $("#page2PSR-prv-btn img").addClass("icon-hover");
 }, function () {
-    $("#page2-prv-btn img").removeClass("icon-hover");
+    $("#page2PSR-prv-btn img").removeClass("icon-hover");
+});
+
+$("#page2DMFT-nxt-btn").hover(function () {
+    $("#page2DMFT-nxt-btn img").addClass("icon-hover");
+}, function () {
+    $("#page2DMFT-nxt-btn img").removeClass("icon-hover");
+});
+
+$("#page2DMFT-prv-btn").hover(function () {
+    $("#page2DMFT-prv-btn img").addClass("icon-hover");
+}, function () {
+    $("#page2DMFT-prv-btn img").removeClass("icon-hover");
 });
 
 
 // ****************** functionality ******************
-$("#page1").show();
-$("#page2").hide();
+// $("#page1").show();
+// $("#page2PSR").hide();
+// $("#page2DMFT").hide();
+
+$("#page1").hide();
+$("#page2PSR").hide();
+$("#page2DMFT").show();
 
 $("#page1-nxt-btn").click(function () {
     $("#page1").hide();
-    $("#page2").show();
+    $(toPage2).show();
 });
 
-$("#page2-prv-btn").click(function () {
-    $("#page2").hide();
+$("#page2PSR-prv-btn").click(function () {
+    $("#page2PSR").hide();
+    $("#page1").show();
+});
+
+$("#page2DMFT-prv-btn").click(function () {
+    $("#page2DMFT").hide();
     $("#page1").show();
 });
 
@@ -228,7 +258,7 @@ var input5 = "0";
 var input6 = "0";
 
 
-$("#page2-nxt-btn").click(function () {
+$("#page2PSR-nxt-btn").click(function () {
 
     oname = $("#oname-orig").val();
 
@@ -250,7 +280,7 @@ $("#page2-nxt-btn").click(function () {
 
     var highest = Math.max(input1, input2, input3, input4, input5, input6);
 
-    var path = "result" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
+    var path = "psr" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
 
     $("#dataPath").attr("href", path);
 });

@@ -26,7 +26,11 @@ OpenSans-LightItalic
         margin-top: 250px;
     }
 
-    #bodyPage2 .right-block {
+    #bodypage2PSR .right-block {
+        margin-top: 550px;
+    }
+
+    #bodypage2DMFT .right-block {
         margin-top: 550px;
     }
 
@@ -75,7 +79,11 @@ OpenSans-LightItalic
         margin-top: 250px;
     }
 
-    #bodyPage2 .right-block {
+    #bodypage2PSR .right-block {
+        margin-top: 430px;
+    }
+
+    #bodypage2DMFT .right-block {
         margin-top: 430px;
     }
 
@@ -124,7 +132,11 @@ OpenSans-LightItalic
         margin-top: 250px;
     }
 
-    #bodyPage2 .right-block {
+    #bodypage2PSR .right-block {
+        margin-top: 400px;
+    }
+
+    #bodypage2DMFT .right-block {
         margin-top: 400px;
     }
 
@@ -454,7 +466,11 @@ p {
         margin-top: 250px;
     }
 
-    #bodyPage2 .right-block {
+    #bodypage2PSR .right-block {
+        margin-top: 370px;
+    }
+
+    #bodypage2DMFT .right-block {
         margin-top: 370px;
     }
 }
