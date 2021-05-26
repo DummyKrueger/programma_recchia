@@ -25,8 +25,9 @@ $("#birth-date").on('keyup change', function () {
         age--;
     };
 
-    $("#age").attr("value", age);
-
+    if (ye > 1800) {
+        $("#age").attr("value", age);
+    };
 });
 
 
