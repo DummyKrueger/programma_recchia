@@ -1,3 +1,25 @@
+// **************************** PROGRAM SELECTION RESPONSE ****************************
+
+$("#program-selector").on("change", function () {
+    if ($("#program-selector").val() == "DMFT") {
+        $("#page1-subtitle").html("<p>ANALISI</p><p>SITUAZIONE</p><p>DENTALE</p>");
+        $("#page1-nxt-btn").css("top", "0");
+        $("#page1-nxt-btn").css("left", "200px");
+        $(".DMFT-radio-teeth").css("display", "block");
+        $("#internal.vertical-line").css("height", "430px");
+    }
+    if ($("#program-selector").val() == "PSR") {
+        $("#page1-subtitle").html("PERIODONTAL SCREENING AND RECORDING");
+        $("#page1-nxt-btn").css("top", "50px");
+        $("#page1-nxt-btn").css("left", "300px");
+        $(".DMFT-radio-teeth").css("display", "none");
+        $("#internal.vertical-line").css("height", "310px");
+    }
+});
+
+
+
+
 // **************************** EXAM DATE TODAY PRECOMPILATION ****************************
 
 var today = new Date();
@@ -29,6 +51,25 @@ $("#birth-date").on('keyup change', function () {
         $("#age").attr("value", age);
     };
 });
+
+
+
+
+// **************************** DMFT FIRST PAGE TEETH ****************************
+
+$("#dec-input, #adul-input").on("change", function () {
+    if ($('input:radio[id=dec-input]:checked').val() == "") {
+        $(".tee-img1").css("opacity", "1")
+    } else {
+        $(".tee-img1").css("opacity", "0.2")
+    };
+    if ($('input:radio[id=adul-input]:checked').val() == "") {
+        $(".tee-img2").css("opacity", "1")
+    } else {
+        $(".tee-img2").css("opacity", "0.2")
+    };
+});
+
 
 
 

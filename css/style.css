@@ -42,6 +42,7 @@ OpenSans-LightItalic
     .bottom-left-box {
         background-color: #dddede;
         margin-right: 120px;
+        height: 142px;
     }
 
     #internal.vertical-line {
@@ -90,6 +91,7 @@ OpenSans-LightItalic
     .bottom-left-box {
         background-color: #dddede;
         margin-right: 35px;
+        height: 142px;
     }
 
     #internal.vertical-line {
@@ -138,6 +140,7 @@ OpenSans-LightItalic
     .bottom-left-box {
         background-color: #dddede;
         margin-right: 35px;
+        height: 142px;
     }
 
     #internal.vertical-line {
@@ -198,6 +201,17 @@ p {
     font-family: OpenSans-Bold;
     font-size: 3.5rem;
     margin-left: 10px;
+}
+
+#program-selector.big-title {
+    color: #555;
+    border: none;
+    width: 65%;
+    margin: -6px 0 -5px 5px;
+}
+
+#program-selector.big-title:focus {
+    outline: none;
 }
 
 @media (max-width: 1399px) {
@@ -543,8 +557,46 @@ p {
     .bottom-left-box {
         background-color: #dddede;
         margin-right: 15px;
+        height: 142px;
     }
 }
+
+
+
+/* ********************** DMFT FIRST PAGE VARIATIONS ********************* */
+
+.DMFT-radio-teeth {
+    display: none;
+}
+
+.DMFT-radio-teeth .one {
+    display: inline-block;
+    position: relative;
+    bottom: 65px;
+    left: 25px;
+    z-index: 100;
+}
+
+.DMFT-radio-teeth .two {
+    display: inline-block;
+    position: relative;
+    bottom: 65px;
+    left: 15px;
+    z-index: 100;
+}
+
+.tee-img1 {
+    opacity: 0.2;
+    position: relative;
+    bottom: 15px;
+}
+
+.tee-img2 {
+    opacity: 0.2;
+    position: relative;
+    bottom: 15px;
+}
+
 
 /* ********************************* SECOND PAGE ********************************* */
 
