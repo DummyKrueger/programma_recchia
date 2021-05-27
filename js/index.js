@@ -251,7 +251,7 @@ function teethColoration(inputValue, groupNumber) {
 
 // **************************** DMFT TEETH COLORATION ****************************
 
-$(".col-5 select").on("change", function (gamma) {
+$(".col-5 select").on("change", function () {
 
     var inputId = this.id;
 
