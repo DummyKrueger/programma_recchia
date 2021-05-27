@@ -56,7 +56,8 @@ $("#birth-date").on('keyup change', function () {
     };
 
     if (ye > 1800) {
-        $("#age").attr("value", age);
+        // $("#age").attr("value", age);
+        $("#age").val(age);
     };
 });
 
@@ -146,7 +147,7 @@ $("#page2DMFT-prv-btn").click(function () {
 
 
 
-// **************************** PAGE 2 INPUTS CONTROL ****************************
+// **************************** PSR PAGE 2 INPUTS CONTROL ****************************
 
 $(".teeth-inputs").on('change keyup', function () {
     if ($(this).val() > 4) {
@@ -162,7 +163,7 @@ $(".teeth-inputs").on('change keyup', function () {
 
 
 
-// **************************** TEETH GROUPS COLORATION ****************************
+// **************************** PSR TEETH GROUPS COLORATION ****************************
 
 $("#input-one").on('keyup change', function () {
     if ($(this).val() == "4*") {
@@ -242,6 +243,34 @@ function teethColoration(inputValue, groupNumber) {
         $(selection).removeClass().addClass("state-four");
     }
 };
+
+
+
+
+
+
+// **************************** DMFT TEETH COLORATION ****************************
+
+$(".col-5 select").on("change", function (gamma) {
+
+    var inputId = this.id;
+
+    var teethId = "#" + inputId.slice(5);
+
+    if ($(this).val() == "-") {
+        $(teethId).removeClass().addClass("dmft-none");
+    };
+    if ($(this).val() == "D") {
+        $(teethId).removeClass().addClass("dmft-d");
+    };
+    if ($(this).val() == "M") {
+        $(teethId).removeClass().addClass("dmft-m");
+    };
+    if ($(this).val() == "F") {
+        $(teethId).removeClass().addClass("dmft-f");
+    };
+});
+
 
 
 

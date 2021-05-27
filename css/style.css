@@ -355,12 +355,9 @@ p {
     outline: none;
 }
 
-.top input::-webkit-calendar-picker-indicator {
-    display: none;
-}
-
-.bottom input::-webkit-calendar-picker-indicator {
-    display: none;
+[list]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 30px;
 }
 
 /* ********************************* BUTTONS ********************************* */
@@ -614,7 +611,7 @@ p {
 }
 
 
-/* ********************************* SECOND PAGE ********************************* */
+/* ********************************* PSR SECOND PAGE ********************************* */
 
 .top-title-box {
     padding-left: 0;
@@ -664,6 +661,63 @@ p {
 
 .bottom input {
     margin: 0 15px 0 15px;
+}
+
+
+/* ********************************* DMFT SECOND PAGE ********************************* */
+
+.dmft-page2-title {
+    display: inline-block;
+    font-family: OpenSans-ExtraBold;
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+.dmft-page2-subtitle {
+    display: inline-block;
+    font-family: OpenSans-Bold;
+    font-size: 1rem;
+    margin-left: 4px;
+}
+
+.dmft-page2-extratitle {
+    font-family: OpenSans-Bold;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgb(214 214 214);
+}
+
+.dmft-inputs {
+    position: relative;
+    font-family: OpenSans-SemiBold;
+    border-width: 1px;
+    border-color: #555;
+    height: 25px;
+    font-size: 13px;
+    color: #555;
+    width: 11%;
+}
+
+.dmft-inputs:focus {
+    background-color: #e7efcc;
+    outline: none;
+}
+
+.dmft-index-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 80px;
+    background-color: #dddede;
+}
+
+.dmft-button-box {
+    text-align: center;
+}
+
+#page2DMFT-prv-btn {
+    margin-top: 0;
+    margin-right: 10px;
 }
 
 /* ********************************* TEETH ********************************* */
@@ -718,6 +772,33 @@ p {
     stroke-miterlimit: 10;
 }
 
+.dmft-none {
+    fill: none;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.dmft-d {
+    fill: #a9abac;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.dmft-m {
+    fill: #7fc9c1;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.dmft-f {
+    fill: #d0df99;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
 
 
 /* ********************************* PRINT ROOF ********************************* */
@@ -744,3 +825,142 @@ p {
     padding: 0;
     margin-bottom: 40px;
 }
+
+
+
+
+/* **************************** DMFT PAGE2 INPUTS POSITION **************************** */
+
+#dmft-teeth1.dmft-inputs {
+    top: 218px;
+    right: 5px;
+}
+
+#dmft-teeth2.dmft-inputs {
+    top: 182px;
+    right: 39px;
+}
+
+#dmft-teeth3.dmft-inputs {
+    top: 144px;
+    right: 68px;
+}
+
+#dmft-teeth4.dmft-inputs {
+    top: 114px;
+    right: 96px;
+}
+
+#dmft-teeth5.dmft-inputs {
+    top: 74px;
+    right: 141px;
+}
+
+#dmft-teeth6.dmft-inputs {
+    top: 38px;
+    right: 175px;
+}
+
+/* #dmft-teeth7.dmft-inputs{
+
+} */
+
+/* #dmft-teeth8.dmft-inputs{
+
+} */
+
+/* #dmft-teeth9.dmft-inputs{
+
+} */
+
+/* #dmft-teeth10.dmft-inputs{
+
+} */
+
+/* #dmft-teeth11.dmft-inputs{
+
+} */
+
+/* #dmft-teeth12.dmft-inputs{
+
+} */
+
+/* #dmft-teeth13.dmft-inputs{
+
+} */
+
+/* #dmft-teeth14.dmft-inputs{
+
+} */
+
+/* #dmft-teeth15.dmft-inputs{
+
+} */
+
+/* #dmft-teeth16.dmft-inputs{
+
+} */
+
+/* #dmft-teeth17.dmft-inputs{
+
+} */
+
+/* #dmft-teeth18.dmft-inputs{
+
+} */
+
+/* #dmft-teeth19.dmft-inputs{
+
+} */
+
+/* #dmft-teeth20.dmft-inputs{
+
+} */
+
+/* #dmft-teeth21.dmft-inputs{
+
+} */
+
+/* #dmft-teeth22.dmft-inputs{
+
+} */
+
+/* #dmft-teeth23.dmft-inputs{
+
+} */
+
+/* #dmft-teeth24.dmft-inputs{
+
+} */
+
+/* #dmft-teeth25.dmft-inputs{
+
+} */
+
+/* #dmft-teeth26.dmft-inputs{
+
+} */
+
+/* #dmft-teeth27.dmft-inputs{
+
+} */
+
+/* #dmft-teeth28.dmft-inputs{
+
+} */
+
+/* #dmft-teeth29.dmft-inputs{
+
+} */
+
+/* #dmft-teeth30.dmft-inputs{
+
+} */
+
+/* #dmft-teeth31.dmft-inputs{
+
+} */
+
+/* #dmft-teeth32.dmft-inputs{
+
+} */
