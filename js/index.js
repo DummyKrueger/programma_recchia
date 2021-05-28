@@ -91,8 +91,8 @@ $("#dec-input, #adul-input").on("change", function () {
 // $("#page2DMFT").hide();
 
 $("#page1").hide();
-$("#page2PSR").hide();
-$("#page2DMFT").show();
+$("#page2PSR").show();
+$("#page2DMFT").hide();
 
 $("#page1-nxt-btn").click(function () {
     $("#page1").hide();
