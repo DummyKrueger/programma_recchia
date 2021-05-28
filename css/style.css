@@ -704,12 +704,126 @@ p {
     outline: none;
 }
 
+.dmft-counter-container {
+    position: relative;
+}
+
+#left.dmft-counter-container {
+    left: 221px;
+    top: 110px;
+}
+
+#right.dmft-counter-container {
+    right: 227px;
+    top: 70px;
+}
+
+.dmft-counter-box {
+    height: 25px;
+    margin-bottom: 3px;
+}
+
+.dmft-letter {
+    display: inline-block;
+    text-align: center;
+    font-family: OpenSans-SemiBold;
+    font-size: 13px;
+    color: #555;
+    height: 25px;
+    width: 12px;
+    padding: 3px 1px;
+}
+
+.counter-square {
+    display: inline-block;
+    font-family: OpenSans-SemiBold;
+    height: 25px;
+    width: 25px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+#counter-none .counter-square {
+    border: solid 1px #555;
+}
+
+#counter-d .counter-square {
+    background-color: #a9abac;
+}
+
+#counter-m .counter-square {
+    background-color: #7fc9c1;
+}
+
+#counter-f .counter-square {
+    background-color: #d0df99;
+}
+
 .dmft-index-container {
     margin-top: 20px;
     margin-bottom: 20px;
     height: 80px;
     background-color: #dddede;
 }
+
+.dmft-sec-title1 {
+    display: inline-block;
+    font-family: OpenSans-Light;
+    font-size: 1rem;
+    margin: 5px 240px 10px 10px;
+}
+
+.dmft-sec-title2 {
+    display: inline-block;
+    font-family: OpenSans-Light;
+    font-size: 1rem;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.total-counter-container {
+    display: inline-block;
+    border: solid 2px #555;
+    background-color: #fff;
+    width: 52%;
+    margin-left: 10px;
+}
+
+.total-counter-box {
+    display: inline-block;
+    height: 25px;
+    margin: 2px 12px 6px 5px;
+}
+
+.counter-icon {
+    position: relative;
+    top: 3px;
+    left: 50px;
+    color: #555;
+}
+
+.dmft-final {
+    display: inline-block;
+    position: relative;
+    left: 95px;
+    top: 1px;
+    border: solid #555;
+    border-width: 3px 12px;
+    background-color: #fff;
+    height: 36px;
+    width: 21%;
+    font-family: OpenSans-SemiBold;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    /* padding-top: 2px;
+    padding-bottom: 2px; */
+}
+
+
 
 .dmft-button-box {
     text-align: center;

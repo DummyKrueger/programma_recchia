@@ -249,7 +249,7 @@ function teethColoration(inputValue, groupNumber) {
 
 
 
-// **************************** DMFT TEETH COLORATION ****************************
+// **************************** DMFT TEETH COLORATION AND COUNTER ****************************
 
 $(".col-5 select").on("change", function () {
 
@@ -269,8 +269,75 @@ $(".col-5 select").on("change", function () {
     if ($(this).val() == "F") {
         $(teethId).removeClass().addClass("dmft-f");
     };
+
+    dmftCounter();
 });
 
+
+function dmftCounter() {
+
+    var leftNones = 0;
+    var leftDs = 0;
+    var leftMs = 0;
+    var leftFs = 0;
+    var rightNones = 0;
+    var rightDs = 0;
+    var rightMs = 0;
+    var rightFs = 0;
+
+    for (var i = 0; i < 16; i++) {
+
+        var dmftValue = $("#dmft-teeth" + (i + 1)).val();
+
+        if (dmftValue == "-") {
+            leftNones++;
+        }
+        if (dmftValue == "D") {
+            leftDs++;
+        }
+        if (dmftValue == "M") {
+            leftMs++;
+        }
+        if (dmftValue == "F") {
+            leftFs++;
+        }
+    };
+
+    for (var i = 16; i < 32; i++) {
+
+        var dmftValue = $("#dmft-teeth" + (i + 1)).val();
+
+        if (dmftValue == "-") {
+            rightNones++;
+        }
+        if (dmftValue == "D") {
+            rightDs++;
+        }
+        if (dmftValue == "M") {
+            rightMs++;
+        }
+        if (dmftValue == "F") {
+            rightFs++;
+        }
+    };
+
+    $("#left #counter-none .counter-square").html(leftNones);
+    $("#left #counter-d .counter-square").html(leftDs);
+    $("#left #counter-m .counter-square").html(leftMs);
+    $("#left #counter-f .counter-square").html(leftFs);
+
+    $("#right #counter-none .counter-square").html(rightNones);
+    $("#right #counter-d .counter-square").html(rightDs);
+    $("#right #counter-m .counter-square").html(rightMs);
+    $("#right #counter-f .counter-square").html(rightFs);
+
+    $(".total-counter-container #counter-none .counter-square").html(rightNones + leftNones);
+    $(".total-counter-container #counter-d .counter-square").html(rightDs + leftDs);
+    $(".total-counter-container #counter-m .counter-square").html(rightMs + leftMs);
+    $(".total-counter-container #counter-f .counter-square").html(rightFs + leftFs);
+
+    $(".dmft-final").html(rightDs + leftDs + rightMs + leftMs + rightFs + leftFs);
+};
 
 
 
