@@ -56,20 +56,6 @@ OpenSans-LightItalic
         left: 385px;
         top: 50px;
     }
-
-    .top-arch {
-        text-align: center;
-        position: absolute;
-        top: 140px;
-        left: 170px;
-    }
-
-    .bottom-arch {
-        text-align: center;
-        position: absolute;
-        top: 85px;
-        left: 178px;
-    }
 }
 
 @media (min-width: 1500px) and (max-width: 1599px) {
@@ -109,20 +95,6 @@ OpenSans-LightItalic
         left: 335px;
         top: 50px;
     }
-
-    .top-arch {
-        text-align: center;
-        position: absolute;
-        top: 110px;
-        left: 130px;
-    }
-
-    .bottom-arch {
-        text-align: center;
-        position: absolute;
-        top: 45px;
-        left: 135px;
-    }
 }
 
 @media (min-width: 1400px) and (max-width: 1499px) {
@@ -161,20 +133,6 @@ OpenSans-LightItalic
         position: absolute;
         left: 305px;
         top: 50px;
-    }
-
-    .top-arch {
-        text-align: center;
-        position: absolute;
-        top: 119px;
-        left: 114px;
-    }
-
-    .bottom-arch {
-        text-align: center;
-        position: absolute;
-        top: 45px;
-        left: 123px;
     }
 }
 
@@ -244,12 +202,16 @@ p {
     margin-bottom: 10px;
 }
 
-.top-arch .secondary-title {
-    margin: 0;
+.sec-title1 {
+    text-align: center;
+    font-family: OpenSans-Light;
+    font-size: 1rem;
 }
 
-.bottom-arch .secondary-title {
-    margin: 0;
+.sec-title2 {
+    text-align: center;
+    font-family: OpenSans-Light;
+    font-size: 1rem;
 }
 
 .input-titles {
@@ -285,6 +247,29 @@ p {
     font-size: 3rem;
     color: #898989;
     margin: 5px 0 20px -10px;
+}
+
+.page2-title {
+    display: inline-block;
+    font-family: OpenSans-ExtraBold;
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+.page2-subtitle {
+    display: inline-block;
+    font-family: OpenSans-Bold;
+    font-size: 1rem;
+    margin-left: 4px;
+}
+
+.page2-extratitle {
+    font-family: OpenSans-Bold;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: rgb(214 214 214);
 }
 
 /* ********************************* INPUTS ********************************* */
@@ -385,7 +370,7 @@ p {
     color: #fff;
     border-radius: 50px;
     padding: 6px 12px 6px 8px;
-    margin-top: 8px;
+    margin-right: 10px;
 }
 
 .prv-button:hover {
@@ -397,10 +382,8 @@ p {
     fill: #fff;
 }
 
-#page1-nxt-btn {
-    position: relative;
-    top: 50px;
-    left: 300px;
+.button-box {
+    text-align: center;
 }
 
 .print-button {
@@ -609,81 +592,61 @@ p {
 
 /* ********************************* PSR SECOND PAGE ********************************* */
 
+.page2-name {
+    font-family: OpenSans-SemiBold;
+    border-width: 1px;
+    background-color: #e7efcc;
+    border-color: #555;
+    height: 25px;
+    font-size: 13px;
+    color: #555;
+    padding-left: 7px;
+    margin: 5px 8px 20px 13px;
+    width: 30%;
+}
+
+.page2-name:focus {
+    outline: none;
+}
+
+.page2-date {
+    font-family: OpenSans-SemiBold;
+    border-width: 1px;
+    border-color: #555;
+    height: 25px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    margin: 5px 0 20px 0;
+    width: 15%;
+}
+
+.page2-date:focus {
+    outline: none;
+}
+
 .top-title-box {
     padding-left: 0;
 }
 
-.button-box {
-    float: right;
-    width: 60%;
-    text-align: center;
-}
-
-@media (max-width: 1399px) {
-    .top-arch {
-        text-align: center;
-        position: absolute;
-        top: 110px;
-        left: 114px;
-    }
-
-    .bottom-arch {
-        text-align: center;
-        position: absolute;
-        top: 45px;
-        left: 112px;
-    }
-}
-
 .info-box {
-    float: right;
     background-color: #dddede;
     padding: 10px;
+    position: relative;
+    top: 50px;
+    right: 10px;
 }
 
-.top {
+.psr-input-container {
     text-align: center;
-    margin: 0 0 20px 0;
 }
 
-.top input {
-    margin: 0 15px 0 15px;
-}
-
-.bottom {
-    text-align: center;
-    margin: 0;
-}
-
-.bottom input {
-    margin: 0 15px 0 15px;
+.psr-input-container input {
+    margin: 20px 15px 35px 15px;
 }
 
 
 /* ********************************* DMFT SECOND PAGE ********************************* */
-
-.dmft-page2-title {
-    display: inline-block;
-    font-family: OpenSans-ExtraBold;
-    font-size: 2.5rem;
-    margin-left: 10px;
-}
-
-.dmft-page2-subtitle {
-    display: inline-block;
-    font-family: OpenSans-Bold;
-    font-size: 1rem;
-    margin-left: 4px;
-}
-
-.dmft-page2-extratitle {
-    font-family: OpenSans-Bold;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: rgb(214 214 214);
-}
 
 .dmft-inputs {
     position: relative;
@@ -766,20 +729,6 @@ p {
     background-color: #dddede;
 }
 
-.dmft-sec-title1 {
-
-    text-align: center;
-    font-family: OpenSans-Light;
-    font-size: 1rem;
-}
-
-.dmft-sec-title2 {
-
-    text-align: center;
-    font-family: OpenSans-Light;
-    font-size: 1rem;
-}
-
 .dmft-sec-title3 {
     display: inline-block;
     font-family: OpenSans-Light;
@@ -830,15 +779,6 @@ p {
     font-size: 18px;
     color: #555;
     text-align: center;
-}
-
-.dmft-button-box {
-    text-align: center;
-}
-
-#page2DMFT-prv-btn {
-    margin-top: 0;
-    margin-right: 10px;
 }
 
 /* ********************************* TEETH ********************************* */

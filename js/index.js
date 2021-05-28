@@ -28,6 +28,8 @@ $("#program-selector").on("change", function () {
 
 
 
+
+
 // **************************** EXAM DATE TODAY PRECOMPILATION ****************************
 
 var today = new Date();
@@ -37,6 +39,36 @@ var yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + dd;
 $("#exam-date").attr("value", today);
 
+
+
+
+
+
+
+
+
+// **************************** PAGE2 PRECOMPILATION ****************************
+
+$("#pname-orig").on("keyup change", function () {
+    $("#pname-page2").val($("#pname-orig").val());
+    $("#pname-page2-bis").val($("#pname-orig").val());
+});
+
+
+var todayV2 = dd + " / " + mm + " / " + yyyy;
+
+$("#exam-date-page2").val(todayV2);
+$("#exam-date-page2-bis").val(todayV2);
+
+$("#exam-date").on("keyup change", function () {
+    var exdate = $("#exam-date").val();
+    var day = exdate.slice(8, 10);
+    var month = exdate.slice(5, 7);
+    var year = exdate.slice(0, 4);
+    exdate = day + " / " + month + " / " + year;
+    $("#exam-date-page2").val(exdate);
+    $("#exam-date-page2-bis").val(exdate);
+});
 
 
 
@@ -56,7 +88,6 @@ $("#birth-date").on('keyup change', function () {
     };
 
     if (ye > 1800) {
-        // $("#age").attr("value", age);
         $("#age").val(age);
     };
 });
@@ -91,8 +122,8 @@ $("#dec-input, #adul-input").on("change", function () {
 // $("#page2DMFT").hide();
 
 $("#page1").hide();
-$("#page2PSR").show();
-$("#page2DMFT").hide();
+$("#page2PSR").hide();
+$("#page2DMFT").show();
 
 $("#page1-nxt-btn").click(function () {
     $("#page1").hide();
