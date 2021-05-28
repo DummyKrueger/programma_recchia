@@ -393,12 +393,8 @@ p {
     color: #fff;
 }
 
-.icon {
-    margin-bottom: 3px;
-}
-
-.icon-hover {
-    filter: blur(3px) brightness(150%);
+.btn-icon {
+    fill: #fff;
 }
 
 #page1-nxt-btn {

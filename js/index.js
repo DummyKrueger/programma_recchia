@@ -86,39 +86,6 @@ $("#dec-input, #adul-input").on("change", function () {
 
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
-// ****************** hover style ******************
-$("#page1-nxt-btn").hover(function () {
-    $("#page1-nxt-btn img").addClass("icon-hover");
-}, function () {
-    $("#page1-nxt-btn img").removeClass("icon-hover");
-});
-
-$("#page2PSR-nxt-btn").hover(function () {
-    $("#page2PSR-nxt-btn img").addClass("icon-hover");
-}, function () {
-    $("#page2PSR-nxt-btn img").removeClass("icon-hover");
-});
-
-$("#page2PSR-prv-btn").hover(function () {
-    $("#page2PSR-prv-btn img").addClass("icon-hover");
-}, function () {
-    $("#page2PSR-prv-btn img").removeClass("icon-hover");
-});
-
-$("#page2DMFT-nxt-btn").hover(function () {
-    $("#page2DMFT-nxt-btn img").addClass("icon-hover");
-}, function () {
-    $("#page2DMFT-nxt-btn img").removeClass("icon-hover");
-});
-
-$("#page2DMFT-prv-btn").hover(function () {
-    $("#page2DMFT-prv-btn img").addClass("icon-hover");
-}, function () {
-    $("#page2DMFT-prv-btn img").removeClass("icon-hover");
-});
-
-
-// ****************** functionality ******************
 // $("#page1").show();
 // $("#page2PSR").hide();
 // $("#page2DMFT").hide();
