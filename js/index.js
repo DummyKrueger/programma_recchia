@@ -123,9 +123,14 @@ $("#page2DMFT-prv-btn").hover(function () {
 // $("#page2PSR").hide();
 // $("#page2DMFT").hide();
 
-$("#page1").hide();
+$("#page1").show();
 $("#page2PSR").hide();
-$("#page2DMFT").show();
+$("#page2DMFT").hide();
+
+$("#page1-nxt-btn").click(function () {
+    $("#page1").hide();
+    $(toPage2).show();
+});
 
 $("#page1-nxt-btn").click(function () {
     $("#page1").hide();

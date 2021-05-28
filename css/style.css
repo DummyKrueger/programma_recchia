@@ -685,6 +685,7 @@ p {
     font-size: 1.5rem;
     margin-left: 10px;
     margin-top: 10px;
+    margin-bottom: 20px;
     color: rgb(214 214 214);
 }
 
@@ -763,20 +764,34 @@ p {
 }
 
 .dmft-index-container {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
     height: 80px;
     background-color: #dddede;
 }
 
 .dmft-sec-title1 {
+
+    text-align: center;
+    font-family: OpenSans-Light;
+    font-size: 1rem;
+}
+
+.dmft-sec-title2 {
+
+    text-align: center;
+    font-family: OpenSans-Light;
+    font-size: 1rem;
+}
+
+.dmft-sec-title3 {
     display: inline-block;
     font-family: OpenSans-Light;
     font-size: 1rem;
     margin: 5px 240px 10px 10px;
 }
 
-.dmft-sec-title2 {
+.dmft-sec-title4 {
     display: inline-block;
     font-family: OpenSans-Light;
     font-size: 1rem;
@@ -819,11 +834,7 @@ p {
     font-size: 18px;
     color: #555;
     text-align: center;
-    /* padding-top: 2px;
-    padding-bottom: 2px; */
 }
-
-
 
 .dmft-button-box {
     text-align: center;
