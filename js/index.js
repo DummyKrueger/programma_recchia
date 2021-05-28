@@ -90,9 +90,9 @@ $("#dec-input, #adul-input").on("change", function () {
 // $("#page2PSR").hide();
 // $("#page2DMFT").hide();
 
-$("#page1").show();
+$("#page1").hide();
 $("#page2PSR").hide();
-$("#page2DMFT").hide();
+$("#page2DMFT").show();
 
 $("#page1-nxt-btn").click(function () {
     $("#page1").hide();
@@ -257,7 +257,7 @@ function dmftCounter() {
     var rightMs = 0;
     var rightFs = 0;
 
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < 14; i++) {
 
         var dmftValue = $("#dmft-teeth" + (i + 1)).val();
 
@@ -275,7 +275,7 @@ function dmftCounter() {
         }
     };
 
-    for (var i = 16; i < 32; i++) {
+    for (var i = 14; i < 28; i++) {
 
         var dmftValue = $("#dmft-teeth" + (i + 1)).val();
 
