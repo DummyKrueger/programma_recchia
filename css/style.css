@@ -468,19 +468,19 @@ p {
     .right-block {
         background: linear-gradient(to left, #009483, #006459);
         height: 155px;
-        margin-top: 250px;
+        margin-top: 320px;
     }
 
     #bodypage2PSR .right-block {
-        margin-top: 370px;
+        margin-top: 390px;
     }
 
     #bodypage2DMFT .right-block {
-        margin-top: 370px;
+        margin-top: 290px;
     }
 
     #bodypage3DMFT .right-block {
-        margin-top: 370px;
+        margin-top: 530px;
     }
 }
 
@@ -591,42 +591,6 @@ p {
     margin-top: 30px;
 }
 
-
-/* ********************** DMFT FIRST PAGE VARIATIONS ********************* */
-
-.DMFT-radio-teeth {
-    display: none;
-}
-
-.DMFT-radio-teeth .one {
-    display: inline-block;
-    position: relative;
-    bottom: 65px;
-    left: 25px;
-    z-index: 100;
-}
-
-.DMFT-radio-teeth .two {
-    display: inline-block;
-    position: relative;
-    bottom: 65px;
-    left: 15px;
-    z-index: 100;
-}
-
-.tee-img1 {
-    opacity: 0.2;
-    position: relative;
-    bottom: 15px;
-}
-
-.tee-img2 {
-    opacity: 0.2;
-    position: relative;
-    bottom: 15px;
-}
-
-
 /* ********************************* PSR SECOND PAGE ********************************* */
 
 .page23-name {
@@ -642,10 +606,6 @@ p {
     width: 30%;
 }
 
-.page23-name:focus {
-    outline: none;
-}
-
 .page23-date {
     font-family: OpenSans-SemiBold;
     border-width: 1px;
@@ -658,7 +618,9 @@ p {
     width: 15%;
 }
 
-.page23-date:focus {
+.page23-name:focus,
+.page23-date:focus,
+.page23-age:focus {
     outline: none;
 }
 
@@ -682,8 +644,73 @@ p {
     margin: 20px 15px 35px 15px;
 }
 
-
 /* ********************************* DMFT SECOND PAGE ********************************* */
+
+.dmft-top-left-box {
+    padding: 0;
+}
+
+.dmft-bottom-left-box {
+    background-color: #dddede;
+    height: 90px;
+    margin: 100px 15px 50px 0;
+}
+
+#oname-page23:focus {
+    background-color: #fff;
+}
+
+#pname-page23-bis.page23-name {
+    margin: 0;
+    width: 100%;
+}
+
+#exam-date-page23-bis.page23-date {
+    width: 100%;
+    margin: 0;
+}
+
+.page23-age {
+    font-family: OpenSans-SemiBold;
+    border-width: 1px;
+    border-color: #555;
+    height: 25px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.DMFT-radio-teeth {
+    margin-left: 6px;
+    position: relative;
+    bottom: 20px;
+}
+
+#dmft-dent.input-titles {
+    position: relative;
+    top: 67px;
+}
+
+.DMFT-radio-teeth .one {
+    display: inline-block;
+}
+
+.DMFT-radio-teeth .two {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+.tee-img1 {
+    opacity: 0.2;
+}
+
+.tee-img2 {
+    opacity: 0.2;
+}
+
+/* ********************************* DMFT THIRD PAGE ********************************* */
 
 .dmft-inputs {
     position: relative;
@@ -927,7 +954,7 @@ p {
 
 
 
-/* **************************** DMFT PAGE2 INPUTS POSITION **************************** */
+/* **************************** DMFT PAGE3 INPUTS POSITION **************************** */
 
 #dmft-teeth1.dmft-inputs {
     top: 182px;

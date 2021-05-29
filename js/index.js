@@ -1,91 +1,3 @@
-// **************************** EXAM DATE TODAY PRECOMPILATION ****************************
-
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0');
-var yyyy = today.getFullYear();
-today = yyyy + '-' + mm + '-' + dd;
-$("#exam-date").attr("value", today);
-
-
-
-
-
-
-
-
-
-// **************************** PAGE23 PRECOMPILATION ****************************
-
-$("#pname-orig").on("keyup change", function () {
-    $("#pname-page23").val($("#pname-orig").val());
-    $("#pname-page23-bis").val($("#pname-orig").val());
-    $("#pname-page23-tris").val($("#pname-orig").val());
-});
-
-
-var todayV2 = dd + " / " + mm + " / " + yyyy;
-
-$("#exam-date-page23").val(todayV2);
-$("#exam-date-page23-bis").val(todayV2);
-$("#exam-date-page23-tris").val(todayV2);
-
-$("#exam-date").on("keyup change", function () {
-    var exdate = $("#exam-date").val();
-    var day = exdate.slice(8, 10);
-    var month = exdate.slice(5, 7);
-    var year = exdate.slice(0, 4);
-    exdate = day + " / " + month + " / " + year;
-    $("#exam-date-page23").val(exdate);
-    $("#exam-date-page23-bis").val(exdate);
-    $("#exam-date-page23-tris").val(exdate);
-});
-
-
-
-
-// **************************** AGE PRECOMPILATION ****************************
-
-$("#birth-date").on('keyup change', function () {
-    var birthDate = $("#birth-date").val();
-    birthDate = birthDate.replace('-', '').replace('-', '');
-    var ye = Number(birthDate.substr(0, 4));
-    var mon = Number(birthDate.substr(4, 2)) - 1;
-    var dy = Number(birthDate.substr(6, 2));
-    var tod = new Date();
-    var age = tod.getFullYear() - ye;
-    if (tod.getMonth() < mon || (tod.getMonth() == mon && tod.getDate() < dy)) {
-        age--;
-    };
-
-    if (ye > 1800) {
-        $("#age").val(age);
-    };
-});
-
-
-
-
-// **************************** DMFT FIRST PAGE TEETH ****************************
-
-$("#dec-input, #adul-input").on("change", function () {
-    if ($('input:radio[id=dec-input]:checked').val() == "") {
-        $(".tee-img1").css("opacity", "1")
-    } else {
-        $(".tee-img1").css("opacity", "0.2")
-    };
-    if ($('input:radio[id=adul-input]:checked').val() == "") {
-        $(".tee-img2").css("opacity", "1")
-    } else {
-        $(".tee-img2").css("opacity", "0.2")
-    };
-});
-
-
-
-
-
-
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
 $("#page1").show();
@@ -122,6 +34,108 @@ $("#page3DMFT-prv-btn").click(function () {
     $("#page3DMFT").hide();
     $("#page2DMFT").show();
 });
+
+
+
+
+
+
+// **************************** EXAM DATE TODAY PRECOMPILATION ****************************
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+$("#exam-date").attr("value", today);
+
+
+
+
+
+
+
+
+
+// **************************** PAGE23 PRECOMPILATION ****************************
+
+$("#pname-orig").on("keyup change", function () {
+    $("#pname-page23").val($("#pname-orig").val());
+    $("#pname-page23-bis").val($("#pname-orig").val());
+    $("#pname-page23-tris").val($("#pname-orig").val());
+});
+
+$("#oname-orig").on("keyup change", function () {
+    $("#oname-page23").val($("#oname-orig").val());
+});
+
+$("#age").on("keyup change", function () {
+    $("#age-page23").val($("#age").val());
+});
+
+
+var todayV2 = dd + " / " + mm + " / " + yyyy;
+
+$("#exam-date-page23").val(todayV2);
+$("#exam-date-page23-bis").val(todayV2);
+$("#exam-date-page23-tris").val(todayV2);
+
+$("#exam-date").on("keyup change", function () {
+    var exdate = $("#exam-date").val();
+    var day = exdate.slice(8, 10);
+    var month = exdate.slice(5, 7);
+    var year = exdate.slice(0, 4);
+    exdate = day + " / " + month + " / " + year;
+    $("#exam-date-page23").val(exdate);
+    $("#exam-date-page23-bis").val(exdate);
+    $("#exam-date-page23-tris").val(exdate);
+});
+
+
+
+
+
+
+// **************************** AGE PRECOMPILATION ****************************
+
+$("#birth-date").on('keyup change', function () {
+    var birthDate = $("#birth-date").val();
+    birthDate = birthDate.replace('-', '').replace('-', '');
+    var ye = Number(birthDate.substr(0, 4));
+    var mon = Number(birthDate.substr(4, 2)) - 1;
+    var dy = Number(birthDate.substr(6, 2));
+    var tod = new Date();
+    var age = tod.getFullYear() - ye;
+    if (tod.getMonth() < mon || (tod.getMonth() == mon && tod.getDate() < dy)) {
+        age--;
+    };
+
+    if (ye > 1800) {
+        $("#age").val(age);
+        $("#age-page23").val(age);
+    };
+});
+
+
+
+
+
+
+// **************************** DMFT SECOND PAGE TEETH ****************************
+
+$("#dec-input, #adul-input").on("change", function () {
+    if ($('input:radio[id=dec-input]:checked').val() == "") {
+        $(".tee-img1").css("opacity", "1")
+    } else {
+        $(".tee-img1").css("opacity", "0.2")
+    };
+    if ($('input:radio[id=adul-input]:checked').val() == "") {
+        $(".tee-img2").css("opacity", "1")
+    } else {
+        $(".tee-img2").css("opacity", "0.2")
+    };
+});
+
 
 
 
@@ -319,6 +333,8 @@ function dmftCounter() {
 
     $(".dmft-final").html(rightDs + leftDs + rightMs + leftMs + rightFs + leftFs);
 };
+
+
 
 
 
