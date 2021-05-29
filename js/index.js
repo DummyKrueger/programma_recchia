@@ -1,35 +1,3 @@
-// **************************** PROGRAM SELECTION RESPONSE ****************************
-
-var toPage2 = "#page2PSR";
-
-$("#program-selector").on("change", function () {
-    if ($("#program-selector").val() == "DMFT") {
-        toPage2 = "#page2DMFT";
-        $("#page1-subtitle").html("<p>ANALISI</p><p>SITUAZIONE</p><p>DENTALE</p>");
-        $("#page1-nxt-btn").css("top", "0");
-        $("#page1-nxt-btn").css("left", "200px");
-        $(".DMFT-radio-teeth").css("display", "block");
-        $("#internal.vertical-line").css("height", "430px");
-        $("#bodyPage1 .right-block").css("margin-top", "350px");
-    }
-
-    if ($("#program-selector").val() == "PSR") {
-        toPage2 = "#page2PSR";
-        $("#page1-subtitle").html("PERIODONTAL SCREENING AND RECORDING");
-        $("#page1-nxt-btn").css("top", "50px");
-        $("#page1-nxt-btn").css("left", "300px");
-        $(".DMFT-radio-teeth").css("display", "none");
-        $("#internal.vertical-line").css("height", "310px");
-        $("#bodyPage1 .right-block").css("margin-top", "250px");
-    }
-
-});
-
-
-
-
-
-
 // **************************** EXAM DATE TODAY PRECOMPILATION ****************************
 
 var today = new Date();
@@ -47,18 +15,20 @@ $("#exam-date").attr("value", today);
 
 
 
-// **************************** PAGE2 PRECOMPILATION ****************************
+// **************************** PAGE23 PRECOMPILATION ****************************
 
 $("#pname-orig").on("keyup change", function () {
-    $("#pname-page2").val($("#pname-orig").val());
-    $("#pname-page2-bis").val($("#pname-orig").val());
+    $("#pname-page23").val($("#pname-orig").val());
+    $("#pname-page23-bis").val($("#pname-orig").val());
+    $("#pname-page23-tris").val($("#pname-orig").val());
 });
 
 
 var todayV2 = dd + " / " + mm + " / " + yyyy;
 
-$("#exam-date-page2").val(todayV2);
-$("#exam-date-page2-bis").val(todayV2);
+$("#exam-date-page23").val(todayV2);
+$("#exam-date-page23-bis").val(todayV2);
+$("#exam-date-page23-tris").val(todayV2);
 
 $("#exam-date").on("keyup change", function () {
     var exdate = $("#exam-date").val();
@@ -66,8 +36,9 @@ $("#exam-date").on("keyup change", function () {
     var month = exdate.slice(5, 7);
     var year = exdate.slice(0, 4);
     exdate = day + " / " + month + " / " + year;
-    $("#exam-date-page2").val(exdate);
-    $("#exam-date-page2-bis").val(exdate);
+    $("#exam-date-page23").val(exdate);
+    $("#exam-date-page23-bis").val(exdate);
+    $("#exam-date-page23-tris").val(exdate);
 });
 
 
@@ -117,22 +88,14 @@ $("#dec-input, #adul-input").on("change", function () {
 
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
-// $("#page1").show();
-// $("#page2PSR").hide();
-// $("#page2DMFT").hide();
-
-$("#page1").hide();
+$("#page1").show();
 $("#page2PSR").hide();
-$("#page2DMFT").show();
+$("#page2DMFT").hide();
+$("#page3DMFT").hide();
 
-$("#page1-nxt-btn").click(function () {
+$("#page1-PSR-btn").click(function () {
     $("#page1").hide();
-    $(toPage2).show();
-});
-
-$("#page1-nxt-btn").click(function () {
-    $("#page1").hide();
-    $(toPage2).show();
+    $("#page2PSR").show();
 });
 
 $("#page2PSR-prv-btn").click(function () {
@@ -140,9 +103,24 @@ $("#page2PSR-prv-btn").click(function () {
     $("#page1").show();
 });
 
+$("#page1-DMFT-btn").click(function () {
+    $("#page1").hide();
+    $("#page2DMFT").show();
+});
+
+$("#page2DMFT-nxt-btn").click(function () {
+    $("#page2DMFT").hide();
+    $("#page3DMFT").show();
+});
+
 $("#page2DMFT-prv-btn").click(function () {
     $("#page2DMFT").hide();
     $("#page1").show();
+});
+
+$("#page3DMFT-prv-btn").click(function () {
+    $("#page3DMFT").hide();
+    $("#page2DMFT").show();
 });
 
 
