@@ -230,6 +230,15 @@ p {
     right: 5px;
 }
 
+.input-radio-labels2 {
+    font-family: OpenSans-Light;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 7px;
+    right: 5px;
+    letter-spacing: -0.5px;
+}
+
 .info-title {
     margin: 5px;
     font-family: OpenSans-Regular;
@@ -468,7 +477,7 @@ p {
     .right-block {
         background: linear-gradient(to left, #009483, #006459);
         height: 155px;
-        margin-top: 320px;
+        margin-top: 460px;
     }
 
     #bodypage2PSR .right-block {
@@ -502,7 +511,7 @@ p {
 
 @media (max-width: 1399px) {
     #internal.vertical-line {
-        height: 310px;
+        height: 490px;
         margin: 0;
         position: absolute;
         left: 305px;
@@ -526,63 +535,109 @@ p {
     padding: 10px 0 0 20px;
 }
 
+#page1-bottom-right-box.bottom-right-box {
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
 .sub-container1 {
     display: inline-block;
-    width: 52%;
-    margin-right: 15px;
+    width: 97%;
 }
 
 .sub-container2 {
     display: inline-block;
     width: 28%;
+    margin-right: 40px;
     position: relative;
-    bottom: 1px;
-    margin-right: 15px;
+    bottom: 8px;
 }
 
 .sub-container3 {
     display: inline-block;
     width: 10%;
+    margin-right: 40px;
+    position: relative;
+    bottom: 8px;
 }
 
 .sub-container4 {
     display: inline-block;
-    margin-right: 10px;
-    position: relative;
-    top: 7px;
+    margin-right: 40px;
 }
 
 .sub-container5 {
     display: inline-block;
-    margin-right: 10px;
-    position: relative;
-    top: 7px;
 }
 
 .sub-container6 {
     display: inline-block;
-    width: 14%;
-    margin-right: 15px;
+    margin-right: 40px;
 }
 
 .sub-container7 {
     display: inline-block;
-    margin-right: 15px;
+    width: 14%;
+    margin-right: 40px;
     position: relative;
-    top: 7px;
+    bottom: 8px;
 }
 
 .sub-container8 {
     display: inline-block;
-    position: relative;
-    top: 7px;
 }
+
+.sub-container9 {
+    display: inline-block;
+    width: 25%;
+    margin-right: 40px;
+    position: relative;
+    bottom: 8px;
+}
+
+.sub-container9 #daily-freq {
+    width: 65%;
+}
+
+.sub-container10 {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.sub-container11 {
+    display: inline-block;
+}
+
+.sub-container12 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.sub-container13 {
+    display: inline-block;
+}
+
+.sub-container14 {
+    display: inline-block;
+    margin: 10px 20px 10px 0;
+}
+
+.sub-container15 {
+    display: inline-block;
+    width: 25%;
+    margin-right: 40px;
+    position: relative;
+    bottom: 8px;
+}
+
+
 
 @media (max-width: 1399px) {
     .bottom-left-box {
         background-color: #dddede;
         margin-right: 15px;
         height: 142px;
+        margin-top: 47px;
     }
 }
 

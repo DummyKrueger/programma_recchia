@@ -63,6 +63,10 @@
                                 <input id="pname-orig" type="text" class="custom-inputs" placeholder="Nome Cognome">
                             </div>
 
+                        </div>
+
+                        <div class="sovra-container2">
+
                             <div class="sub-container2">
                                 <h4 class="input-titles">Data di nascita</h4>
                                 <input type="date" id="birth-date" class="custom-inputs">
@@ -73,10 +77,6 @@
                                 <input type="number" id="age" class="custom-inputs" placeholder="Anni">
                             </div>
 
-                        </div>
-
-                        <div class="sovra-container2">
-
                             <div class="sub-container4">
                                 <h4 class="input-titles">Sesso</h4>
                                 <input type="radio" class="custom-radios" id="male-sex-input" name="sex" value="">
@@ -86,32 +86,37 @@
                             </div>
 
                             <div class="sub-container5">
-                                <h4 class="input-titles">Abitudine al fumo?</h4>
+                                <h4 class="input-titles">Diabete</h4>
+                                <input type="radio" class="custom-radios" id="diab-yes-input" name="diab" value="">
+                                <span class="input-radio-labels" for="diab-yes-input">Si</span>
+                                <input type="radio" class="custom-radios" id="diab-no-input" name="diab" value="">
+                                <span class="input-radio-labels" for="diab-no-input">No</span>
+                            </div>
+
+                        </div>
+                        
+
+                        <div class="sovra-container3">
+
+                            <div class="sub-container6">
+                                <h4 class="input-titles">Abitudine al fumo</h4>
                                 <input type="radio" class="custom-radios" id="smoke-yes-input" name="smoke" value="">
                                 <span class="input-radio-labels" for="smoke-yes-input">Si</span>
                                 <input type="radio" class="custom-radios" id="smoke-no-input" name="smoke" value="">
                                 <span class="input-radio-labels" for="smoke-no-input">No</span>
                             </div>
 
-                            <div class="sub-container6">
+                            <div class="sub-container7">
                                 <h4 class="input-titles">Ex fumatore</h4>
                                 <input type="number" id="ex-smoke" class="custom-inputs" placeholder="Da anni">
                             </div>
 
-                            <div class="sub-container7">
-                                <h4 class="input-titles">Sigaretta elett.?</h4>
+                            <div class="sub-container8">
+                                <h4 class="input-titles">Sigaretta elettronica</h4>
                                 <input type="radio" class="custom-radios" id="svapo-yes-input" name="svapo" value="">
                                 <span class="input-radio-labels" for="svapo-yes-input">Si</span>
                                 <input type="radio" class="custom-radios" id="svapo-no-input" name="svapo" value="">
                                 <span class="input-radio-labels" for="svapo-no-input">No</span>
-                            </div>
-
-                            <div class="sub-container8">
-                                <h4 class="input-titles">Diabete?</h4>
-                                <input type="radio" class="custom-radios" id="diab-yes-input" name="diab" value="">
-                                <span class="input-radio-labels" for="diab-yes-input">Si</span>
-                                <input type="radio" class="custom-radios" id="diab-no-input" name="diab" value="">
-                                <span class="input-radio-labels" for="diab-no-input">No</span>
                             </div>
 
                         </div>
@@ -130,9 +135,86 @@
                         <input type="date" id="exam-date" class="custom-inputs" value="2000-01-01">
                     </div>
 
-                    <div class="col-lg-8 bottom-right-box">
+                    <div id="page1-bottom-right-box" class="col-lg-8 bottom-right-box">
 
-                        <!-- ALTRO -->
+                        <h3 class="secondary-title">ATTUALE IGIENE ORALE</h3>
+
+                        <div class="sovra-container3">
+
+                            <div class="sub-container9">
+                                <h4 class="input-titles">Frequenza quotidiana</h4>
+                                <select id="daily-freq" name="daily-freq" class="custom-inputs">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+
+                            <div class="sub-container10">
+                                <h4 class="input-titles">Spazzolino</h4>
+                                <input type="radio" class="custom-radios" id="brush-elet-input" name="brush" value="">
+                                <span class="input-radio-labels" for="brush-elet-input">Elett.</span>
+                                <input type="radio" class="custom-radios" id="brush-manu-input" name="brush" value="">
+                                <span class="input-radio-labels" for="brush-manu-input">Man.</span>
+                            </div>
+
+                            <div class="sub-container11">
+                                <h4 class="input-titles">Dentifricio fluorato</h4>
+                                <input type="radio" class="custom-radios" id="paste-yes-input" name="paste" value="">
+                                <span class="input-radio-labels" for="paste-yes-input">Si</span>
+                                <input type="radio" class="custom-radios" id="paste-no-input" name="paste" value="">
+                                <span class="input-radio-labels" for="paste-no-input">No</span>
+                            </div>
+
+                        </div>
+
+                        <div class="sovra-container4">
+
+                            <div class="sub-container12">
+                                <h4 class="input-titles">Frequenza filo interdentale</h4>
+                                <input type="radio" class="custom-radios" id="wire-day" name="wire" value="">
+                                <span class="input-radio-labels2" for="wire-day">Quotidiana</span>
+                                <input type="radio" class="custom-radios" id="wire-week" name="wire" value="">
+                                <span class="input-radio-labels2" for="wire-week">Settimanale</span>
+                                <input type="radio" class="custom-radios" id="wire-never" name="wire" value="">
+                                <span class="input-radio-labels2" for="wire-never">Mai</span>
+                            </div>
+
+                            <div class="sub-container13">
+                                <h4 class="input-titles">Frequenza scovolino</h4>
+                                <input type="radio" class="custom-radios" id="scovo-day" name="scovo" value="">
+                                <span class="input-radio-labels2" for="scovo">Quotidiana</span>
+                                <input type="radio" class="custom-radios" id="scovo-week" name="scovo" value="">
+                                <span class="input-radio-labels2" for="scovo-week">Settimanale</span>
+                                <input type="radio" class="custom-radios" id="scovo-never" name="scovo" value="">
+                                <span class="input-radio-labels2" for="scovo-never">Mai</span>
+                            </div>
+
+                        </div>
+
+                        <div class="sovra-container5">
+
+                            <div class="sub-container14">
+                                <h4 class="input-titles">Frequenza collutorio</h4>
+                                <input type="radio" class="custom-radios" id="collu-day" name="collu" value="">
+                                <span class="input-radio-labels2" for="collu">Quotidiana</span>
+                                <input type="radio" class="custom-radios" id="collu-week" name="collu" value="">
+                                <span class="input-radio-labels2" for="collu-week">Settimanale</span>
+                                <input type="radio" class="custom-radios" id="collu-never" name="collu" value="">
+                                <span class="input-radio-labels2" for="collu-never">Mai</span>
+                            </div>
+                            
+                            <div class="sub-container15">
+                                <h4 class="input-titles">Tipo di collutorio</h4>
+                                <select id="collu-type" name="collu-type" class="custom-inputs">
+                                    <option value="antiplacca">Antiplacca</option>
+                                    <option value="fluorato">Fluorato</option>
+                                </select>
+                            </div>
+
+                        </div>
 
                     </div>
 
