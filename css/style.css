@@ -490,6 +490,10 @@ p {
     #bodypage3DMFT .right-block {
         margin-top: 530px;
     }
+
+    #bodypage3DMFT-decid .right-block {
+        margin-top: 330px;
+    }
 }
 
 #roof-head .left-block {
@@ -535,7 +539,7 @@ p {
 }
 
 .top-right-box {
-    padding: 10px 0 0 20px;
+    padding: 5px 0 0 20px;
 }
 
 #page1-bottom-right-box.bottom-right-box {

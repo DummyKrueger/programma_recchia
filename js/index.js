@@ -4,15 +4,14 @@ $("#page1").show();
 $("#page2PSR").hide();
 $("#page2DMFT").hide();
 $("#page3DMFT").hide();
+$("#page3DMFT-decid").hide();
+
+
+// *************** PAGE1
 
 $("#page1-PSR-btn").click(function () {
     $("#page1").hide();
     $("#page2PSR").show();
-});
-
-$("#page2PSR-prv-btn").click(function () {
-    $("#page2PSR").hide();
-    $("#page1").show();
 });
 
 $("#page1-DMFT-btn").click(function () {
@@ -20,9 +19,30 @@ $("#page1-DMFT-btn").click(function () {
     $("#page2DMFT").show();
 });
 
+
+// *************** PAGE2 PSR
+
+$("#page2PSR-prv-btn").click(function () {
+    $("#page2PSR").hide();
+    $("#page1").show();
+});
+
+
+// *************** PAGE2 DMFT
+
 $("#page2DMFT-nxt-btn").click(function () {
+
+    if ($('input:radio[id=dec-input]:checked').val() == "") {
+        var dmftPage3 = "#page3DMFT-decid";
+    };
+    
+    if ($('input:radio[id=adul-input]:checked').val() == "") {
+        var dmftPage3 = "#page3DMFT";
+    };
+    
     $("#page2DMFT").hide();
-    $("#page3DMFT").show();
+    $(dmftPage3).show();
+
 });
 
 $("#page2DMFT-prv-btn").click(function () {
@@ -30,11 +50,18 @@ $("#page2DMFT-prv-btn").click(function () {
     $("#page1").show();
 });
 
+
+// *************** PAGE3 DMFT
+
 $("#page3DMFT-prv-btn").click(function () {
     $("#page3DMFT").hide();
     $("#page2DMFT").show();
 });
 
+$("#page3DMFT-decid-prv-btn").click(function () {
+    $("#page3DMFT-decid").hide();
+    $("#page2DMFT").show();
+});
 
 
 
@@ -63,6 +90,7 @@ $("#pname-orig").on("keyup change", function () {
     $("#pname-page23").val($("#pname-orig").val());
     $("#pname-page23-bis").val($("#pname-orig").val());
     $("#pname-page23-tris").val($("#pname-orig").val());
+    $("#pname-page23-quad").val($("#pname-orig").val());
 });
 
 $("#oname-orig").on("keyup change", function () {
@@ -79,6 +107,7 @@ var todayV2 = dd + " / " + mm + " / " + yyyy;
 $("#exam-date-page23").val(todayV2);
 $("#exam-date-page23-bis").val(todayV2);
 $("#exam-date-page23-tris").val(todayV2);
+$("#exam-date-page23-quad").val(todayV2);
 
 $("#exam-date").on("keyup change", function () {
     var exdate = $("#exam-date").val();
@@ -89,6 +118,7 @@ $("#exam-date").on("keyup change", function () {
     $("#exam-date-page23").val(exdate);
     $("#exam-date-page23-bis").val(exdate);
     $("#exam-date-page23-tris").val(exdate);
+    $("#exam-date-page23-quad").val(exdate);
 });
 
 
