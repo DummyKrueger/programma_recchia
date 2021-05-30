@@ -373,7 +373,7 @@ $("#page2PSR-nxt-btn").click(function () {
 
     var highest = Math.max(input1, input2, input3, input4, input5, input6);
 
-    var path = "psr" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
+    var path = "reports/psr" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
 
     $("#dataPath").attr("href", path);
 });
