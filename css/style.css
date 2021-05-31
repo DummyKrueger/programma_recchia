@@ -316,8 +316,16 @@ p {
     margin-right: 3px;
 }
 
-/* .custom-radios:after {
-    qui va inserito ciò che voglio vedere dentro l'input radio prima di  aver cliccato
+/* #adul-input:after {
+    background-color: #009483;
+    border-radius: 25px;
+    height: 15px;
+    width: 15px;
+    content: '';
+    display: block;
+    position: relative;
+    left: 4px;
+    top: 4px; 
 } */
 
 .custom-radios:checked:after {

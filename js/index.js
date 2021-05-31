@@ -154,7 +154,14 @@ function setAge() {
 
 // **************************** DMFT SECOND PAGE TEETH ****************************
 
+teethChecker();
+
 $("#dec-input, #adul-input").on("change", function () {
+    teethChecker();
+});
+
+
+function teethChecker () {
     if ($('input:radio[id=dec-input]:checked').val() == "") {
         $(".tee-img1").css("opacity", "1")
     } else {
@@ -165,7 +172,7 @@ $("#dec-input, #adul-input").on("change", function () {
     } else {
         $(".tee-img2").css("opacity", "0.2")
     };
-});
+};
 
 
 
