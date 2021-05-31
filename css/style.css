@@ -785,6 +785,14 @@ p {
     width: 11%;
 }
 
+#exception1 .dmft-inputs {
+    width: 14%;
+}
+
+#exception2 .dmft-inputs {
+    width: 14%;
+}
+
 .dmft-inputs:focus {
     background-color: #e7efcc;
     outline: none;
@@ -1016,7 +1024,7 @@ p {
 
 
 
-/* **************************** DMFT PAGE3 INPUTS POSITION **************************** */
+/* **************************** DMFT PAGE3 ADULT INPUTS POSITION **************************** */
 
 #dmft-teeth1.dmft-inputs {
     top: 182px;
@@ -1156,4 +1164,107 @@ p {
 #dmft-teeth28.dmft-inputs {
     bottom: 179px;
     left: 56px;
+}
+
+
+/* **************************** DMFT PAGE3 DECID INPUTS POSITION **************************** */
+
+#dmft-small-teeth1.dmft-inputs {
+    top: 143px;
+    right: 43px;
+}
+
+#dmft-small-teeth2.dmft-inputs {
+    top: 101px;
+    right: 77px;
+}
+
+#dmft-small-teeth3.dmft-inputs {
+    top: 55px;
+    right: 95px;
+}
+
+#dmft-small-teeth4.dmft-inputs {
+    top: 18px;
+    right: 93px;
+}
+
+#dmft-small-teeth5.dmft-inputs {
+    top: 1px;
+    right: 83px;
+}
+
+#dmft-small-teeth6.dmft-inputs {
+    bottom: 210px;
+    left: 142px;
+}
+
+#dmft-small-teeth7.dmft-inputs {
+    bottom: 193px;
+    left: 152px;
+}
+
+#dmft-small-teeth8.dmft-inputs {
+    bottom: 156px;
+    left: 150px;
+}
+
+#dmft-small-teeth9.dmft-inputs {
+    bottom: 110px;
+    left: 135px;
+}
+
+#dmft-small-teeth10.dmft-inputs {
+    bottom: 68px;
+    left: 106px;
+}
+
+#dmft-small-teeth11.dmft-inputs {
+    top: 80px;
+    right: 42px;
+}
+
+#dmft-small-teeth12.dmft-inputs {
+    top: 122px;
+    right: 68px;
+}
+
+#dmft-small-teeth13.dmft-inputs {
+    top: 159px;
+    right: 82px;
+}
+
+#dmft-small-teeth14.dmft-inputs {
+    top: 193px;
+    right: 86px;
+}
+
+#dmft-small-teeth15.dmft-inputs {
+    top: 206px;
+    right: 79px;
+}
+
+#dmft-small-teeth16.dmft-inputs {
+    bottom: 5px;
+    left: 138px;
+}
+
+#dmft-small-teeth17.dmft-inputs {
+    bottom: 18px;
+    left: 143px;
+}
+
+#dmft-small-teeth18.dmft-inputs {
+    bottom: 52px;
+    left: 140px;
+}
+
+#dmft-small-teeth19.dmft-inputs {
+    bottom: 89px;
+    left: 127px;
+}
+
+#dmft-small-teeth20.dmft-inputs {
+    bottom: 131px;
+    left: 105px;
 }
