@@ -1,10 +1,10 @@
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
-$("#page1").hide();
+$("#page1").show();
 $("#page2PSR").hide();
 $("#page2DMFT").hide();
 $("#page3DMFT").hide();
-$("#page3DMFT-decid").show();
+$("#page3DMFT-decid").hide();
 
 
 // *************** PAGE1
@@ -274,9 +274,9 @@ function teethColoration(inputValue, groupNumber) {
 
 
 
-// **************************** DMFT TEETH COLORATION AND COUNTER ****************************
+// **************************** DMFT ADULT TEETH COLORATION AND COUNTER ****************************
 
-$(".col-5 select").on("change", function () {
+$("#adul .col-5 select").on("change", function () {
 
     var inputId = this.id;
 
@@ -356,13 +356,111 @@ function dmftCounter() {
     $("#right #counter-m .counter-square").html(rightMs);
     $("#right #counter-f .counter-square").html(rightFs);
 
-    $(".total-counter-container #counter-none .counter-square").html(rightNones + leftNones);
-    $(".total-counter-container #counter-d .counter-square").html(rightDs + leftDs);
-    $(".total-counter-container #counter-m .counter-square").html(rightMs + leftMs);
-    $(".total-counter-container #counter-f .counter-square").html(rightFs + leftFs);
+    $("#adul-counter #counter-none .counter-square").html(rightNones + leftNones);
+    $("#adul-counter #counter-d .counter-square").html(rightDs + leftDs);
+    $("#adul-counter #counter-m .counter-square").html(rightMs + leftMs);
+    $("#adul-counter #counter-f .counter-square").html(rightFs + leftFs);
 
-    $(".dmft-final").html(rightDs + leftDs + rightMs + leftMs + rightFs + leftFs);
+    $("#adul-final").html(rightDs + leftDs + rightMs + leftMs + rightFs + leftFs);
 };
+
+
+
+
+
+
+
+// **************************** DMFT DECID TEETH COLORATION AND COUNTER ****************************
+
+$("#decid .col-4 select").on("change", function () {
+
+    var inputIdDecid = this.id;
+
+    var teethIdDecid = "#" + inputIdDecid.slice(5);
+
+    if ($(this).val() == "-") {
+        $(teethIdDecid).removeClass().addClass("dmft-none");
+    };
+    if ($(this).val() == "D") {
+        $(teethIdDecid).removeClass().addClass("dmft-d");
+    };
+    if ($(this).val() == "M") {
+        $(teethIdDecid).removeClass().addClass("dmft-m");
+    };
+    if ($(this).val() == "F") {
+        $(teethIdDecid).removeClass().addClass("dmft-f");
+    };
+
+    dmftCounterDecid();
+});
+
+
+function dmftCounterDecid() {
+
+    var leftNonesDecid = 0;
+    var leftDsDecid = 0;
+    var leftMsDecid = 0;
+    var leftFsDecid = 0;
+    var rightNonesDecid = 0;
+    var rightDsDecid = 0;
+    var rightMsDecid = 0;
+    var rightFsDecid = 0;
+
+    for (var i = 0; i < 10; i++) {
+
+        var dmftValueDecid = $("#dmft-small-teeth" + (i + 1)).val();
+
+        if (dmftValueDecid == "-") {
+            leftNonesDecid++;
+        }
+        if (dmftValueDecid == "D") {
+            leftDsDecid++;
+        }
+        if (dmftValueDecid == "M") {
+            leftMsDecid++;
+        }
+        if (dmftValueDecid == "F") {
+            leftFsDecid++;
+        }
+    };
+
+    for (var i = 10; i < 20; i++) {
+
+        var dmftValueDecid = $("#dmft-small-teeth" + (i + 1)).val();
+
+        if (dmftValueDecid == "-") {
+            rightNonesDecid++;
+        }
+        if (dmftValueDecid == "D") {
+            rightDsDecid++;
+        }
+        if (dmftValueDecid == "M") {
+            rightMsDecid++;
+        }
+        if (dmftValueDecid == "F") {
+            rightFsDecid++;
+        }
+    };
+
+    $("#left-decid #counter-none .counter-square").html(leftNonesDecid);
+    $("#left-decid #counter-d .counter-square").html(leftDsDecid);
+    $("#left-decid #counter-m .counter-square").html(leftMsDecid);
+    $("#left-decid #counter-f .counter-square").html(leftFsDecid);
+
+    $("#right-decid #counter-none .counter-square").html(rightNonesDecid);
+    $("#right-decid #counter-d .counter-square").html(rightDsDecid);
+    $("#right-decid #counter-m .counter-square").html(rightMsDecid);
+    $("#right-decid #counter-f .counter-square").html(rightFsDecid);
+
+    $("#decid-counter #counter-none .counter-square").html(rightNonesDecid + leftNonesDecid);
+    $("#decid-counter #counter-d .counter-square").html(rightDsDecid + leftDsDecid);
+    $("#decid-counter #counter-m .counter-square").html(rightMsDecid + leftMsDecid);
+    $("#decid-counter #counter-f .counter-square").html(rightFsDecid + leftFsDecid);
+
+    $("#decid-final").html(rightDsDecid + leftDsDecid + rightMsDecid + leftMsDecid + rightFsDecid + leftFsDecid);
+};
+
+
 
 
 

@@ -492,7 +492,7 @@ p {
     }
 
     #bodypage3DMFT-decid .right-block {
-        margin-top: 330px;
+        margin-top: 480px;
     }
 }
 
@@ -772,7 +772,7 @@ p {
     opacity: 0.2;
 }
 
-/* ********************************* DMFT THIRD PAGE ********************************* */
+/* ********************************* DMFT THIRD PAGES (adul & decid) ********************************* */
 
 .dmft-inputs {
     position: relative;
@@ -798,6 +798,10 @@ p {
     outline: none;
 }
 
+#exception2.col-4 {
+    margin-top: -25px;
+}
+
 .dmft-counter-container {
     position: relative;
 }
@@ -810,6 +814,16 @@ p {
 #right.dmft-counter-container {
     right: 227px;
     top: 70px;
+}
+
+#left-decid.dmft-counter-container {
+    left: 217px;
+    top: 85px;
+}
+
+#right-decid.dmft-counter-container {
+    right: 197px;
+    top: 11px;
 }
 
 .dmft-counter-box {
