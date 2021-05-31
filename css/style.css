@@ -427,23 +427,29 @@ p {
     fill: #fff;
 }
 
+.btn-icon2 {
+    fill: #fff;
+    position: relative;
+    right: 6px;
+}
+
 .button-box {
     text-align: center;
 }
 
-.print-button {
+.green-button {
     font-family: OpenSans-Regular;
     font-size: 1rem;
     letter-spacing: 1px;
-    background-color: #009483;
     color: #fff;
     border-radius: 50px;
-    padding: 6px 18px 6px 22px;
-    margin-top: 7px;
-    margin-right: 200px;
+    padding: 6px 15px 6px 10px;
+    margin-right: 10px;
+    background-color: #009483;
+
 }
 
-.print-button:hover {
+.green-button:hover {
     background-color: #00e0c6;
     color: #fff;
 }

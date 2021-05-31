@@ -22,7 +22,7 @@ $("#page1-DMFT-btn").click(function () {
 
 // *************** PAGE2 PSR
 
-$("#page2PSR-prv-btn").click(function () {
+$("#analysis-btn").click(function () {
     $("#page2PSR").hide();
     $("#page1").show();
 });
@@ -45,7 +45,7 @@ $("#page2DMFT-nxt-btn").click(function () {
 
 });
 
-$("#page2DMFT-prv-btn").click(function () {
+$("#analysis-btn2").click(function () {
     $("#page2DMFT").hide();
     $("#page1").show();
 });
@@ -58,9 +58,19 @@ $("#page3DMFT-prv-btn").click(function () {
     $("#page2DMFT").show();
 });
 
+$("#analysis-btn3").click(function () {
+    $("#page3DMFT").hide();
+    $("#page1").show();
+});
+
 $("#page3DMFT-decid-prv-btn").click(function () {
     $("#page3DMFT-decid").hide();
     $("#page2DMFT").show();
+});
+
+$("#analysis-btn4").click(function () {
+    $("#page3DMFT-decid").hide();
+    $("#page1").show();
 });
 
 
