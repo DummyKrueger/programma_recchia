@@ -35,11 +35,11 @@ $("#page2DMFT-nxt-btn").click(function () {
     if ($('input:radio[id=dec-input]:checked').val() == "") {
         var dmftPage3 = "#page3DMFT-decid";
     };
-    
+
     if ($('input:radio[id=adul-input]:checked').val() == "") {
         var dmftPage3 = "#page3DMFT";
     };
-    
+
     $("#page2DMFT").hide();
     $(dmftPage3).show();
 
@@ -111,42 +111,43 @@ $("#exam-date-page23-quad").val(todayV2);
 
 $("#exam-date").on("keyup change", function () {
     var exdate = $("#exam-date").val();
-    var day = exdate.slice(8, 10);
-    var month = exdate.slice(5, 7);
-    var year = exdate.slice(0, 4);
-    exdate = day + " / " + month + " / " + year;
+    dd = exdate.slice(8, 10);
+    mm = exdate.slice(5, 7);
+    yyyy = exdate.slice(0, 4);
+    exdate = dd + " / " + mm + " / " + yyyy;
     $("#exam-date-page23").val(exdate);
     $("#exam-date-page23-bis").val(exdate);
     $("#exam-date-page23-tris").val(exdate);
     $("#exam-date-page23-quad").val(exdate);
+
+    if ($("#birth-date").val() != undefined) {
+        setAge();
+    };
 });
-
-
-
-
 
 
 // **************************** AGE PRECOMPILATION ****************************
 
 $("#birth-date").on('keyup change', function () {
+    setAge();
+});
+
+function setAge() {
     var birthDate = $("#birth-date").val();
     birthDate = birthDate.replace('-', '').replace('-', '');
-    var ye = Number(birthDate.substr(0, 4));
-    var mon = Number(birthDate.substr(4, 2)) - 1;
-    var dy = Number(birthDate.substr(6, 2));
-    var tod = new Date();
-    var age = tod.getFullYear() - ye;
-    if (tod.getMonth() < mon || (tod.getMonth() == mon && tod.getDate() < dy)) {
+    var yyyyBirth = Number(birthDate.substr(0, 4));
+    var mmBirth = Number(birthDate.substr(4, 2)) - 1;
+    var ddBirth = Number(birthDate.substr(6, 2));
+    var age = yyyy - yyyyBirth;
+    if (mm < mmBirth || (mm == mmBirth && dd < ddBirth)) {
         age--;
     };
 
-    if (ye > 1800) {
+    if (yyyyBirth > 1800) {
         $("#age").val(age);
         $("#age-page23").val(age);
     };
-});
-
-
+}
 
 
 
