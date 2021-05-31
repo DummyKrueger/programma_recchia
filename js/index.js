@@ -1,10 +1,10 @@
 // **************************** PAGE BUTTONS FUNCTIONALITY ****************************
 
-$("#page1").show();
+$("#page1").hide();
 $("#page2PSR").hide();
 $("#page2DMFT").hide();
 $("#page3DMFT").hide();
-$("#page3DMFT-decid").hide();
+$("#page3DMFT-decid").show();
 
 
 // *************** PAGE1
