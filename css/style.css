@@ -175,6 +175,12 @@ p {
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
+    color: rgb(156 156 156);
+}
+
+.extratitle-end {
+    font-family: OpenSans-Regular;
+    font-size: 1.2rem;
     color: rgb(214 214 214);
 }
 
@@ -187,6 +193,7 @@ p {
     height: 25px;
     font-size: 13px;
     color: #555;
+    background-color: #fff;
     padding-left: 7px;
     margin-bottom: 8px;
     width: 100%;
@@ -689,6 +696,7 @@ p {
     font-size: 13px;
     color: #555;
     width: 11%;
+    background-color: #fff;
 }
 
 #exception1 .dmft-inputs {

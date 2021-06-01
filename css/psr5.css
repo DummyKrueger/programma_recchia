@@ -1,6 +1,14 @@
 /* ********************************* PRINT OUTPUT FIVE ********************************* */
-/* Le classi in @media print {} devono essere identiche alle classi @media screen {}
-    eccetto per .outpu1, .output1 .container, .output2 e .output2 .container */
+/* 
+Le classi in @media print {} devono essere identiche alle classi @media screen {}
+    eccetto per:
+    .outpu1
+    .output1 .container
+    .output2
+    .output2 .container
+*/
+
+
 
 @media (min-width: 2000px) {
     #mac-resolution {
@@ -33,7 +41,7 @@
         height: 408mm;
         transform: scale(0.76);
         position: relative;
-        bottom: 150mm;
+        bottom: 110mm;
     }
 
     .output2 .container {
@@ -508,7 +516,7 @@
 
     .markk-container {
         float: left;
-        background-color: #eb5b85;
+        background-color: #8b8b8b;
         width: 22mm;
         height: 22mm;
         border-radius: 50%;
