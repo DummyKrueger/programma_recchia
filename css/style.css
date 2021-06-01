@@ -12,129 +12,22 @@ OpenSans-LightItalic
 */
 
 /* RESOLUTIONS 
-    2560×1440 (non ancora implementata)
+    2560×1440
     1920x1080
     1536×864
     1440×900
     1366×768
 */
-/* 
-@media (min-width: 1600px) {
-    .right-block {
-        background: linear-gradient(to left, #009483, #006459);
-        height: 155px;
-        margin-top: 250px;
-    }
 
-    #bodypage2PSR .right-block {
-        margin-top: 550px;
-    }
-
-    #bodypage2DMFT .right-block {
-        margin-top: 550px;
-    }
-
-    .big-sub-title {
-        font-family: OpenSans-Regular;
-        font-size: 1.6rem;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        width: 50%;
-        margin-left: 10px;
-    }
-
-    .bottom-left-box {
-        background-color: #dddede;
-        margin-right: 120px;
-        height: 142px;
-    }
-
-    #internal.vertical-line {
-        height: 310px;
-        margin: 0;
-        position: absolute;
-        left: 385px;
-        top: 50px;
+@media (min-width: 2000px) { /* mac resolution */
+    body {
+        transform: scale(1.6);
+        padding-top: 220px;
+        width: 76.9%;
+        padding-left: 350px;
     }
 }
 
-@media (min-width: 1500px) and (max-width: 1599px) {
-    .right-block {
-        background: linear-gradient(to left, #009483, #006459);
-        height: 155px;
-        margin-top: 250px;
-    }
-
-    #bodypage2PSR .right-block {
-        margin-top: 430px;
-    }
-
-    #bodypage2DMFT .right-block {
-        margin-top: 430px;
-    }
-
-    .big-sub-title {
-        font-family: OpenSans-Regular;
-        font-size: 1.6rem;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        width: 50%;
-        margin-left: 10px;
-    }
-
-    .bottom-left-box {
-        background-color: #dddede;
-        margin-right: 35px;
-        height: 142px;
-    }
-
-    #internal.vertical-line {
-        height: 310px;
-        margin: 0;
-        position: absolute;
-        left: 335px;
-        top: 50px;
-    }
-}
-
-@media (min-width: 1400px) and (max-width: 1499px) {
-    .right-block {
-        background: linear-gradient(to left, #009483, #006459);
-        height: 155px;
-        margin-top: 250px;
-    }
-
-    #bodypage2PSR .right-block {
-        margin-top: 400px;
-    }
-
-    #bodypage2DMFT .right-block {
-        margin-top: 400px;
-    }
-
-    .big-sub-title {
-        font-family: OpenSans-Regular;
-        font-size: 1.6rem;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        width: 80%;
-        margin-left: 10px;
-    }
-
-    .bottom-left-box {
-        background-color: #dddede;
-        margin-right: 35px;
-        height: 142px;
-    }
-
-    #internal.vertical-line {
-        height: 310px;
-        margin: 0;
-        position: absolute;
-        left: 305px;
-        top: 50px;
-    }
-} */
 
 /* ********************************* BASIC CSS ********************************* */
 
@@ -147,11 +40,6 @@ body .container {
     padding: 0;
 }
 
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
 h1,
 h2,
 h3,
@@ -162,6 +50,12 @@ p {
     margin: 0;
     color: #555;
 }
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 /* ********************************* TITLES ********************************* */
 
@@ -197,7 +91,6 @@ p {
     width: 82%;
     margin-left: 10px;
 }
-
 
 .secondary-title {
     font-family: OpenSans-Light;
@@ -320,18 +213,6 @@ p {
     cursor: pointer;
     margin-right: 3px;
 }
-
-/* #adul-input:after {
-    background-color: #009483;
-    border-radius: 25px;
-    height: 15px;
-    width: 15px;
-    content: '';
-    display: block;
-    position: relative;
-    left: 4px;
-    top: 4px; 
-} */
 
 .custom-radios:checked:after {
     background-color: #009483;
@@ -1052,7 +933,8 @@ p {
     border-style: none;
     background-color: #009483;
     height: 7px;
-    margin: 0 -1% 40px -1%;
+    margin-top: 0;
+    margin-bottom: 40px;
 }
 
 #alpha .col {

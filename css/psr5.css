@@ -1,6 +1,14 @@
 /* ********************************* PRINT OUTPUT FIVE ********************************* */
-/* Le classi in @media print {} devono essereidentiche alle classi @media screen {}
+/* Le classi in @media print {} devono essere identiche alle classi @media screen {}
     eccetto per .outpu1, .output1 .container, .output2 e .output2 .container */
+
+@media (min-width: 2000px) {
+    #mac-resolution {
+        transform: scale(1.6);
+        padding-top: 800px;
+    }
+}
+
 
 @media screen {
 
@@ -30,6 +38,11 @@
 
     .output2 .container {
         padding: 0;
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     /* *********************** header ******************** */
