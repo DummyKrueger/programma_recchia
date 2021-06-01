@@ -18,7 +18,7 @@ OpenSans-LightItalic
     1440×900
     1366×768
 */
-
+/* 
 @media (min-width: 1600px) {
     .right-block {
         background: linear-gradient(to left, #009483, #006459);
@@ -134,7 +134,7 @@ OpenSans-LightItalic
         left: 305px;
         top: 50px;
     }
-}
+} */
 
 /* ********************************* BASIC CSS ********************************* */
 
@@ -143,8 +143,13 @@ body {
 }
 
 body .container {
-    margin: 0;
     max-width: 100%;
+    padding: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h1,
@@ -183,16 +188,16 @@ p {
     margin-bottom: 8px;
 }
 
-@media (max-width: 1399px) {
-    .big-sub-title {
-        font-family: OpenSans-Regular;
-        font-size: 1.6rem;
-        line-height: 1.1;
-        letter-spacing: -1px;
-        width: 82%;
-        margin-left: 10px;
-    }
+
+.big-sub-title {
+    font-family: OpenSans-Regular;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    width: 82%;
+    margin-left: 10px;
 }
+
 
 .secondary-title {
     font-family: OpenSans-Light;
@@ -457,12 +462,13 @@ p {
 /* ********************************* ALL PAGES ********************************* */
 
 .logo {
-    max-width: 58%;
+    width: 195px;
     margin-top: 35px;
     margin-left: 15px;
 }
 
 .logo-col {
+    width: 900px;
     padding: 0;
 }
 
@@ -470,10 +476,13 @@ p {
     border-style: none;
     background-color: #009483;
     height: 7px;
-    margin: 0 -1%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .body-col {
+    display: inline-block;
+    width: 900px;
     background-color: #fff;
     padding-top: 45px;
     padding-bottom: 30px;
@@ -486,29 +495,29 @@ p {
     margin-top: 50px;
 }
 
-@media (max-width: 1399px) {
-    .right-block {
-        background: linear-gradient(to left, #009483, #006459);
-        height: 155px;
-        margin-top: 460px;
-    }
 
-    #bodypage2PSR .right-block {
-        margin-top: 390px;
-    }
-
-    #bodypage2DMFT .right-block {
-        margin-top: 290px;
-    }
-
-    #bodypage3DMFT .right-block {
-        margin-top: 530px;
-    }
-
-    #bodypage3DMFT-decid .right-block {
-        margin-top: 480px;
-    }
+.right-block {
+    background: linear-gradient(to left, #009483, #006459);
+    height: 155px;
+    margin-top: 460px;
 }
+
+#bodypage2PSR .right-block {
+    margin-top: 390px;
+}
+
+#bodypage2DMFT .right-block {
+    margin-top: 290px;
+}
+
+#bodypage3DMFT .right-block {
+    margin-top: 530px;
+}
+
+#bodypage3DMFT-decid .right-block {
+    margin-top: 480px;
+}
+
 
 #roof-head .left-block {
     height: 30px;
@@ -526,23 +535,25 @@ p {
     background-color: #006459;
 }
 
-@media (max-width: 1399px) {
-    #internal.vertical-line {
-        height: 490px;
-        margin: 0;
-        position: absolute;
-        left: 305px;
-        top: 50px;
-    }
+
+#internal.vertical-line {
+    height: 490px;
+    position: absolute;
+    left: 5px;
+    margin-top: 0;
 }
+
 
 #roof-head .vertical-line {
     margin-top: 35px;
     height: 60px;
 }
 
-#bodypage2DMFT #internal.vertical-line {
-    height: 330px;   
+#internal-dmft.vertical-line {
+    height: 330px;
+    position: absolute;
+    left: 5px;
+    margin-top: 0;
 }
 
 /* ********************************* FIRST PAGE ********************************* */
@@ -653,14 +664,14 @@ p {
 
 
 
-@media (max-width: 1399px) {
-    .bottom-left-box {
-        background-color: #dddede;
-        margin-right: 15px;
-        height: 142px;
-        margin-top: 47px;
-    }
+
+.bottom-left-box {
+    background-color: #dddede;
+    margin-right: 15px;
+    height: 142px;
+    margin-top: 47px;
 }
+
 
 .programs {
     text-align: center;
