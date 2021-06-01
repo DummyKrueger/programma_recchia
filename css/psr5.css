@@ -1,14 +1,4 @@
 /* ********************************* PRINT OUTPUT FIVE ********************************* */
-/* 
-Le classi in @media print {} devono essere identiche alle classi @media screen {}
-    eccetto per:
-    .outpu1
-    .output1 .container
-    .output2
-    .output2 .container
-*/
-
-
 
 @media (min-width: 2000px) {
     #mac-resolution {
@@ -20,14 +10,49 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
 
 @media screen {
 
+    .hide1 {
+        display: none;
+    }
+
+    #print-logo-col {
+        margin-left: 42mm;
+    }
+
+    .delta-left-block {
+        background: linear-gradient(to right, #009483, #006459);
+        height: 155px;
+        width: 200mm;
+        position: absolute;
+        left: 0;
+        top: 13mm;
+    }
+
+    .delta-right-block {
+        background: linear-gradient(to left, #009483, #006459);
+        height: 155px;
+        width: 79.5mm;
+        position: absolute;
+        right: 0;
+        top: 135mm;
+    }
+
+    .delta-left-line {
+        height: 215px;
+        width: 1px;
+        background-color: #006459;
+        position: absolute;
+        left: 78.8mm;
+        top: 6mm;
+    }
+
     .output1 {
         background-color: #fff;
-        padding: 0;
-        width: 290mm;
-        height: 408mm;
-        transform: scale(0.76);
+        padding: 0 5mm;
+        width: 261mm;
+        height: 340mm;
         position: relative;
-        bottom: 50mm;
+        bottom: 51.5mm;
+        transform: scale(0.76);
     }
 
     .output1 .container {
@@ -36,12 +61,12 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
 
     .output2 {
         background-color: #fff;
-        padding: 0;
-        width: 290mm;
-        height: 408mm;
+        padding: 0 5mm;
+        width: 261mm;
+        height: 370mm;
         transform: scale(0.76);
         position: relative;
-        bottom: 110mm;
+        bottom: 145mm;
     }
 
     .output2 .container {
@@ -51,6 +76,39 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
     .row {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    #central-col.col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #buttons-row1 {
+        padding-top: 10mm;
+    }
+
+    #buttons-row2 {
+        margin-top: 10mm;
+        padding-top: 10mm;
+    }
+
+    #analysis-btn5.green-button,
+    #analysis-btn5-2.green-button {
+        transform: scale(1.32);
+        margin-left: 5mm;
+    }
+
+    #psr5-prv.prv-button,
+    #psr5-prv2.prv-button {
+        transform: scale(1.32);
+        margin-left: 25mm;
+    }
+
+    #print-btn.green-button,
+    #print-btn2.green-button {
+        transform: scale(1.32);
+        padding-left: 4mm;
+        float: right;
     }
 
     /* *********************** header ******************** */
@@ -138,39 +196,39 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
 
     #sep1.print-vertical-sep {
         position: absolute;
-        top: 77mm;
-        left: 85mm;
+        top: 29mm;
+        left: 68mm;
     }
 
     #sep2.print-horizontal-sep {
         position: absolute;
-        top: 132mm;
-        left: 50mm;
+        top: 84mm;
+        left: 30mm;
     }
 
     #sep3.print-horizontal-sep {
         position: absolute;
-        top: 218mm;
+        top: 170mm;
         left: 50mm;
     }
 
     #sep4.print-vertical-sep {
         position: absolute;
-        top: 218mm;
-        right: 127mm;
+        top: 170mm;
+        right: 113mm;
         height: 85mm;
     }
 
     #sep5.print-horizontal-sep {
         position: absolute;
-        top: 208mm;
-        right: 20mm;
+        top: 137mm;
+        right: 10mm;
     }
 
     #sep6.print-vertical-sep {
         position: absolute;
-        top: 120mm;
-        right: 20mm;
+        top: 50mm;
+        right: 10mm;
         height: 120mm;
     }
 
@@ -277,8 +335,8 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
 
     .print-legend {
         position: absolute;
-        top: 153mm;
-        right: 20mm;
+        top: 101mm;
+        right: 6mm;
         width: 74mm;
     }
 
@@ -479,8 +537,8 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
         border-radius: 50%;
         padding-left: 2mm;
         position: absolute;
-        left: 42mm;
-        top: 217.5mm;
+        left: 25mm;
+        top: 147mm;
     }
 
     #two2 {
@@ -490,8 +548,8 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
         border-radius: 50%;
         padding-left: 2mm;
         position: absolute;
-        left: 42mm;
-        top: 264mm;
+        left: 25mm;
+        top: 193.5mm;
     }
 
     #three3 {
@@ -501,8 +559,8 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
         border-radius: 50%;
         padding-left: 2mm;
         position: absolute;
-        left: 42mm;
-        top: 302mm;
+        left: 25mm;
+        top: 231.5mm;
     }
 
     .smoke-box {
@@ -559,6 +617,13 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
 
 
 
+
+
+
+
+
+
+
 @media print {
     body * {
         visibility: hidden;
@@ -568,10 +633,18 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
         background: #fff;
     }
 
+    #buttons-row1 {
+        display: none;
+    }
+
+    #buttons-row2 {
+        display: none;
+    }
+
     .output1 {
         visibility: visible;
         position: absolute;
-        top: -63mm;
+        top: -73mm;
         left: -96mm;
         background-color: #fff;
         padding: 0;
@@ -1061,7 +1134,7 @@ Le classi in @media print {} devono essere identiche alle classi @media screen {
 
     .markk-container {
         float: left;
-        background-color: #eb5b85;
+        background-color: #8b8b8b;
         width: 22mm;
         height: 22mm;
         border-radius: 50%;

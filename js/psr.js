@@ -70,3 +70,9 @@ $("#print-btn").click(function () {
     window.print();
 
 });
+
+$("#print-btn2").click(function () {
+
+    window.print();
+
+});
