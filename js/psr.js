@@ -1,12 +1,3 @@
-// **************************** PREV BUTTON ****************************
-
-$("#roof-prv-btn").hover(function () {
-    $("#roof-prv-btn img").addClass("icon-hover");
-}, function () {
-    $("#roof-prv-btn img").removeClass("icon-hover");
-});
-
-
 // **************************** DATA COLLECTION/INJECTION****************************
 
 const queryString = window.location.search;

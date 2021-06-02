@@ -51,7 +51,7 @@ $("#analysis-btn2").click(function () {
 });
 
 
-// *************** PAGE3 DMFT
+// *************** PAGE3 DMFT (adul and decid)
 
 $("#page3DMFT-prv-btn").click(function () {
     $("#page3DMFT").hide();
@@ -171,7 +171,7 @@ $("#dec-input, #adul-input").on("change", function () {
 });
 
 
-function teethChecker () {
+function teethChecker() {
     if ($('input:radio[id=dec-input]:checked').val() == "") {
         $(".tee-img1").css("opacity", "1")
     } else {
@@ -485,7 +485,7 @@ function dmftCounterDecid() {
 
 
 
-// **************************** DATA TRANSMISSION TO PAGE 3 ****************************
+// **************************** DATA TRANSMISSION TO PSR REPORT ****************************
 
 var oname = "Nome Cognome";
 var pname = "Nome Cognome";
@@ -523,3 +523,19 @@ $("#page2PSR-nxt-btn").click(function () {
 
     $("#dataPath").attr("href", path);
 });
+
+
+
+
+// **************************** DATA COLLECTION FROM PSR REPORT ****************************
+
+const queryString = window.location.search;
+
+const allData = new URLSearchParams(queryString);
+
+var prv = allData.get('prv');
+
+if (prv == "yes") {
+    $("#page1").hide();
+    $("#page2PSR").show();
+}
