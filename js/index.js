@@ -26,6 +26,7 @@ $("#analysis-btn").click(function () {
     $("#page2PSR").hide();
     $("#page1").show();
 });
+// il bottone AVANTI è gestito da un href
 
 
 // *************** PAGE2 DMFT
@@ -72,6 +73,11 @@ $("#analysis-btn4").click(function () {
     $("#page3DMFT-decid").hide();
     $("#page1").show();
 });
+// il bottone AVANTI è gestito da un href
+
+
+
+
 
 
 
@@ -94,7 +100,42 @@ $("#exam-date").attr("value", today);
 
 
 
+// **************************** AGE PRECOMPILATION ****************************
+
+$("#birth-date").on('keyup change', function () {
+    setAge();
+});
+
+function setAge() {
+    var birthDate = $("#birth-date").val();
+    birthDate = birthDate.replace('-', '').replace('-', '');
+    var yyyyBirth = Number(birthDate.substr(0, 4));
+    var mmBirth = Number(birthDate.substr(4, 2)) - 1;
+    var ddBirth = Number(birthDate.substr(6, 2));
+    var age = yyyy - yyyyBirth;
+    if (mm < mmBirth || (mm == mmBirth && dd < ddBirth)) {
+        age--;
+    };
+
+    if (yyyyBirth > 1800) {
+        $("#age").val(age);
+        $("#age-page23").val(age);
+    };
+}
+
+
+
+
+
+
+
+
+
+
+
 // **************************** PAGE23 PRECOMPILATION ****************************
+// il codice seguente fa in modo che gli input readonly presenti nelle pagine successive
+// alla prima vengano compilati con i dati inseriti nella prima pagina
 
 $("#pname-orig").on("keyup change", function () {
     $("#pname-page23").val($("#pname-orig").val());
@@ -136,28 +177,10 @@ $("#exam-date").on("keyup change", function () {
 });
 
 
-// **************************** AGE PRECOMPILATION ****************************
 
-$("#birth-date").on('keyup change', function () {
-    setAge();
-});
 
-function setAge() {
-    var birthDate = $("#birth-date").val();
-    birthDate = birthDate.replace('-', '').replace('-', '');
-    var yyyyBirth = Number(birthDate.substr(0, 4));
-    var mmBirth = Number(birthDate.substr(4, 2)) - 1;
-    var ddBirth = Number(birthDate.substr(6, 2));
-    var age = yyyy - yyyyBirth;
-    if (mm < mmBirth || (mm == mmBirth && dd < ddBirth)) {
-        age--;
-    };
 
-    if (yyyyBirth > 1800) {
-        $("#age").val(age);
-        $("#age-page23").val(age);
-    };
-}
+
 
 
 
@@ -190,6 +213,9 @@ function teethChecker() {
 
 
 
+
+
+
 // **************************** PSR PAGE 2 INPUTS CONTROL ****************************
 
 $(".teeth-inputs").on('change keyup', function () {
@@ -206,7 +232,16 @@ $(".teeth-inputs").on('change keyup', function () {
 
 
 
+
+
 // **************************** PSR TEETH GROUPS COLORATION ****************************
+
+var input1 = "0";
+var input2 = "0";
+var input3 = "0";
+var input4 = "0";
+var input5 = "0";
+var input6 = "0";
 
 $("#input-one").on('keyup change', function () {
     if ($(this).val() == "4*") {
@@ -286,6 +321,12 @@ function teethColoration(inputValue, groupNumber) {
         $(selection).removeClass().addClass("state-four");
     }
 };
+
+
+
+
+
+
 
 
 
@@ -381,6 +422,11 @@ function dmftCounter() {
 
     $("#adul-final").html(rightDs + leftDs + rightMs + leftMs + rightFs + leftFs);
 };
+
+
+
+
+
 
 
 
@@ -485,23 +531,51 @@ function dmftCounterDecid() {
 
 
 
-// **************************** DATA TRANSMISSION TO PSR REPORT ****************************
 
-var oname = "Nome Cognome";
-var pname = "Nome Cognome";
-var input1 = "0";
-var input2 = "0";
-var input3 = "0";
-var input4 = "0";
-var input5 = "0";
-var input6 = "0";
+
+
+
+
+// **************************** DATA TRANSMISSION TO REPORTS ****************************
 
 
 $("#page2PSR-nxt-btn").click(function () {
+    var after = Math.max(input1, input2, input3, input4, input5, input6);
+    dataTransmission("reports/psr", after);
+});
 
-    oname = $("#oname-orig").val();
+$("#page3DMFT-nxt-btn").click(function () {
+    dataTransmission("reports/dmft-", "adul");
+});
 
-    pname = $("#pname-orig").val();
+$("#page3DMFT-nxt-btn-decid").click(function () {
+    dataTransmission("reports/dmft-", "decid");
+});
+
+
+
+
+
+function dataTransmission(report, end) {
+
+    var oname = $("#oname-orig").val();
+    var pname = $("#pname-orig").val();
+    var ageX = $("#age").val();
+    var exSmoke = $("#ex-smoke").val();
+
+
+    if ($("#daily-freq").val() == "-") {
+        var freq = "";
+    } else {
+        var freq = $("#daily-freq").val();
+    };
+
+    if ($("#collu-type").val() == "-") {
+        var colluType = "";
+    } else {
+        var colluType = $("#collu-type").val();
+    };
+
 
     var exdate = $("#exam-date").val();
     var day = exdate.slice(8, 10);
@@ -509,25 +583,125 @@ $("#page2PSR-nxt-btn").click(function () {
     var year = exdate.slice(0, 4);
     exdate = day + " / " + month + " / " + year;
 
+
+    if ($("#birth-date").val() == "") {
+        var bdate = "";
+    } else {
+        var bdate = $("#birth-date").val();
+        var bday = bdate.slice(8, 10);
+        var bmonth = bdate.slice(5, 7);
+        var byear = bdate.slice(0, 4);
+        bdate = bday + " / " + bmonth + " / " + byear;
+    };
+
+
+    if ($('input:radio[id=male-sex-input]:checked').val() == "") {
+        var sex = "male";
+    } else if ($('input:radio[id=female-sex-input]:checked').val() == "") {
+        var sex = "female";
+    } else {
+        var sex = "";
+    };
+
+    if ($('input:radio[id=diab-yes-input]:checked').val() == "") {
+        var diab = "yes";
+    } else if ($('input:radio[id=diab-no-input]:checked').val() == "") {
+        var diab = "no";
+    } else {
+        var diab = "";
+    };
+
     if ($('input:radio[id=smoke-yes-input]:checked').val() == "") {
         var smoke = "yes";
-    };
-
-    if ($('input:radio[id=smoke-no-input]:checked').val() == "") {
+    } else if ($('input:radio[id=smoke-no-input]:checked').val() == "") {
         var smoke = "no";
+    } else {
+        var smoke = "";
     };
 
-    var highest = Math.max(input1, input2, input3, input4, input5, input6);
+    if ($('input:radio[id=svapo-yes-input]:checked').val() == "") {
+        var svapo = "yes";
+    } else if ($('input:radio[id=svapo-no-input]:checked').val() == "") {
+        var svapo = "no";
+    } else {
+        var svapo = "";
+    };
 
-    var path = "reports/psr" + highest + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
+    if ($('input:radio[id=brush-elet-input]:checked').val() == "") {
+        var brush = "e";
+    } else if ($('input:radio[id=brush-manu-input]:checked').val() == "") {
+        var brush = "m";
+    } else {
+        var brush = "";
+    };
 
-    $("#dataPath").attr("href", path);
-});
+    if ($('input:radio[id=paste-yes-input]:checked').val() == "") {
+        var paste = "yes";
+    } else if ($('input:radio[id=paste-no-input]:checked').val() == "") {
+        var paste = "no";
+    } else {
+        var paste = "";
+    };
+
+    if ($('input:radio[id=wire-day]:checked').val() == "") {
+        var wire = "day";
+    } else if ($('input:radio[id=wire-week]:checked').val() == "") {
+        var wire = "week";
+    } else if ($('input:radio[id=wire-never]:checked').val() == "") {
+        var wire = "never";
+    } else {
+        var wire = "";
+    };
+
+    if ($('input:radio[id=scovo-day]:checked').val() == "") {
+        var scovo = "day";
+    } else if ($('input:radio[id=scovo-week]:checked').val() == "") {
+        var scovo = "week";
+    } else if ($('input:radio[id=scovo-never]:checked').val() == "") {
+        var scovo = "never";
+    } else {
+        var scovo = "";
+    };
+
+    if ($('input:radio[id=collu-day]:checked').val() == "") {
+        var collu = "day";
+    } else if ($('input:radio[id=collu-week]:checked').val() == "") {
+        var collu = "week";
+    } else if ($('input:radio[id=collu-never]:checked').val() == "") {
+        var collu = "never";
+    } else {
+        var collu = "";
+    };
+
+
+    var path1 = report + end + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&bdate=" + bdate;
+    var path2 = "&ageX=" + ageX + "&sex=" + sex + "&diab=" + diab + "&exSmoke=" + exSmoke + "&svapo=" + svapo;
+    var path3 = "&freq=" + freq + "&brush=" + brush + "&paste=" + paste + "&wire=" + wire + "&scovo=" + scovo;
+    var path4 = "&collu=" + collu + "&collutype=" + colluType;
+    var path5 = "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2;
+    var path6 = "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
+
+    var path = path1 + path2 + path3 + path4 + path5+ path6;
+
+    $("#dataPathPsr").attr("href", path);
+    $("#dataPathAdul").attr("href", path);
+    $("#dataPathDecid").attr("href", path);
+};
 
 
 
 
-// **************************** DATA COLLECTION FROM PSR REPORT ****************************
+
+
+
+
+
+
+
+// **************************** DATA COLLECTION/INJECTION FROM PSR REPORT ****************************
+// qui vanno inserite le querystring che vengono passate alla pagina 1 quando si torna indietro
+// da un report, in modo che tutti gli input di pagina 1, 2 e 3 vengano precompilati. Altrimenti
+// tornando indietro da un report, tutti i dati precedentemente inseriti vengono persi
 
 const queryString = window.location.search;
 
@@ -538,4 +712,7 @@ var prv = allData.get('prv');
 if (prv == "yes") {
     $("#page1").hide();
     $("#page2PSR").show();
+    var queryParams = new URLSearchParams(window.location.search);
+    queryParams.set("prv", "no");
+    history.replaceState(null, null, "?" + queryParams.toString());
 }
