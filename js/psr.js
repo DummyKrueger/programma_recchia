@@ -14,9 +14,18 @@ $("#oname-dest").text(oname);
 $("#pname-dest").text(pname);
 $(".print-date-box").text(exdate);
 
-if (smoke == "no") {
+if (smoke == "yes") {
+    $(".smoke-box").css("display", "block");
+} else {
     $(".smoke-box").css("display", "none");
-}
+    $("#smoke-no1").css("float", "left").css("margin-right", "5mm");
+    $("#smoke-no2").css("display", "inline-block");
+    $("#smoke-no3").css("margin-bottom", "20mm");
+    $("#three3").css("left", "139mm").css("top", "147mm");
+    $("#two2").css("top", "191mm");
+    $(".output2").css("height", "340mm");
+    $(".delta-right-block").css("top", "90mm");
+};
 
 
 
@@ -70,11 +79,23 @@ function teethColoration(inputValue, groupNumber) {
 
 $("#print-btn").click(function () {
 
+    if (smoke != "yes") {
+        $("#two2").css("top", "262mm");
+        $("#three3").css("left", "155mm").css("top", "217mm");
+        $("#second-num.sheet-num").css("bottom", "-62mm");
+    };
+
     window.print();
 
 });
 
 $("#print-btn2").click(function () {
+
+    if (smoke != "yes") {
+        $("#two2").css("top", "262mm");
+        $("#three3").css("left", "155mm").css("top", "217mm");
+        $("#second-num.sheet-num").css("bottom", "-62mm");
+    };
 
     window.print();
 
