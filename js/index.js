@@ -335,6 +335,8 @@ function teethColoration(inputValue, groupNumber) {
 
 // **************************** DMFT ADULT TEETH COLORATION AND COUNTER ****************************
 
+var adulArray = ["0", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"];
+
 $("#adul .col-5 select").on("change", function () {
 
     var inputId = this.id;
@@ -343,15 +345,19 @@ $("#adul .col-5 select").on("change", function () {
 
     if ($(this).val() == "-") {
         $(teethId).removeClass().addClass("dmft-none");
+        adulArray[inputId.slice(10)] = "-";
     };
     if ($(this).val() == "D") {
         $(teethId).removeClass().addClass("dmft-d");
+        adulArray[inputId.slice(10)] = "D";
     };
     if ($(this).val() == "M") {
         $(teethId).removeClass().addClass("dmft-m");
+        adulArray[inputId.slice(10)] = "M";
     };
     if ($(this).val() == "F") {
         $(teethId).removeClass().addClass("dmft-f");
+        adulArray[inputId.slice(10)] = "F";
     };
 
     dmftCounter();
@@ -436,6 +442,8 @@ function dmftCounter() {
 
 // **************************** DMFT DECID TEETH COLORATION AND COUNTER ****************************
 
+var decidArray = ["0", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"];
+
 $("#decid .col-4 select").on("change", function () {
 
     var inputIdDecid = this.id;
@@ -444,15 +452,19 @@ $("#decid .col-4 select").on("change", function () {
 
     if ($(this).val() == "-") {
         $(teethIdDecid).removeClass().addClass("dmft-none");
+        decidArray[inputIdDecid.slice(16)] = "-";
     };
     if ($(this).val() == "D") {
         $(teethIdDecid).removeClass().addClass("dmft-d");
+        decidArray[inputIdDecid.slice(16)] = "D";
     };
     if ($(this).val() == "M") {
         $(teethIdDecid).removeClass().addClass("dmft-m");
+        decidArray[inputIdDecid.slice(16)] = "M";
     };
     if ($(this).val() == "F") {
         $(teethIdDecid).removeClass().addClass("dmft-f");
+        decidArray[inputIdDecid.slice(16)] = "F";
     };
 
     dmftCounterDecid();
@@ -677,11 +689,23 @@ function dataTransmission(report, end) {
     var path1 = report + end + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&bdate=" + bdate;
     var path2 = "&ageX=" + ageX + "&sex=" + sex + "&diab=" + diab + "&exSmoke=" + exSmoke + "&svapo=" + svapo;
     var path3 = "&freq=" + freq + "&brush=" + brush + "&paste=" + paste + "&wire=" + wire + "&scovo=" + scovo;
-    var path4 = "&collu=" + collu + "&collutype=" + colluType;
-    var path5 = "&exdate=" + exdate + "&smoke=" + smoke + "&input1=" + input1 + "&input2=" + input2;
-    var path6 = "&input3=" + input3 + "&input4=" + input4 + "&input5=" + input5 + "&input6=" + input6;
+    var path4 = "&collu=" + collu + "&collutype=" + colluType + "&exdate=" + exdate + "&smoke=" + smoke;
+    var path5 = "&input1=" + input1 + "&input2=" + input2 + "&input3=" + input3 + "&input4=" + input4;
+    var path6 = "&input5=" + input5 + "&input6=" + input6 + "&adul1=" + adulArray[1] + "&adul2=" + adulArray[2];
+    var path7 = "&adul3=" + adulArray[3] + "&adul4=" + adulArray[4] + "&adul5=" + adulArray[5] + "&adul6=" + adulArray[6];
+    var path8 = "&adul7=" + adulArray[7] + "&adul8=" + adulArray[8] + "&adul9=" + adulArray[9] + "&adul10=" + adulArray[10];
+    var path9 = "&adul11=" + adulArray[11] + "&adul12=" + adulArray[12] + "&adul13=" + adulArray[13] + "&adul14=" + adulArray[14];
+    var path10 = "&adul15=" + adulArray[15] + "&adul16=" + adulArray[16] + "&adul17=" + adulArray[17] + "&adul18=" + adulArray[18];
+    var path11 = "&adul19=" + adulArray[19] + "&adul20=" + adulArray[20] + "&adul21=" + adulArray[21] + "&adul22=" + adulArray[22];
+    var path12 = "&adul23=" + adulArray[23] + "&adul24=" + adulArray[24] + "&adul25=" + adulArray[25] + "&adul26=" + adulArray[26];
+    var path13 = "&adul27=" + adulArray[27] + "&adul28=" + adulArray[28] + "&decid1=" + decidArray[1] + "&decid2=" + decidArray[2];
+    var path14 = "&decid3=" + decidArray[3] + "&decid4=" + decidArray[4] + "&decid5=" + decidArray[5] + "&decid6=" + decidArray[6];
+    var path15 = "&decid7=" + decidArray[7] + "&decid8=" + decidArray[8] + "&decid9=" + decidArray[9] + "&decid10=" + decidArray[10];
+    var path16 = "&decid11=" + decidArray[11] + "&decid12=" + decidArray[12] + "&decid13=" + decidArray[13] + "&decid14=" + decidArray[14];
+    var path17 = "&decid15=" + decidArray[15] + "&decid16=" + decidArray[16] + "&decid17=" + decidArray[17] + "&decid18=" + decidArray[18];
+    var path18 = "&decid19=" + decidArray[19] + "&decid20=" + decidArray[20];
 
-    var path = path1 + path2 + path3 + path4 + path5+ path6;
+    var path = path1 + path2 + path3 + path4 + path5 + path6 + path7 + path8 + path9 + path10 + path11 + path12 + path13 + path14 + path15 + path16 + path17 + path18;
 
     $("#dataPathPsr").attr("href", path);
     $("#dataPathAdul").attr("href", path);
@@ -715,4 +739,4 @@ if (prv == "yes") {
     var queryParams = new URLSearchParams(window.location.search);
     queryParams.set("prv", "no");
     history.replaceState(null, null, "?" + queryParams.toString());
-}
+};
