@@ -30,10 +30,11 @@
     .delta-right-block {
         background: linear-gradient(to left, #009483, #006459);
         height: 155px;
-        width: 79.5mm;
+        width: 200mm;
         position: absolute;
         right: 0;
         top: 135mm;
+        z-index: -10;
     }
 
     .delta-left-line {
@@ -41,7 +42,7 @@
         width: 1px;
         background-color: #006459;
         position: absolute;
-        left: 78.8mm;
+        right: -31.2mm;
         top: 6mm;
     }
 
