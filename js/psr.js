@@ -107,7 +107,7 @@ var dataArrayString = "&" + dataArray;
 
 dataArrayString = dataArrayString.replaceAll(",", "");
 
-$("#dataPath-analysis5").attr("href", "../index.html?" + dataArrayString);
-$("#dataPath-analysis5-2").attr("href", "../index.html?" + dataArrayString);
+$("#dataPath-analysis5").attr("href", "../index.html?prv=no" + dataArrayString);
+$("#dataPath-analysis5-2").attr("href", "../index.html?prv=no" + dataArrayString);
 $("#dataPath-psr5-prv").attr("href", "../index.html?prv=yes" + dataArrayString);
 $("#dataPath-psr5-prv2").attr("href", "../index.html?prv=yes" + dataArrayString);

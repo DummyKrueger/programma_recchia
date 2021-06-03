@@ -731,12 +731,72 @@ const queryString = window.location.search;
 
 const allData = new URLSearchParams(queryString);
 
-var prv = allData.get('prv');
+// exSmoke=&svapo=&freq=&brush=&paste=&wire=&scovo=&collu=&collutype=&smoke=&input1=0&input2=0&input3=0&input4=0&input5=0&input6=0&adul1=-&adul2=-&adul3=-&adul4=-&adul5=-&adul6=-&adul7=-&adul8=-&adul9=-&adul10=-&adul11=-&adul12=-&adul13=-&adul14=-&adul15=-&adul16=-&adul17=-&adul18=-&adul19=-&adul20=-&adul21=-&adul22=-&adul23=-&adul24=-&adul25=-&adul26=-&adul27=-&adul28=-&decid1=-&decid2=-&decid3=-&decid4=-&decid5=-&decid6=-&decid7=-&decid8=-&decid9=-&decid10=-&decid11=-&decid12=-&decid13=-&decid14=-&decid15=-&decid16=-&decid17=-&decid18=-&decid19=-&decid20=-
 
-if (prv == "yes") {
-    $("#page1").hide();
-    $("#page2PSR").show();
-    var queryParams = new URLSearchParams(window.location.search);
-    queryParams.set("prv", "no");
-    history.replaceState(null, null, "?" + queryParams.toString());
+myFunc(allData);
+
+function myFunc(allData) {
+
+    var prv = allData.get('prv');
+
+    if (prv == "yes") {
+        $("#page1").hide();
+        $("#page2PSR").show();
+        var queryParams = new URLSearchParams(window.location.search);
+        queryParams.set("prv", "no");
+        history.replaceState(null, null, "?" + queryParams.toString());
+    };
+
+    if (prv) {
+        var deltaExDate = allData.get('exdate');
+        var deltaDD = deltaExDate.slice(0, 2);
+        var deltaMM = deltaExDate.slice(5, 7);
+        var deltaYY = deltaExDate.slice(10);
+        var deltaExDateV2 = deltaYY + "-" + deltaMM + "-" + deltaDD;
+        $("#exam-date").val(deltaExDateV2);
+        $("#exam-date-page23").val(deltaExDate);
+        $("#exam-date-page23-bis").val(deltaExDate);
+        $("#exam-date-page23-tris").val(deltaExDate);
+        $("#exam-date-page23-quad").val(deltaExDate);
+    };
+
+    if (prv) {
+        var deltaBdate = allData.get('bdate');
+        var deltaBD = deltaBdate.slice(0, 2);
+        var deltaBM = deltaBdate.slice(5, 7);
+        var deltaBY = deltaBdate.slice(10);
+        deltaBdate = deltaBY + "-" + deltaBM + "-" + deltaBD;
+        $("#birth-date").val(deltaBdate);
+    };
+
+    var pname = allData.get('pname');
+    $("#pname-orig").val(pname);
+    $("#pname-page23").val(pname);
+    $("#pname-page23-bis").val(pname);
+    $("#pname-page23-tris").val(pname);
+    $("#pname-page23-quad").val(pname);
+
+    var oname = allData.get('oname');
+    $("#oname-orig").val(oname);
+    $("#oname-page23").val(oname);
+
+    var ageX = allData.get('ageX');
+    $("#age").val(ageX);
+    $("#age-page23").val(ageX);
+
+    var deltaSex = allData.get('sex');
+    if (deltaSex == "male") {
+        $("#male-sex-input").attr("checked", "true");
+    } else if (deltaSex == "female") {
+        $("#female-sex-input").attr("checked", "true");
+    };
+
+    var diab = allData.get('diab');
+    if (diab == "yes") {
+        $("#diab-yes-input").attr("checked", "true");
+    } else if (diab == "no") {
+        $("#diab-no-input").attr("checked", "true");
+    };
+
+
 };
