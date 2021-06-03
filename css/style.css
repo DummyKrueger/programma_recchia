@@ -423,6 +423,12 @@ p {
 
 /* ********************************* FIRST PAGE ********************************* */
 
+.trash-icon {
+    position: absolute;
+    right: 15px;
+    color: #dddede;
+}
+
 .top-left-box {
     margin-bottom: 50px;
     padding: 0;
