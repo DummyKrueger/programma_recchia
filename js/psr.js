@@ -63,6 +63,16 @@ if (smoke == "yes") {
     $("#two2").css("top", "171mm");
     $(".output2").css("height", "340mm");
     $(".delta-right-block").css("top", "70mm");
+} else if (reportNum == "0") {
+    $(".smoke-box").css("display", "none");
+    $("#smoke-no1").css("float", "left").css("margin-right", "5mm");
+    $("#smoke-no2").css("display", "inline-block");
+    $("#smoke-no3").css("margin-bottom", "20mm");
+    $("#three3").css("left", "139mm").css("top", "101mm");
+    $("#two2").css("top", "145mm");
+    $(".output2").css("height", "320mm");
+    $(".delta-right-block").css("top", "35mm");
+    $("#row5.print-row").css("margin-bottom", "0");
 };
 
 
@@ -124,6 +134,11 @@ $("#print-btn").click(function () {
         $("#two2").css("top", "242.5mm");
         $("#three3").css("left", "155mm").css("top", "197.5mm");
         $("#second-num.sheet-num").css("bottom", "-62mm");
+    } else if (smoke != "yes" && reportNum == "0") {
+        $("#one1").css("top", "170mm");
+        $("#two2").css("top", "214mm");
+        $("#three3").css("left", "155mm").css("top", "170mm");
+        $("#second-num.sheet-num").css("bottom", "-82mm");
     } else if (smoke != "yes") {
         $("#two2").css("top", "262mm");
         $("#three3").css("left", "155mm").css("top", "217mm");
@@ -146,6 +161,11 @@ $("#print-btn2").click(function () {
         $("#two2").css("top", "242.5mm");
         $("#three3").css("left", "155mm").css("top", "197.5mm");
         $("#second-num.sheet-num").css("bottom", "-62mm");
+    } else if (smoke != "yes" && reportNum == "0") {
+        $("#one1").css("top", "170mm");
+        $("#two2").css("top", "214mm");
+        $("#three3").css("left", "155mm").css("top", "170mm");
+        $("#second-num.sheet-num").css("bottom", "-82mm");
     } else if (smoke != "yes") {
         $("#two2").css("top", "262mm");
         $("#three3").css("left", "155mm").css("top", "217mm");
