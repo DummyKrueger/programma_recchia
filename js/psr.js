@@ -134,6 +134,7 @@ $("#print-btn").click(function () {
         $("#two2").css("top", "242.5mm");
         $("#three3").css("left", "155mm").css("top", "197.5mm");
         $("#second-num.sheet-num").css("bottom", "-62mm");
+        $(".ending").css("margin-top", "67mm");
     } else if (smoke != "yes" && reportNum == "0") {
         $("#one1").css("top", "170mm");
         $("#two2").css("top", "214mm");
@@ -162,11 +163,13 @@ $("#print-btn2").click(function () {
         $("#two2").css("top", "242.5mm");
         $("#three3").css("left", "155mm").css("top", "197.5mm");
         $("#second-num.sheet-num").css("bottom", "-62mm");
+        $(".ending").css("margin-top", "67mm");
     } else if (smoke != "yes" && reportNum == "0") {
         $("#one1").css("top", "170mm");
         $("#two2").css("top", "214mm");
         $("#three3").css("left", "155mm").css("top", "170mm");
         $("#second-num.sheet-num").css("bottom", "-82mm");
+        $(".ending").css("margin-top", "97mm");
     } else if (smoke != "yes") {
         $("#two2").css("top", "262mm");
         $("#three3").css("left", "155mm").css("top", "217mm");
