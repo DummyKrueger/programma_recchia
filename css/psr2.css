@@ -769,20 +769,20 @@
 
     #sep3.print-horizontal-sep {
         position: absolute;
-        top: 218mm;
+        top: 238mm;
         left: 50mm;
     }
 
     #sep4.print-vertical-sep {
         position: absolute;
-        top: 218mm;
+        top: 238mm;
         right: 127mm;
         height: 85mm;
     }
 
     #sep5.print-horizontal-sep {
         position: absolute;
-        top: 195mm;
+        top: 185mm;
         right: 20mm;
     }
 
@@ -833,6 +833,11 @@
     }
 
     /* *********************** row two ******************** */
+
+    #row2.print-row {
+        margin-top: 10mm;
+        margin-bottom: 10mm;
+    }
 
     .print-diag-title {
         font-family: OpenSans-Bold;
@@ -896,7 +901,7 @@
 
     .print-legend {
         position: absolute;
-        top: 153mm;
+        top: 163mm;
         right: 20mm;
         width: 74mm;
     }
@@ -1021,7 +1026,7 @@
     /* *********************** row four ******************** */
 
     #row4.print-row {
-        margin-top: 10mm;
+        margin-top: 12mm;
         margin-left: 2mm;
         padding-right: 10mm;
         margin-bottom: 27mm;
@@ -1098,8 +1103,8 @@
         border-radius: 50%;
         padding-left: 2mm;
         position: absolute;
-        left: 42mm;
-        top: 217.5mm;
+        left: 41mm;
+        top: 208.5mm;
     }
 
     #two2 {
@@ -1109,8 +1114,8 @@
         border-radius: 50%;
         padding-left: 2mm;
         position: absolute;
-        left: 42mm;
-        top: 264mm;
+        left: 41mm;
+        top: 253mm;
     }
 
     #three3 {
@@ -1120,8 +1125,8 @@
         border-radius: 50%;
         padding-left: 2mm;
         position: absolute;
-        left: 42mm;
-        top: 302mm;
+        left: 41mm;
+        top: 291mm;
     }
 
     .smoke-box {
@@ -1155,6 +1160,7 @@
 
     #row6.print-row {
         margin-left: 2mm;
+        margin-top: 5mm;
     }
 
     #row6 .print-parag {
@@ -1165,7 +1171,7 @@
         text-align: justify;
         font-family: OpenSans-Regular;
         font-size: 4.3mm;
-        margin-top: 7mm;
+        margin-top: 30mm;
         margin-right: 20mm;
 
     }

@@ -782,7 +782,7 @@
 
     #sep5.print-horizontal-sep {
         position: absolute;
-        top: 195mm;
+        top: 197mm;
         right: 20mm;
     }
 
@@ -1021,7 +1021,7 @@
     /* *********************** row four ******************** */
 
     #row4.print-row {
-        margin-top: 10mm;
+        margin-top: 12mm;
         margin-left: 2mm;
         padding-right: 10mm;
         margin-bottom: 27mm;
@@ -1099,7 +1099,7 @@
         padding-left: 2mm;
         position: absolute;
         left: 42mm;
-        top: 217.5mm;
+        top: 219.5mm;
     }
 
     #two2 {
@@ -1110,7 +1110,7 @@
         padding-left: 2mm;
         position: absolute;
         left: 42mm;
-        top: 264mm;
+        top: 266mm;
     }
 
     #three3 {
@@ -1121,7 +1121,7 @@
         padding-left: 2mm;
         position: absolute;
         left: 42mm;
-        top: 302mm;
+        top: 304mm;
     }
 
     .smoke-box {
@@ -1165,7 +1165,7 @@
         text-align: justify;
         font-family: OpenSans-Regular;
         font-size: 4.3mm;
-        margin-top: 7mm;
+        margin-top: 23mm;
         margin-right: 20mm;
 
     }

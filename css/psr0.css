@@ -1029,7 +1029,7 @@
     /* *********************** row four ******************** */
 
     #row4.print-row {
-        margin-top: 10mm;
+        margin-top: 12mm;
         margin-left: 2mm;
         padding-right: 10mm;
         margin-bottom: 10mm;
@@ -1108,7 +1108,7 @@
         padding-left: 2mm;
         position: absolute;
         left: 41mm;
-        top: 171mm;
+        top: 173mm;
     }
 
     #two2 {
@@ -1119,7 +1119,7 @@
         padding-left: 2mm;
         position: absolute;
         left: 41mm;
-        top: 217.5mm;
+        top: 219.5mm;
     }
 
     #three3 {
@@ -1130,7 +1130,7 @@
         padding-left: 2mm;
         position: absolute;
         left: 41mm;
-        top: 255.5mm;
+        top: 257.5mm;
     }
 
     .smoke-box {
@@ -1174,7 +1174,7 @@
         text-align: justify;
         font-family: OpenSans-Regular;
         font-size: 4.3mm;
-        margin-top: 7mm;
+        margin-top: 50mm;
         margin-right: 20mm;
 
     }
