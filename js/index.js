@@ -693,7 +693,7 @@ function dataTransmission(report, end) {
     };
 
 
-    var path1 = report + end + ".html" + "?" + "oname=" + oname + "&pname=" + pname + "&bdate=" + bdate;
+    var path1 = report + end + ".html" + "?" + "alpha=" + end + "&oname=" + oname + "&pname=" + pname + "&bdate=" + bdate;
     var path2 = "&ageX=" + ageX + "&sex=" + sex + "&diab=" + diab + "&exSmoke=" + exSmoke + "&svapo=" + svapo;
     var path3 = "&freq=" + freq + "&brush=" + brush + "&paste=" + paste + "&wire=" + wire + "&scovo=" + scovo;
     var path4 = "&collu=" + collu + "&collutype=" + colluType + "&exdate=" + exdate + "&smoke=" + smoke;

@@ -5,6 +5,7 @@ const queryString = window.location.search;
 
 const allData = new URLSearchParams(queryString);
 
+var reportNum = allData.get('alpha');
 var oname = allData.get('oname');
 var pname = allData.get('pname');
 var exdate = allData.get('exdate');
@@ -14,9 +15,19 @@ $("#oname-dest").text(oname);
 $("#pname-dest").text(pname);
 $(".print-date-box").text(exdate);
 
+
 if (smoke == "yes") {
     $(".smoke-box").css("display", "block");
-} else {
+} else if (reportNum == "5") {
+    $(".smoke-box").css("display", "none");
+    $("#smoke-no1").css("float", "left").css("margin-right", "5mm");
+    $("#smoke-no2").css("display", "inline-block");
+    $("#smoke-no3").css("margin-bottom", "20mm");
+    $("#three3").css("left", "139mm").css("top", "147mm");
+    $("#two2").css("top", "191mm");
+    $(".output2").css("height", "340mm").css("bottom", "140mm");
+    $(".delta-right-block").css("top", "115mm");
+} else if (reportNum == "4") {
     $(".smoke-box").css("display", "none");
     $("#smoke-no1").css("float", "left").css("margin-right", "5mm");
     $("#smoke-no2").css("display", "inline-block");
@@ -25,10 +36,25 @@ if (smoke == "yes") {
     $("#two2").css("top", "191mm");
     $(".output2").css("height", "340mm");
     $(".delta-right-block").css("top", "90mm");
+} else if (reportNum == "3") {
+    $(".smoke-box").css("display", "none");
+    $("#smoke-no1").css("float", "left").css("margin-right", "5mm");
+    $("#smoke-no2").css("display", "inline-block");
+    $("#smoke-no3").css("margin-bottom", "20mm");
+    $("#three3").css("left", "139mm").css("top", "147mm");
+    $("#two2").css("top", "191mm");
+    $(".output2").css("height", "340mm");
+    $(".delta-right-block").css("top", "105mm");
+} else if (reportNum == "2") {
+    $(".smoke-box").css("display", "none");
+    $("#smoke-no1").css("float", "left").css("margin-right", "5mm");
+    $("#smoke-no2").css("display", "inline-block");
+    $("#smoke-no3").css("margin-bottom", "20mm");
+    $("#three3").css("left", "139mm").css("top", "134mm");
+    $("#two2").css("top", "178mm");
+    $(".output2").css("height", "340mm");
+    $(".delta-right-block").css("top", "70mm");
 };
-
-
-
 
 
 
@@ -79,7 +105,12 @@ function teethColoration(inputValue, groupNumber) {
 
 $("#print-btn").click(function () {
 
-    if (smoke != "yes") {
+    if (smoke != "yes" && reportNum == "2") {
+        $("#one1").css("top", "205.5mm");
+        $("#two2").css("top", "250mm");
+        $("#three3").css("left", "155mm").css("top", "205mm");
+        $("#second-num.sheet-num").css("bottom", "-62mm");
+    } else if (smoke != "yes") {
         $("#two2").css("top", "262mm");
         $("#three3").css("left", "155mm").css("top", "217mm");
         $("#second-num.sheet-num").css("bottom", "-62mm");
@@ -91,7 +122,12 @@ $("#print-btn").click(function () {
 
 $("#print-btn2").click(function () {
 
-    if (smoke != "yes") {
+    if (smoke != "yes" && reportNum == "2") {
+        $("#one1").css("top", "205.5mm");
+        $("#two2").css("top", "250mm");
+        $("#three3").css("left", "155mm").css("top", "205mm");
+        $("#second-num.sheet-num").css("bottom", "-62mm");
+    } else if (smoke != "yes") {
         $("#two2").css("top", "262mm");
         $("#three3").css("left", "155mm").css("top", "217mm");
         $("#second-num.sheet-num").css("bottom", "-62mm");
