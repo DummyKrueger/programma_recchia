@@ -420,7 +420,6 @@
 
     .print-img-box {
         float: right;
-        margin-top: 10mm;
         margin-left: 30mm;
         margin-right: 30mm;
     }
@@ -773,13 +772,13 @@
 
     #sep3.print-horizontal-sep {
         position: absolute;
-        top: 218mm;
+        top: 238mm;
         left: 50mm;
     }
 
     #sep4.print-vertical-sep {
         position: absolute;
-        top: 218mm;
+        top: 238mm;
         right: 127mm;
         height: 85mm;
     }
@@ -837,6 +836,11 @@
     }
 
     /* *********************** row two ******************** */
+
+    #row2.print-row {
+        margin-top: 10mm;
+        margin-bottom: 10mm;
+    }
 
     .print-diag-title {
         font-family: OpenSans-Bold;
@@ -900,7 +904,7 @@
 
     .print-legend {
         position: absolute;
-        top: 153mm;
+        top: 163mm;
         right: 20mm;
         width: 74mm;
     }
@@ -984,7 +988,6 @@
 
     .print-img-box {
         float: right;
-        margin-top: 10mm;
         margin-left: 30mm;
         margin-right: 30mm;
     }
