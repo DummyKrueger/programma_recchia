@@ -158,6 +158,8 @@ $("#print-btn").click(function () {
 
     window.print();
 
+    location.reload();
+
 });
 
 $("#print-btn2").click(function () {
@@ -195,6 +197,8 @@ $("#print-btn2").click(function () {
     };
 
     window.print();
+
+    location.reload();
 
 });
 
