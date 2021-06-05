@@ -244,58 +244,42 @@ var input5 = "0";
 var input6 = "0";
 
 $("#input-one").on('keyup change', function () {
-    if ($(this).val() == "4*") {
-        input1 = "5";
-    } else {
-        input1 = $(this).val();
-    };
-    teethColoration($(this).val(), 1);
+    input1 = psrSelector($(this).val(), 1);
 });
 
 $("#input-two").on('keyup change', function () {
-    if ($(this).val() == "4*") {
-        input2 = "5";
-    } else {
-        input2 = $(this).val();
-    };
-    teethColoration($(this).val(), 2);
+    input2 = psrSelector($(this).val(), 2);
 });
 
 $("#input-three").on('keyup change', function () {
-    if ($(this).val() == "4*") {
-        input3 = "5";
-    } else {
-        input3 = $(this).val();
-    };
-    teethColoration($(this).val(), 3);
+    input3 = psrSelector($(this).val(), 3);
 });
 
 $("#input-four").on('keyup change', function () {
-    if ($(this).val() == "4*") {
-        input4 = "5";
-    } else {
-        input4 = $(this).val();
-    };
-    teethColoration($(this).val(), 4);
+    input4 = psrSelector($(this).val(), 4);
 });
 
 $("#input-five").on('keyup change', function () {
-    if ($(this).val() == "4*") {
-        input5 = "5";
-    } else {
-        input5 = $(this).val();
-    };
-    teethColoration($(this).val(), 5);
+    input5 = psrSelector($(this).val(), 5);
 });
 
 $("#input-six").on('keyup change', function () {
-    if ($(this).val() == "4*") {
-        input6 = "5";
-    } else {
-        input6 = $(this).val();
-    };
-    teethColoration($(this).val(), 6);
+    input6 = psrSelector($(this).val(), 6);
 });
+
+
+function psrSelector(inputValue, num) {
+
+    if (inputValue == "4*") {
+        psrResult = "5";
+    } else {
+        psrResult = inputValue;
+    };
+
+    teethColoration(inputValue, num);
+
+    return psrResult;
+};
 
 
 function teethColoration(inputValue, groupNumber) {
@@ -614,83 +598,17 @@ function dataTransmission(report, end) {
     };
 
 
-    if ($('input:radio[id=male-sex-input]:checked').val() == "") {
-        var sex = "male";
-    } else if ($('input:radio[id=female-sex-input]:checked').val() == "") {
-        var sex = "female";
-    } else {
-        var sex = "";
-    };
+    var sex = radioReceiver("male-sex", "female-sex", "male", "female");
+    var diab = radioReceiver("diab-yes", "diab-no", "yes", "no");
+    var smoke = radioReceiver("smoke-yes", "smoke-no", "yes", "no");
+    var svapo = radioReceiver("svapo-yes", "svapo-no", "yes", "no");
+    var brush = radioReceiver("brush-elet", "brush-manu", "e", "m");
+    var paste = radioReceiver("paste-yes", "paste-no", "yes", "no");
 
-    if ($('input:radio[id=diab-yes-input]:checked').val() == "") {
-        var diab = "yes";
-    } else if ($('input:radio[id=diab-no-input]:checked').val() == "") {
-        var diab = "no";
-    } else {
-        var diab = "";
-    };
 
-    if ($('input:radio[id=smoke-yes-input]:checked').val() == "") {
-        var smoke = "yes";
-    } else if ($('input:radio[id=smoke-no-input]:checked').val() == "") {
-        var smoke = "no";
-    } else {
-        var smoke = "";
-    };
-
-    if ($('input:radio[id=svapo-yes-input]:checked').val() == "") {
-        var svapo = "yes";
-    } else if ($('input:radio[id=svapo-no-input]:checked').val() == "") {
-        var svapo = "no";
-    } else {
-        var svapo = "";
-    };
-
-    if ($('input:radio[id=brush-elet-input]:checked').val() == "") {
-        var brush = "e";
-    } else if ($('input:radio[id=brush-manu-input]:checked').val() == "") {
-        var brush = "m";
-    } else {
-        var brush = "";
-    };
-
-    if ($('input:radio[id=paste-yes-input]:checked').val() == "") {
-        var paste = "yes";
-    } else if ($('input:radio[id=paste-no-input]:checked').val() == "") {
-        var paste = "no";
-    } else {
-        var paste = "";
-    };
-
-    if ($('input:radio[id=wire-day]:checked').val() == "") {
-        var wire = "day";
-    } else if ($('input:radio[id=wire-week]:checked').val() == "") {
-        var wire = "week";
-    } else if ($('input:radio[id=wire-never]:checked').val() == "") {
-        var wire = "never";
-    } else {
-        var wire = "";
-    };
-
-    if ($('input:radio[id=scovo-day]:checked').val() == "") {
-        var scovo = "day";
-    } else if ($('input:radio[id=scovo-week]:checked').val() == "") {
-        var scovo = "week";
-    } else if ($('input:radio[id=scovo-never]:checked').val() == "") {
-        var scovo = "never";
-    } else {
-        var scovo = "";
-    };
-
-    if ($('input:radio[id=collu-day]:checked').val() == "") {
-        var collu = "day";
-    } else if ($('input:radio[id=collu-week]:checked').val() == "") {
-        var collu = "week";
-    } else if ($('input:radio[id=collu-never]:checked').val() == "") {
-        var collu = "never";
-    } else {
-        var collu = "";
-    };
+    var wire = radioTriReceiver("wire");
+    var scovo = radioTriReceiver("scovo");
+    var collu = radioTriReceiver("collu");
 
 
     var path1 = report + end + ".html" + "?" + "alpha=" + end + "&oname=" + oname + "&pname=" + pname + "&bdate=" + bdate;
@@ -720,6 +638,34 @@ function dataTransmission(report, end) {
 };
 
 
+function radioReceiver(idOne, idTwo, valueOne, valueTwo) {
+
+    if ($('input:radio[id=' + idOne + '-input]:checked').val() == "") {
+        radioResult = valueOne;
+    } else if ($('input:radio[id=' + idTwo + '-input]:checked').val() == "") {
+        radioResult = valueTwo;
+    } else {
+        radioResult = "";
+    };
+
+    return radioResult;
+};
+
+
+function radioTriReceiver(onlyId) {
+
+    if ($('input:radio[id=' + onlyId + '-day]:checked').val() == "") {
+        triResult = "day";
+    } else if ($('input:radio[id=' + onlyId + '-week]:checked').val() == "") {
+        triResult = "week";
+    } else if ($('input:radio[id=' + onlyId + '-never]:checked').val() == "") {
+        triResult = "never";
+    } else {
+        triResult = "";
+    };
+
+    return triResult;
+};
 
 
 
@@ -808,9 +754,9 @@ function myFunc(allData) {
     radioCompiler(allData.get('brush'), "e", "m", "#brush-elet-input", "#brush-manu-input");
     radioCompiler(allData.get('paste'), "yes", "no", "#paste-yes-input", "#paste-no-input");
 
-    radioTriCompiler(allData.get('wire'), "day", "week", "never", "#wire-day", "#wire-week", "#wire-never");
-    radioTriCompiler(allData.get('scovo'), "day", "week", "never", "#scovo-day", "#scovo-week", "#scovo-never");
-    radioTriCompiler(allData.get('collu'), "day", "week", "never", "#collu-day", "#collu-week", "#collu-never");
+    radioTriCompiler(allData.get('wire'), "wire");
+    radioTriCompiler(allData.get('scovo'), "scovo");
+    radioTriCompiler(allData.get('collu'), "collu");
 
     input1 = psrTeeth(allData.get('input1'), 1, "#input-one");
     input2 = psrTeeth(allData.get('input2'), 2, "#input-two");
@@ -842,13 +788,13 @@ function radioCompiler(data, value1, value2, id1, id2) {
     };
 };
 
-function radioTriCompiler(data, value1, value2, value3, id1, id2, id3) {
-    if (data == value1) {
-        $(id1).attr("checked", "true");
-    } else if (data == value2) {
-        $(id2).attr("checked", "true");
-    } else if (data == value3) {
-        $(id3).attr("checked", "true");
+function radioTriCompiler(data, onlyId) {
+    if (data == "day") {
+        $("#" + onlyId + "-day").attr("checked", "true");
+    } else if (data == "week") {
+        $("#" + onlyId + "-week").attr("checked", "true");
+    } else if (data == "never") {
+        $("#" + onlyId + "-never").attr("checked", "true");
     };
 };
 
