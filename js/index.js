@@ -693,9 +693,18 @@ if (prv) {
 
 function myFunc(allData) {
 
-    if (prv == "yes") {
+    if (prv == "yes" || prv == "adul" || prv == "decid") {
+
         $("#page1").hide();
-        $("#page2PSR").show();
+
+        if (prv == "yes") {
+            $("#page2PSR").show();
+        } else if (prv == "adul") {
+            $("#page3DMFT").show();
+        } else if (prv == "decid") {
+            $("#page3DMFT-decid").show();
+        };
+
         var queryParams = new URLSearchParams(window.location.search);
         queryParams.set("prv", "no");
         history.replaceState(null, null, "?" + queryParams.toString());
@@ -712,7 +721,6 @@ function myFunc(allData) {
     $("#exam-date-page23-bis").val(deltaExDate);
     $("#exam-date-page23-tris").val(deltaExDate);
     $("#exam-date-page23-quad").val(deltaExDate);
-
 
 
     var deltaBdate = allData.get('bdate');
