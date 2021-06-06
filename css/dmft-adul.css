@@ -1,4 +1,105 @@
+/* **************************************** BUTTONS *********************************** */
+
+#print-btn-top {
+    margin-top: 12mm;
+    padding-left: 4mm;
+    float: right;
+}
+
 #print-btn {
     padding-left: 4mm;
     float: right;
+}
+
+
+
+
+
+/* **************************************** CANVAS *********************************** */
+
+.canvas-box {
+    display: inline-block;
+    width: 136mm;
+    margin-left: 3mm;
+}
+
+canvas {
+    position: absolute;
+    top: 123.5mm;
+    left: 65mm;
+}
+
+.st5 {
+    fill: #53575A;
+}
+
+.st26 {
+    font-family: 'OpenSans-Bold';
+}
+
+.st45 {
+    font-size: 9.5808px;
+}
+
+.st47 {
+    fill: #FFB4B8;
+    stroke: #53575A;
+    stroke-width: 0.935;
+    stroke-miterlimit: 10;
+}
+
+.st48 {
+    fill: #FFF4B7;
+    stroke: #53575A;
+    stroke-width: 0.935;
+    stroke-miterlimit: 10;
+}
+
+.st49 {
+    fill: #D5F9CA;
+    stroke: #53575A;
+    stroke-width: 0.935;
+    stroke-miterlimit: 10;
+}
+
+.st50 {
+    fill: none;
+    stroke: #53575A;
+    stroke-width: 0.374;
+    stroke-miterlimit: 10;
+}
+
+.st51 {
+    fill: none;
+    stroke: #53575A;
+    stroke-width: 1.87;
+    stroke-miterlimit: 10;
+}
+
+.st52 {
+    fill: none;
+    stroke: #53575A;
+    stroke-width: 0.2337;
+    stroke-miterlimit: 10;
+}
+
+.st57 {
+    fill: #FFB4B8;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.st58 {
+    fill: #FFF4B7;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.st59 {
+    fill: #D5F9CA;
+    stroke: #53575A;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
 }
