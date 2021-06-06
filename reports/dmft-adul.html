@@ -23,6 +23,7 @@
             <div class="col"></div>
 
             <div class="logo-col">
+                <canvas id="Canvas" width="383" height="295"></canvas>
                 <img class="logo" src="../images/logo_psr.png" alt="logo_psr.png">
                 <h2 class="logo-title">Ambulatorio Polispecialistico</h2>
             </div>
@@ -66,14 +67,28 @@
 
                 </div>
 
-
-
-
-
                 <div class="row">
 
-                    <div class="canvas-box">
+                    <div class="square-box">
+                        <div id="age-dmf-square" class="dmf-square">
+                            0
+                        </div>
+                        <h3 class="square-title"><strong>ANNI</strong> PAZIENTE</h3>
+                        <div id="index-dmf-square" class="dmf-square">
+                            0
+                        </div>
+                        <h3 class="square-title">INDICE <strong>DMF-T</strong></h3>
+                    </div>
 
+                    <div class="right-inputs-box">
+
+                        <div class="risk-box">
+                            <p class="risk">Classe di rischio <span class="risk-strong">ROSSA</span></p>
+                        </div>
+
+                    </div>
+
+                    <div class="canvas-box">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             x="0px" y="0px" viewBox="0 0 399.26719 236.52081" xml:space="preserve" id="svg4881"
                             height="80mm">
@@ -612,15 +627,9 @@
                             </g>
 
                         </svg>
-
-                        <canvas id="Canvas" width="383" height="295"></canvas>
-
                     </div>
 
                 </div>
-
-
-
 
                 <div class="row" style="margin-top: 50mm;">
 

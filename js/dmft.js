@@ -5,9 +5,21 @@ const allData = new URLSearchParams(queryString);
 $("#pname-page4").val(allData.get('pname'))
 $("#exam-date-page4").val(allData.get("exdate"));
 
+var dmf = allData.get("adulf");
 
-$("#dataPath-analysis6").attr("href", "../index.html" + queryString + "&prv=no");
-$("#dataPath-dmft6-prv").attr("href", "../index.html" + queryString + "&prv=adul");
+var age = allData.get("ageX");
+if (age > 80) {
+    var plotAge = 80;
+} else if (age == "") {
+    var plotAge = 0;
+} else {
+    var plotAge = age;
+};
+
+$("#age-dmf-square").html(age);
+$("#index-dmf-square").html(dmf);
+
+
 
 
 
@@ -18,13 +30,11 @@ var context = canvas.getContext('2d');
 
 // ************************ COORDINATES
 var const1 = 41;
-var const2 = 260;
+var const2 = 261;
 
-var age = 20;
-var dmf = 21;
 
-var xVal = 54 + age * 4.975;
-var yVal = 327 - dmf * 10.857;
+var xVal = const1 + plotAge * 4.00625;
+var yVal = const2 - dmf * 8.71429;
 
 
 // ************************ LINE 1
@@ -69,3 +79,15 @@ context.beginPath();
 context.arc(xVal, yVal, 4, 0, Math.PI * 2, true);
 context.fillStyle = "#555";
 context.fill();
+
+
+
+
+
+
+
+
+
+// **************************** DATA TRANSMISSION TO INDEX ****************************
+$("#dataPath-analysis6").attr("href", "../index.html" + queryString + "&prv=no");
+$("#dataPath-dmft6-prv").attr("href", "../index.html" + queryString + "&prv=adul");

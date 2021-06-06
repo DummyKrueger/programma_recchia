@@ -13,20 +13,20 @@
 
 
 
-
-
 /* **************************************** CANVAS *********************************** */
 
 .canvas-box {
     display: inline-block;
-    width: 136mm;
+    width: 139mm;
     margin-left: 3mm;
 }
 
 canvas {
-    position: absolute;
-    top: 123.5mm;
-    left: 65mm;
+    float: right;
+    margin-bottom: -20mm;
+    position: relative;
+    top: 142.5mm;
+    right: 131mm;
 }
 
 .st5 {
@@ -102,4 +102,72 @@ canvas {
     stroke: #53575A;
     stroke-width: 0.5;
     stroke-miterlimit: 10;
+}
+
+
+/* **************************************** OTHER *********************************** */
+
+#pname-page4.page23-name {
+    width: 83mm;
+}
+
+#exam-date-page4.page23-date {
+    width: 35mm;
+}
+
+.square-box {
+    width: 139mm;
+    margin-left: 3mm;
+    margin-bottom: 10mm;
+}
+
+.dmf-square {
+    display: inline-block;
+    border: solid #555;
+    border-width: 1mm 3mm;
+    background-color: #fff;
+    height: 9mm;
+    width: 25mm;
+    font-family: OpenSans-SemiBold;
+    font-size: 5mm;
+    color: #555;
+    text-align: center;
+}
+
+#age-dmf-square.dmf-square {
+    border: solid #006459;
+    border-width: 1mm 3mm;
+}
+
+.square-title {
+    display: inline-block;
+    font-family: OpenSans-Regular;
+    font-size: 4.3mm;
+    margin-right: 8mm;
+}
+
+.right-inputs-box {
+    float: right;
+    border-left-style: solid;
+    border-left-width: 0.3mm;
+    border-left-color: #006459;
+}
+
+.risk-box {
+    border: solid 0.3mm #555;
+    background-color: #ffb4b8;
+    margin-left: 3mm;
+    width: 89mm;
+    height: 9mm;
+}
+
+.risk {
+    color: #555;
+    font-family: OpenSans-SemiBold;
+    font-size: 5.5mm;
+    margin-left: 3mm;
+}
+
+.risk-strong {
+    font-family: OpenSans-Bold;
 }

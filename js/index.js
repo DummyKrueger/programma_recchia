@@ -565,6 +565,7 @@ function dataTransmission(report, end) {
     var pname = $("#pname-orig").val();
     var ageX = $("#age").val();
     var exSmoke = $("#ex-smoke").val();
+    var adulIndex = $("#adul-final").html();
 
 
     if ($("#daily-freq").val() == "-") {
@@ -628,7 +629,7 @@ function dataTransmission(report, end) {
     var path15 = "&decid7=" + decidArray[7] + "&decid8=" + decidArray[8] + "&decid9=" + decidArray[9] + "&decid10=" + decidArray[10];
     var path16 = "&decid11=" + decidArray[11] + "&decid12=" + decidArray[12] + "&decid13=" + decidArray[13] + "&decid14=" + decidArray[14];
     var path17 = "&decid15=" + decidArray[15] + "&decid16=" + decidArray[16] + "&decid17=" + decidArray[17] + "&decid18=" + decidArray[18];
-    var path18 = "&decid19=" + decidArray[19] + "&decid20=" + decidArray[20];
+    var path18 = "&decid19=" + decidArray[19] + "&decid20=" + decidArray[20] + "&adulf=" + adulIndex;
 
     var path = path1 + path2 + path3 + path4 + path5 + path6 + path7 + path8 + path9 + path10 + path11 + path12 + path13 + path14 + path15 + path16 + path17 + path18;
 
