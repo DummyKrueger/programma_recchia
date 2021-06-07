@@ -120,11 +120,9 @@ function setAge() {
     if (yyyyBirth > 1800) {
         $("#age").val(age);
         $("#age-page23").val(age);
+        ageTeeth($("#age").val());
     };
 }
-
-
-
 
 
 
@@ -187,11 +185,35 @@ $("#exam-date").on("keyup change", function () {
 
 // **************************** DMFT SECOND PAGE TEETH ****************************
 
-teethChecker();
+ageTeeth($("#age").val());
+
+$("#age").on("keyup change", function () {
+    ageTeeth($("#age").val());
+});
 
 $("#dec-input, #adul-input").on("change", function () {
     teethChecker();
 });
+
+
+function ageTeeth(age) {
+    if (age > 10) {
+        console.log(age);
+        document.getElementById("dec-input").removeAttribute("checked");
+        $("#adul-input").attr("checked", "true");
+        teethChecker();
+    } else if (age <= 10 && age > 0) {
+        console.log(age);
+        document.getElementById("adul-input").removeAttribute("checked");
+        $("#dec-input").attr("checked", "true");
+        teethChecker();
+    } else {
+        console.log("altro");
+        document.getElementById("dec-input").removeAttribute("checked");
+        $("#adul-input").attr("checked", "true");
+        teethChecker();
+    };
+};
 
 
 function teethChecker() {

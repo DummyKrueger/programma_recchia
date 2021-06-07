@@ -11,7 +11,8 @@ var age = allData.get("ageX");
 if (age > 80) {
     var plotAge = 80;
 } else if (age == "") {
-    var plotAge = 0;
+    age = 0;
+    var plotAge = age;
 } else {
     var plotAge = age;
 };

@@ -151,6 +151,8 @@ canvas {
     border-left-style: solid;
     border-left-width: 0.3mm;
     border-left-color: #006459;
+    position: relative;
+    bottom: 19mm;
 }
 
 .risk-box {
@@ -170,4 +172,37 @@ canvas {
 
 .risk-strong {
     font-family: OpenSans-Bold;
+}
+
+.pers-title {
+    display: inline-block;
+    font-family: OpenSans-Bold;
+    font-size: 4.3mm;
+    color: rgb(214 214 214);
+    margin-left: 3mm;
+    margin-top: 3mm;
+}
+
+.pers-box1 {
+    border: solid 0.3mm #555;
+    margin-left: 3mm;
+    margin-top: 2mm;
+    width: 89mm;
+    height: 70mm;
+}
+
+.pers-box2 {
+    border: solid 0.3mm #555;
+    margin-left: 3mm;
+    margin-top: 2mm;
+    width: 89mm;
+    height: 35mm;
+}
+
+.pers-box3 {
+    border: solid 0.3mm #555;
+    margin-left: 3mm;
+    margin-top: 2mm;
+    width: 89mm;
+    height: 35mm;
 }
