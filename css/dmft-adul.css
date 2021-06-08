@@ -402,12 +402,11 @@ body {
 .output1 {
     visibility: visible;
     position: absolute;
-    top: -73mm;
-    left: -96mm;
+    left: -95.5mm;
     background-color: #fff;
     padding: 0;
     width: 290mm;
-    height: 408mm;
+    height: 418mm;
 }
 
 .output1 * {
@@ -417,12 +416,12 @@ body {
 .output2 {
     visibility: visible;
     position: absolute;
-    top: 348mm;
-    left: -96mm;
+    top: 420mm;
+    left: -95.5mm;
     background-color: #fff;
     padding: 0;
     width: 290mm;
-    height: 408mm;
+    height: 418mm;
 }
 
 .output2 * {
@@ -465,7 +464,7 @@ body {
 /* *********************** left & right block ******************** */
 .print-left-block {
     float: left;
-    height: 337mm;
+    height: 346mm;
     width: 20mm;
 }
 
@@ -473,7 +472,7 @@ body {
     position: absolute;
     right: 0;
     top: 70mm;
-    height: 337mm;
+    height: 346mm;
     width: 20mm;
 }
 
@@ -486,7 +485,7 @@ body {
 .gradient2 {
     background: linear-gradient(to left, #009483, #006459);
     height: 15mm;
-    margin-top: 317mm;
+    margin-top: 328mm;
 }
 
 .print-vertical-line {
@@ -599,22 +598,6 @@ body {
     margin-left: 2mm;
 }
 
-.print-diag {
-    margin-top: 4mm;
-    margin-left: 2mm;
-    float: left;
-    height: 45mm;
-    width: 60mm;
-}
-
-.print-diag-subtitle {
-    font-family: OpenSans-SemiBold;
-    font-size: 4.5mm;
-    width: 55mm;
-    padding: 2mm 1mm;
-    background-color: #dddede;
-}
-
 .print-arches {
     display: inline-block;
     height: 48mm;
@@ -661,8 +644,7 @@ body {
 .legend4,
 .legend3,
 .legend2,
-.legend1,
-.legend0 {
+.legend1 {
     display: inline-block;
     margin-bottom: 2mm;
     height: 8mm;
@@ -676,19 +658,19 @@ body {
 }
 
 .legend4 .square {
-    background-color: #d62831;
+    background-color: #a9abac;
 }
 
 .legend3 .square {
-    background-color: #fadb65;
+    background-color: #7fc9c1;
 }
 
 .legend2 .square {
-    background-color: #2d94c1;
+    background-color: #d0df99;
 }
 
 .legend1 .square {
-    background-color: #bbdfeb;
+    background-color: #fff;
 }
 
 .legend-para {
@@ -700,13 +682,9 @@ body {
 
 .legend4 .legend-para,
 .legend3 .legend-para,
+.legend2 .legend-para,
 .legend1 .legend-para {
     margin-top: 1.5mm;
-}
-
-.legend2 .legend-para,
-.legend0 .legend-para {
-    margin-top: -0.5mm;
 }
 
 /* *********************** row three ******************** */
