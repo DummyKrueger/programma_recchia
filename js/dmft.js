@@ -194,10 +194,37 @@ if (risk == "green") {
 
 var advice1 = "Mastica Gomme allo Xilitolo ed usa Eritritolo come zucchero";
 var advice1text = "Prova a sostituire il classico saccarosio (lo zucchero a cui siamo sempre abituati) con l'Eritritolo (chiedi qualche bustina in reception per provare) e mastica una gomma allo Xilitolo per 4 minuti dopo pranzo se non riesci a lavarti i denti.  Entrambi questi zuccheri non promuovono la carie."
-var advice2 = "Controlla i dolci e la dieta (massimo 5% di zuccheri)";
-var advice2text = "Quanto zucchero ingerisci durante la giornata contribuisce assieme alla frequenza (Snacking) all'insorgenza di nuove carie nella tua bocca. Ricorda che gli zuccheri non devono essere più del 5% del fabbisogno in calorie giornaliero; affidati ad una Dietista se ne hai bisogno.";
-var advice3 = "Controlla la frequenza dei pasti (snacking)";
-var advice3text = "Quanto zucchero mangi è cruciale per l'insorgenza delle carie, ma anche quanto spesso mangi dolci e zuccheri. Limita la loro assunzione ai soli pasti principali. Per approfondire leggi questo post www.recchiadentistibambini.it/nutrizionista/";
+var advice2 = "Sigilla i denti permanenti";
+var advice2text = "Proteggi i denti con le sigillature, prima lo fai e meno rischi di carie avrai.";
+var advice3 = "Collutori? Ecco quelli giusti";
+var advice3text = 'Se hai una infezione tipo "gengivite", usa collutori alla Clorexidina per 1-2 settimane. Dopo questa fase, alterna ogni giorno un collutorio con Fluoro ed uno con la Clorexidina sempre dopo aver lavato i denti.';
+var advice4 = "Ti sei lavato i denti bene? Ecco come fare a saperlo";
+var advice4text = "Utilizza un colorante per la placca, nella prima fase usalo prima di lavarti i denti. Dopo 2 settimane, usalo dopo aver spazzolato bene i denti per vedere dove devi migliorare!";
+var advice5 = "Hai l'apparecchio? per te una attenzione diversa";
+var advice5text = 'Compra un "idropulsore" per pulire tra i gli spazi  e alla fine della tua seduta di Igiene Orale chiedi che usino "Vernici e gel al Fluoro " attorno ai bracket e bande, sono punti fragile dove la carie potrebbe arrivare facilmente.';
+var advice6 = "Utilizza dentifrici Fluorati e bevi l'acqua giusta";
+var advice6text = "Già dai primi mesi di vita usa dentifrici con fluoro. Se il pediatra di tuo figlio crede sia necessario, in gravidanza o nei primi anni di vita bevi acqua ad alto contenuto di fluoro. per informazioni porta questa scheda dal medico https://www.ambulatoriorecchia.it/fluoro/";
+var advice7 = "Sei in dolce attesa? Ecco le raccomandazioni per te";
+var advice7text = "Bevi sempre abbondantemente durante l’intero arco della giornata e fai piccoli pasti limitando ai soli pasti principali l'assunzione di cibi contenenti zuccheri. In caso di vomito, risciac-quare la bocca con acqua e bicarbonato (basta un cucchiaino) per neutralizzare l’acidità dell’ambiente orale. Dopo";
+var advice7bis = "mangiato, mastica gomme senza zucchero o con xilitolo. Usa spazzolini da denti delicati e dentifrici al fluoro: in questo modo si evitano danni ai denti";
+var advice7bistext = "resi più delicati dalla demineralizzazione. Evita bevande gassate e zuccherate, preferendo l’acqua; Preferisci la frutta ai succhi e spremute. Tutta la famiglia deve arrivare alla nascita con una bocca batteriologicamente sana: mamma, papà, fratelli e nonni, questo previene la contaminazione della bocca del tuo piccolo da parte di batteri cariogeni proteggendolo dalla carie.";
+var advice8 = "Piercing, diabete e sigarette";
+var advice8text = "Piercing e fumo non fanno di certo bene ai tuoi denti, cerca di smettere di fumare e togli se puoi i piercing orali. Se non lo fai di frequente controlla la glicemia e diabete, parla di questo con il tuo medico di base. Sono tutti fattori che hanno una grossa influenza sulla tua salute, denti compresi.";
+var advice9 = "Hai la bocca secca?";
+var advice9text = "Cerca di avere molta salvia, se ne hai poca prova a bere molta acqua durante il giorno. Alcuni farmaci interferiscono con la secrezione di saliva. In casi selezionanti ti raccomandiamo test salivari (Ph, volume, coltura batterica). Il fumo è un fattore che influisce negativamente sulla capacità tampone della saliva e il suo volume.";
+var advice10 = "Controlla i dolci e la dieta (massimo 5% di zuccheri)";
+var advice10text = "Quanto zucchero ingerisci durante la giornata contribuisce assieme alla frequenza (Snacking) all'insorgenza di nuove carie nella tua bocca. Ricorda che gli zuccheri non devono essere più del 5% del fabbisogno in calorie giornaliero; affidati ad una Dietista se ne hai bisogno.";
+var advice11 = "Controlla la frequenza dei pasti (snacking)";
+var advice11text = "Quanto zucchero mangi è cruciale per l'insorgenza delle carie, ma anche quanto spesso mangi dolci e zuccheri. Limita la loro assunzione ai soli pasti principali. Per approfondire leggi questo post www.recchiadentistibambini.it/nutrizionista/";
+var advice12 = "I probiotici e la carie";
+var advice12text = "Se hai molte carie, oltre a migliorare dieta ed igiene orale a casa, utilizza CARIOBLIS (un probiotico al pari dei fermenti lattici) che ha la capacità in 3 mesi di sostituire i batteri patogeni con una flora meno aggressiva. Ovviamente i denti vanno sempre lavati secondo linee guida.";
+var advice13 = "Bevi acqua o bevande senza zucchero";
+var advice13text = "Impara a bere solo acqua e non bere succhi di frutta o bevande acide e gassate. Preferisci tisane a freddo (della pompadour ) e mangia frutta invece che spremute, la fibra nella frutta tampona acidi e fruttosio in essa contenuta.";
+var advice14 = "Sei uno sportivo?";
+var advice14text = "Fai attenzione agli energy drink che forse bevi durante i tuoi allenamenti, sono molto acidi e zuccherini";
+
+
+
 
 
 $("#pers-input1").on("change", function () {
@@ -228,18 +255,88 @@ function persIndication(num, choice) {
     var persText = "#pers" + num + "text";
 
     if (choice == "1") {
-        $(pers).css("padding-top", "0")
+        reverse();
+        $(persText).css("margin-top", "-3mm");
         $(pers).text(advice1);
         $(persText).text(advice1text);
     } else if (choice == "2") {
-        $(pers).css("padding-top", "0")
+        reverse();
+        $(persText).css("margin-top", "-6.8mm");
         $(pers).text(advice2);
         $(persText).text(advice2text);
     } else if (choice == "3") {
-        $(pers).css("padding-top", "4mm")
+        reverse();
+        $(persText).css("margin-top", "-6.8mm");
         $(pers).text(advice3);
         $(persText).text(advice3text);
+    } else if (choice == "4") {
+        reverse();
+        $(persText).css("margin-top", "-3mm");
+        $(pers).text(advice4);
+        $(persText).text(advice4text);
+    } else if (choice == "5") {
+        reverse();
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice5);
+        $(persText).text(advice5text);
+    } else if (choice == "6") {
+        reverse();
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice6);
+        $(persText).text(advice6text);
+    } else if (choice == "7") {
+        $(persText).css("margin-top", "-3mm");
+        $(pers).text(advice7);
+        $(persText).text(advice7text);
+        $(".pers-box1").css("height", "101mm");
+        $("#pers2").css("font-family", "OpenSans-Regular").css("margin-top", "-4.5mm").css("height", "14.5mm");
+        $("#pers2").text(advice7bis);
+        $("#pers2text").css("height", "42mm").css("margin-top", "-3mm");
+        $("#pers2text").text(advice7bistext);
+    } else if (choice == "8") {
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice8);
+        $(persText).text(advice8text);
+    } else if (choice == "9") {
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice9);
+        $(persText).text(advice9text);
+    } else if (choice == "10") {
+        $(persText).css("margin-top", "-3mm");
+        $(pers).text(advice10);
+        $(persText).text(advice10text);
+    } else if (choice == "11") {
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice11);
+        $(persText).text(advice11text);
+    } else if (choice == "12") {
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice12);
+        $(persText).text(advice12text);
+    } else if (choice == "13") {
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice13);
+        $(persText).text(advice13text);
+    } else if (choice == "14") {
+        $(persText).css("margin-top", "-6.8mm");
+        $(pers).text(advice14);
+        $(persText).text(advice14text);
     };
+};
+
+
+
+
+
+function reverse() {
+    if ($("#pers2").css("font-family") == "OpenSans-Regular") {
+        $("#pers2").text("");
+        $("#pers2text").text("");
+    };
+
+    $(".pers-box1").css("height", "89mm");
+    $("#pers2").css("font-family", "OpenSans-SemiBold").css("margin-top", "-3mm").css("height", "10mm");
+    $("#pers2text").css("height", "30mm");
 };
 
 

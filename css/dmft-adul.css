@@ -224,7 +224,7 @@ canvas {
     margin-left: 3mm;
     margin-top: 7mm;
     width: 89mm;
-    height: 49mm;
+    height: 52mm;
 }
 
 .pers-box3 {
@@ -286,10 +286,14 @@ canvas {
 
 #pers1text,
 #pers2text,
-#pers3text,
 #pers4text {
     margin-top: -3mm;
     height: 30mm;
+}
+
+#pers3text {
+    margin-top: -3mm;
+    height: 33mm;
 }
 
 #pers2 {
