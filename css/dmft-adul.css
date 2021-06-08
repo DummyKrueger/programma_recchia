@@ -1,3 +1,13 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #555;
+}
+
 /* **************************************** BUTTONS *********************************** */
 
 #print-btn-top {
@@ -26,7 +36,7 @@ canvas {
     margin-bottom: -20mm;
     position: relative;
     top: 142.5mm;
-    right: 131mm;
+    right: 130.8mm;
 }
 
 .st5 {
@@ -107,6 +117,10 @@ canvas {
 
 /* **************************************** OTHER *********************************** */
 
+#bodypage4DMFT .right-block {
+    margin-top: 1065px;
+}
+
 #pname-page4.page23-name {
     width: 83mm;
 }
@@ -146,6 +160,9 @@ canvas {
     margin-right: 8mm;
 }
 
+
+/* **************************************** RIGHT COLUMN *********************************** */
+
 .right-inputs-box {
     float: right;
     border-left-style: solid;
@@ -157,7 +174,6 @@ canvas {
 
 .risk-box {
     border: solid 0.3mm #555;
-    background-color: #ffb4b8;
     margin-left: 3mm;
     width: 89mm;
     height: 9mm;
@@ -174,19 +190,31 @@ canvas {
     font-family: OpenSans-Bold;
 }
 
+#risk-red {
+    background-color: #ffb4b8;
+}
+
+#risk-yellow {
+    background-color: #fff4b7;
+}
+
+#risk-green {
+    background-color: #d5f9ca;
+}
+
 .pers-title {
     display: inline-block;
     font-family: OpenSans-Bold;
     font-size: 4.3mm;
     color: rgb(214 214 214);
     margin-left: 3mm;
-    margin-top: 3mm;
+    margin-top: 8mm;
 }
 
 .pers-box1 {
     border: solid 0.3mm #555;
     margin-left: 3mm;
-    margin-top: 2mm;
+    margin-top: 7mm;
     width: 89mm;
     height: 89mm;
 }
@@ -194,17 +222,17 @@ canvas {
 .pers-box2 {
     border: solid 0.3mm #555;
     margin-left: 3mm;
-    margin-top: 2mm;
+    margin-top: 7mm;
     width: 89mm;
-    height: 35mm;
+    height: 49mm;
 }
 
 .pers-box3 {
     border: solid 0.3mm #555;
     margin-left: 3mm;
-    margin-top: 2mm;
+    margin-top: 7mm;
     width: 89mm;
-    height: 35mm;
+    height: 49mm;
 }
 
 .pers-input {
@@ -223,7 +251,7 @@ canvas {
 
 #pers-input2 {
     position: relative;
-    top: 39mm;
+    top: 49.1mm;
     left: 2.6mm;
     width: 75mm;
     z-index: 100;
@@ -248,13 +276,18 @@ canvas {
     outline: none;
 }
 
-#pers1 {
+#pers1,
+#pers3,
+#pers4 {
     font-family: OpenSans-SemiBold;
     height: 10mm;
     margin-top: 2mm;
 }
 
-#pers1text {
+#pers1text,
+#pers2text,
+#pers3text,
+#pers4text {
     margin-top: -3mm;
     height: 30mm;
 }
@@ -264,7 +297,75 @@ canvas {
     height: 10mm;
 }
 
-#pers2text {
-    margin-top: -3mm;
-    height: 30mm;
+
+/* **************************************** UNDER THE PLOT *********************************** */
+
+.dmft-ho-sep {
+    background-color: #006459;
+    display: inline-block;
+    width: 125mm;
+    height: 0.2mm;
+}
+
+#ho-sep1 {
+    position: relative;
+    top: 5mm;
+    left: 3mm;
+}
+
+.green-box {
+    margin-top: 10mm;
+}
+
+.yellow-box {
+    margin-top: 3mm;
+}
+
+.red-box {
+    margin-top: 3mm;
+    margin-bottom: 10mm;
+}
+
+.color-block {
+    float: left;
+}
+
+.color-title {
+    font-family: OpenSans-ExtraBold;
+    font-size: 3.7mm;
+    padding-top: 1mm;
+    margin-left: 16mm;
+}
+
+.color-subtitle {
+    font-family: OpenSans-Regular;
+    font-size: 3.7mm;
+    margin: -0.4mm 0 1mm 16mm;
+}
+
+.color-text {
+    font-family: OpenSans-Regular;
+    font-size: 3.7mm;
+    line-height: 1.3;
+}
+
+.grey-box {
+    background-color: #dddede;
+    font-family: OpenSans-Regular;
+    font-size: 3.7mm;
+    line-height: 1.3;
+    width: 120mm;
+    padding: 1mm 0 1mm 2mm;
+}
+
+.green-word {
+    background-color: #d5f9ca;
+    padding-left: 0.5mm;
+    padding-right: 0.5mm;
+}
+
+.yellow-word {
+    background-color: #fff4b7;
+    padding-left: 0.5mm;
+    padding-right: 0.5mm;
 }

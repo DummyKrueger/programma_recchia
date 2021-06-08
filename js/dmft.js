@@ -88,6 +88,107 @@ context.fill();
 
 
 
+// ***************************************** RISK CLASS **************************************
+
+var risk = "green";
+
+if (dmf == 0) {
+    risk = "green";
+} else if (dmf == 1 && age > 7 && age < 14) {
+    risk = "yellow";
+} else if (dmf == 1 && age >= 14) {
+    risk = "green";
+} else if (dmf == 2 && age > 12 && age < 17) {
+    risk = "yellow";
+} else if (dmf == 2 && age >= 17) {
+    risk = "green";
+} else if (dmf == 3 && age > 14 && age < 21) {
+    risk = "yellow";
+} else if (dmf == 3 && age >= 21) {
+    risk = "green";
+} else if (dmf == 4 && age > 16 && age < 25) {
+    risk = "yellow";
+} else if (dmf == 4 && age >= 25) {
+    risk = "green";
+} else if (dmf == 5 && age > 17 && age < 29) {
+    risk = "yellow";
+} else if (dmf == 5 && age >= 29) {
+    risk = "green";
+} else if (dmf == 6 && age > 20 && age < 32) {
+    risk = "yellow";
+} else if (dmf == 6 && age >= 32) {
+    risk = "green";
+} else if (dmf == 7 && age > 22 && age < 36) {
+    risk = "yellow";
+} else if (dmf == 7 && age >= 36) {
+    risk = "green";
+} else if (dmf == 8 && age > 25 && age < 39) {
+    risk = "yellow";
+} else if (dmf == 8 && age >= 39) {
+    risk = "green";
+} else if (dmf == 9 && age > 28 && age < 42) {
+    risk = "yellow";
+} else if (dmf == 9 && age >= 42) {
+    risk = "green";
+} else if (dmf == 10 && age > 31 && age < 46) {
+    risk = "yellow";
+} else if (dmf == 10 && age >= 46) {
+    risk = "green";
+} else if (dmf == 11 && age > 34 && age < 49) {
+    risk = "yellow";
+} else if (dmf == 11 && age >= 49) {
+    risk = "green";
+} else if (dmf == 12 && age > 37 && age < 52) {
+    risk = "yellow";
+} else if (dmf == 12 && age >= 52) {
+    risk = "green";
+} else if (dmf == 13 && age > 40 && age < 55) {
+    risk = "yellow";
+} else if (dmf == 13 && age >= 55) {
+    risk = "green";
+} else if (dmf == 14 && age > 44 && age < 59) {
+    risk = "yellow";
+} else if (dmf == 14 && age >= 59) {
+    risk = "green";
+} else if (dmf == 15 && age > 47 && age < 64) {
+    risk = "yellow";
+} else if (dmf == 15 && age >= 64) {
+    risk = "green";
+} else if (dmf == 16 && age > 50 && age < 74) {
+    risk = "yellow";
+} else if (dmf == 16 && age >= 74) {
+    risk = "green";
+} else if (dmf == 17 && age > 54) {
+    risk = "yellow";
+} else if (dmf == 18 && age > 58) {
+    risk = "yellow";
+} else {
+    risk = "red";
+};
+
+
+if (risk == "green") {
+    $("#risk-green").css("display", "block");
+    $("#risk-yellow").css("display", "none");
+    $("#risk-red").css("display", "none");
+} else if (risk == "yellow") {
+    $("#risk-green").css("display", "none");
+    $("#risk-yellow").css("display", "block");
+    $("#risk-red").css("display", "none");
+} else if (risk == "red") {
+    $("#risk-green").css("display", "none");
+    $("#risk-yellow").css("display", "none");
+    $("#risk-red").css("display", "block");
+};
+
+
+
+
+
+
+
+
+
 
 // **************************** PERSONAL INDICATIONS ****************************
 
@@ -97,7 +198,6 @@ var advice2 = "Controlla i dolci e la dieta (massimo 5% di zuccheri)";
 var advice2text = "Quanto zucchero ingerisci durante la giornata contribuisce assieme alla frequenza (Snacking) all'insorgenza di nuove carie nella tua bocca. Ricorda che gli zuccheri non devono essere più del 5% del fabbisogno in calorie giornaliero; affidati ad una Dietista se ne hai bisogno.";
 var advice3 = "Controlla la frequenza dei pasti (snacking)";
 var advice3text = "Quanto zucchero mangi è cruciale per l'insorgenza delle carie, ma anche quanto spesso mangi dolci e zuccheri. Limita la loro assunzione ai soli pasti principali. Per approfondire leggi questo post www.recchiadentistibambini.it/nutrizionista/";
-
 
 
 $("#pers-input1").on("change", function () {
@@ -110,6 +210,15 @@ $("#pers-input2").on("change", function () {
     $("#pers-input2").val("0");
 });
 
+$("#pers-input3").on("change", function () {
+    persIndication("3", $(this).val());
+    $("#pers-input3").val("0");
+});
+
+$("#pers-input4").on("change", function () {
+    persIndication("4", $(this).val());
+    $("#pers-input4").val("0");
+});
 
 
 
