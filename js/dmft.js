@@ -346,6 +346,15 @@ function reverse() {
 
 
 
+// **************************** DATA TRANSMISSION TO PRINT ****************************
+
+$("#dataPath-to-print1").attr("href", "dmft-adul-print.html" + queryString);
+$("#dataPath-to-print2").attr("href", "dmft-adul-print.html" + queryString);
+
+
+
+
+
 
 // **************************** DATA TRANSMISSION TO INDEX ****************************
 $("#dataPath-analysis6").attr("href", "../index.html" + queryString + "&prv=no");

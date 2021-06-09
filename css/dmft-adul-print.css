@@ -47,13 +47,13 @@ body {
 .print-logo {
     width: 60mm;
     margin-top: 10mm;
-    margin-left: 20mm;
+    margin-left: 13mm;
 }
 
 .print-logo-title {
     font-family: OpenSans-Bold;
     font-size: 4.1mm;
-    margin: 2mm 20mm 6mm;
+    margin: 2mm 13mm 6mm;
     width: 70mm;
 }
 
@@ -80,7 +80,7 @@ body {
 .print-left-block {
     float: left;
     height: 346mm;
-    width: 20mm;
+    width: 13mm;
 }
 
 .print-right-block {
@@ -88,7 +88,7 @@ body {
     right: 0;
     top: 70mm;
     height: 346mm;
-    width: 20mm;
+    width: 13mm;
 }
 
 .gradient1 {
@@ -129,7 +129,7 @@ body {
 #sep1.print-vertical-sep {
     position: absolute;
     top: 77mm;
-    left: 85mm;
+    left: 82mm;
 }
 
 #sep2.print-horizontal-sep {
@@ -151,23 +151,9 @@ body {
     height: 85mm;
 }
 
-#sep5.print-horizontal-sep {
-    position: absolute;
-    top: 208mm;
-    right: 20mm;
-}
-
-#sep6.print-vertical-sep {
-    position: absolute;
-    top: 120mm;
-    right: 20mm;
-    height: 120mm;
-}
-
 /* *********************** row one ******************** */
 .print-row {
     display: inline-block;
-    width: 249mm;
 }
 
 .print-title-box {
@@ -177,8 +163,9 @@ body {
 
 .print-intro-box {
     float: right;
-    width: 175mm;
+    width: 186mm;
     margin-top: 11mm;
+    margin-left: 15mm;
 }
 
 .print-big-title {
@@ -209,7 +196,6 @@ body {
     font-family: OpenSans-Bold;
     color: #797979;
     font-size: 7mm;
-    margin-top: 15mm;
     margin-left: 2mm;
 }
 
@@ -217,20 +203,17 @@ body {
     display: inline-block;
     height: 48mm;
     width: 141mm;
+    margin: 10mm 0 10mm 5mm;
 }
 
 .print-top-arch {
     float: left;
-    position: relative;
-    right: 10mm;
     height: 48mm;
     width: 70mm;
 }
 
 .print-bottom-arch {
     float: right;
-    position: relative;
-    right: 27mm;
     height: 48mm;
     width: 70mm;
 }
@@ -239,20 +222,23 @@ body {
     font-family: OpenSans-Bold;
     font-size: 5mm;
     margin-left: 14mm;
-    margin-top: 3mm;
+    margin-top: 10mm;
 }
 
 .print-arch-title2 {
     font-family: OpenSans-Bold;
     font-size: 5mm;
     margin-left: 17mm;
-    margin-top: 3mm;
+    margin-top: 10mm;
 }
 
-.print-legend {
-    position: absolute;
-    top: 153mm;
-    right: 20mm;
+.containerOne {
+    float: right;
+    margin-left: 13mm;
+    margin-top: 10mm;
+}
+
+.legend-box {
     width: 74mm;
 }
 
@@ -292,52 +278,78 @@ body {
     font-family: OpenSans-Regular;
     font-size: 4.5mm;
     line-height: 1;
-    margin: 0 0 0 9mm;
+    margin: 1.5mm 0 0 9mm;
 }
 
-.legend4 .legend-para,
-.legend3 .legend-para,
-.legend2 .legend-para,
-.legend1 .legend-para {
-    margin-top: 1.5mm;
+.index-box {
+    background-color: #dddede;
+    width: 105mm;
+    margin-top: 2mm;
 }
+
+.index-title-l {
+    display: inline-block;
+    font-family: OpenSans-Regular;
+    font-size: 5mm;
+    margin: 1mm 8mm 1mm 4mm;
+}
+
+.index-title-r {
+    display: inline-block;
+    font-family: OpenSans-Regular;
+    font-size: 5mm;
+    margin: 1mm 1mm 1mm 0;
+}
+
+.d-m-f {
+    display: inline-block;
+    border: solid 2px #555;
+    background-color: #fff;
+    width: 50mm;
+    margin: 2mm 0 2mm 7mm;
+    font-family: OpenSans-Bold;
+    font-size: 6mm;
+    color: #555;
+    text-align: center;
+}
+
+.index-icon {
+    position: relative;
+    top: 1mm;
+    left: 7mm;
+    color: #555;
+}
+
+.dmf-sum {
+    display: inline-block;
+    position: relative;
+    left: 13mm;
+    border: solid #555;
+    border-width: 3px 12px;
+    background-color: #fff;
+    width: 25mm;
+    font-family: OpenSans-SemiBold;
+    font-size: 6mm;
+    color: #555;
+    text-align: center;
+}
+
+.print-counter {
+    position: relative;
+}
+
+#left.print-counter {
+    left: 46mm;
+    top: 45mm;
+}
+
+#right.print-counter {
+    left: 117mm;
+    top: 1mm;
+}
+
 
 /* *********************** row three ******************** */
-#row3.print-row {
-    margin-top: 24mm;
-    margin-left: 2mm;
-    padding-right: 2mm;
-}
-
-#row3 .print-parag {
-    margin-top: 3mm;
-    margin-bottom: 3mm;
-}
-
-.print-result-title {
-    font-family: OpenSans-Bold;
-    color: #797979;
-    font-size: 7mm;
-
-}
-
-.print-result-subtitle {
-    font-family: OpenSans-Bold;
-    color: #797979;
-    font-size: 5.5mm;
-
-}
-
-.print-img-box {
-    float: right;
-    margin-top: 10mm;
-    margin-left: 10mm;
-}
-
-.print-img-box img {
-    height: 60mm;
-    margin: 0 5mm;
-}
 
 .sheet-num {
     position: absolute;
@@ -350,150 +362,87 @@ body {
 
 /* *********************** row four ******************** */
 
-#row4.print-row {
-    margin-top: 12mm;
-    margin-left: 2mm;
-    padding-right: 10mm;
-}
-
-.print-list-title {
-    margin-left: 5mm;
-    margin-top: 4mm;
-    font-family: OpenSans-SemiBold;
-    font-size: 4.8mm;
-}
-
-.print-list li {
-    margin-top: 2mm;
-}
-
-.print-list-foot {
-    margin-top: 4mm;
-    font-family: OpenSans-SemiBold;
-    font-size: 4.8mm;
-    line-height: 1.2;
-}
-
 /* *********************** row five ******************** */
-
-#row5.print-row {
-    margin-top: 17mm;
-    margin-left: 2mm;
-}
-
-.float-L {
-    float: left;
-}
-
-.section2-img-box {
-    background-color: #dddede;
-    width: 109mm;
-    margin-bottom: 5mm;
-    border-radius: 15mm 0 0 0;
-    padding: 2mm 2mm 2mm 0;
-}
-
-.print-parag-except1 {
-    font-family: OpenSans-Regular;
-    font-size: 5mm;
-    text-align: justify;
-    margin-top: 3mm;
-    margin-bottom: 3mm;
-}
-
-.print-parag-except2 {
-    font-family: OpenSans-Regular;
-    font-size: 5mm;
-    text-align: justify;
-    margin-top: 6mm;
-    margin-bottom: 8mm;
-}
-
-.section2-img-box img {
-    margin: 3mm 6mm 5mm 0;
-    float: left;
-}
-
-.odd-num {
-    font-family: OpenSans-ExtraBold;
-    font-size: 10mm;
-    color: #009483;
-}
-
-#one1 {
-    background-color: #dddede;
-    width: 12mm;
-    height: 12mm;
-    border-radius: 50%;
-    padding-left: 2mm;
-    position: absolute;
-    left: 42mm;
-    top: 219.5mm;
-}
-
-#two2 {
-    background-color: #dddede;
-    width: 12mm;
-    height: 12mm;
-    border-radius: 50%;
-    padding-left: 2mm;
-    position: absolute;
-    left: 42mm;
-    top: 266mm;
-}
-
-#three3 {
-    background-color: #dddede;
-    width: 12mm;
-    height: 12mm;
-    border-radius: 50%;
-    padding-left: 2mm;
-    position: absolute;
-    left: 42mm;
-    top: 304mm;
-}
-
-.smoke-box {
-    float: right;
-    background-color: #dddede;
-    width: 90mm;
-    padding: 5mm;
-    border-radius: 15mm 0 0 0;
-    margin-right: 20mm;
-}
-
-.markk-container {
-    float: left;
-    background-color: #8b8b8b;
-    width: 22mm;
-    height: 22mm;
-    border-radius: 50%;
-    margin: 0 4mm 0 -5mm;
-}
-
-.markk {
-    position: relative;
-    left: 8mm;
-    bottom: 1mm;
-    font-family: OpenSans-ExtraBold;
-    font-size: 20mm;
-    color: #dddede;
-}
 
 /* *********************** row six ******************** */
 
-#row6.print-row {
-    margin-left: 2mm;
+
+
+/* ********************************** DMF LITTLE BOXEs ******************************* */
+
+
+
+.dmf-little-box {
+    display: inline-block;
+    position: relative;
+    font-family: OpenSans-Bold;
+    border: solid 1px #555;
+    font-size: 4mm;
+    color: #555;
+    width: 8mm;
+    height: 5mm;
+    text-align: center;
 }
 
-#row6 .print-parag {
-    padding-right: 20mm;
+.joke {
+    position: relative;
+    bottom: 0.8mm;
 }
 
-.ending {
-    text-align: justify;
-    font-family: OpenSans-Regular;
-    font-size: 4.3mm;
-    margin-top: 16mm;
-    margin-right: 20mm;
+#lbox1 {
+    top: 57mm;
+    left: 4mm;
+}
+
+#lbox2 {
+    top: 49mm;
+    right: 4mm;
+}
+
+#lbox3 {
+    top: 42.5mm;
+    right: 10.5mm;
+}
+
+#lbox4 {
+    top: 37mm;
+    right: 17mm;
+}
+
+#lbox5 {
+    top: 31.5mm;
+    right: 23mm;
+}
+
+
+
+
+
+
+
+
+
+#lbox10 {
+    top: 31.5mm;
+    right: 22mm;
+}
+
+#lbox11 {
+    top: 37mm;
+    right: 28.5mm;
+}
+
+#lbox12 {
+    top: 42.5mm;
+    right: 35mm;
+}
+
+#lbox13 {
+    top: 49mm;
+    right: 42mm;
+}
+
+#lbox14 {
+    top: 57mm;
+    right: 50mm;
 }
