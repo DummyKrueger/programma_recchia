@@ -115,7 +115,7 @@ body {
 .print-vertical-sep {
     background-color: #006459;
     display: inline-block;
-    height: 55mm;
+    height: 53mm;
     width: 0.2mm;
 }
 
@@ -134,7 +134,7 @@ body {
 
 #sep2.print-horizontal-sep {
     position: absolute;
-    top: 132mm;
+    top: 130mm;
     left: 50mm;
 }
 
@@ -202,7 +202,7 @@ body {
 .print-arches {
     display: inline-block;
     height: 48mm;
-    width: 141mm;
+    width: 146mm;
     margin: 10mm 0 10mm 5mm;
 }
 
@@ -210,6 +210,7 @@ body {
     float: left;
     height: 48mm;
     width: 70mm;
+    margin-right: 5mm;
 }
 
 .print-bottom-arch {
@@ -222,20 +223,20 @@ body {
     font-family: OpenSans-Bold;
     font-size: 5mm;
     margin-left: 14mm;
-    margin-top: 10mm;
+    margin-top: 5mm;
 }
 
 .print-arch-title2 {
     font-family: OpenSans-Bold;
     font-size: 5mm;
     margin-left: 17mm;
-    margin-top: 10mm;
+    margin-top: 5mm;
 }
 
 .containerOne {
     float: right;
     margin-left: 13mm;
-    margin-top: 10mm;
+    margin-top: 5mm;
 }
 
 .legend-box {
@@ -344,7 +345,7 @@ body {
 }
 
 #right.print-counter {
-    left: 117mm;
+    left: 122mm;
     top: 1mm;
 }
 
@@ -390,12 +391,12 @@ body {
 }
 
 #lbox1 {
-    top: 57mm;
+    top: 56.5mm;
     left: 4mm;
 }
 
 #lbox2 {
-    top: 49mm;
+    top: 49.5mm;
     right: 4mm;
 }
 
@@ -414,13 +415,25 @@ body {
     right: 23mm;
 }
 
+#lbox6 {
+    top: 25mm;
+    right: 26mm;
+}
 
+#lbox7 {
+    top: 21.5mm;
+    right: 24mm;
+}
 
+#lbox8 {
+    top: 21.5mm;
+    right: 21.5mm;
+}
 
-
-
-
-
+#lbox9 {
+    top: 25mm;
+    right: 20mm;
+}
 
 #lbox10 {
     top: 31.5mm;
@@ -438,11 +451,82 @@ body {
 }
 
 #lbox13 {
-    top: 49mm;
+    top: 49.5mm;
     right: 42mm;
 }
 
 #lbox14 {
-    top: 57mm;
+    top: 56.5mm;
     right: 50mm;
+    margin-right: 5mm;
+}
+
+#lbox15 {
+    top: 35.5mm;
+    right: 52mm;
+}
+
+#lbox16 {
+    top: 43mm;
+    right: 60mm;
+}
+
+#lbox17 {
+    top: 50mm;
+    right: 67mm;
+}
+
+#lbox18 {
+    top: 56mm;
+    right: 73.5mm;
+}
+
+#lbox19 {
+    top: 61.5mm;
+    right: 79.5mm;
+}
+
+#lbox20 {
+    top: 68mm;
+    right: 82mm;
+}
+
+#lbox21 {
+    top: 71mm;
+    right: 80.5mm;
+}
+
+#lbox22 {
+    top: 71mm;
+    right: 79.5mm;
+}
+
+#lbox23 {
+    top: 68mm;
+    right: 78mm;
+}
+
+#lbox24 {
+    top: 61.5mm;
+    right: 81.5mm;
+}
+
+#lbox25 {
+    top: 56mm;
+    right: 87.5mm;
+}
+
+#lbox26 {
+    top: 50mm;
+    right: 94.5mm;
+}
+
+#lbox27 {
+    top: 43mm;
+    right: 101mm;
+}
+
+#lbox28 {
+    top: 35.5mm;
+    right: 108.5mm;
 }
